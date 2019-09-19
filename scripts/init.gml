@@ -4,7 +4,7 @@ air_hurtbox_spr = -1;
 hitstun_hurtbox_spr = -1;
 
 char_height = 32;
-idle_anim_speed = .1;
+idle_anim_speed = .05;
 crouch_anim_speed = .1;
 walk_anim_speed = .125;
 dash_anim_speed = .2;
@@ -43,7 +43,7 @@ max_fall = 10; //maximum fall speed without fastfalling
 fast_fall = 13; //fast fall speed
 gravity_speed = .5;
 hitstun_grav = .45;
-knockback_adj = 1.0; //the multiplier to KB dealt to you. 1 = default, >1 = lighter, <1 = heavier
+knockback_adj = 1.15; //the multiplier to KB dealt to you. 1 = default, >1 = lighter, <1 = heavier
 
 land_time = 4; //normal landing frames
 prat_land_time = 3;
@@ -97,3 +97,6 @@ air_dodge_sound = asset_get("sfx_quick_dodge");
 //visual offsets for when you're in Ranno's bubble
 bubble_x = 0;
 bubble_y = 8;
+
+//Kirby variables
+jetcharge = 0;
