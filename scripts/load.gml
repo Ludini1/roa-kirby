@@ -1,4 +1,6 @@
 sprite_change_offset("idle", 32, 54);
+sprite_change_offset("hurtbox", 32, 54);
+sprite_change_offset("crouchhurt", 32, 46);
 sprite_change_offset("hurt", 32, 50);
 sprite_change_offset("bighurt", 64, 64);
 sprite_change_offset("bouncehurt", 32, 48);
