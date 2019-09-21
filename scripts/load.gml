@@ -12,7 +12,7 @@ sprite_change_offset("dashstart", 32, 54);
 sprite_change_offset("dashstop", 32, 54);
 sprite_change_offset("dashturn", 32, 50);
 
-sprite_change_offset("jumpstart", 32, 54);
+sprite_change_offset("jumpstart", 32, 56);
 sprite_change_offset("jump", 32, 50);
 sprite_change_offset("doublejump", 32, 50);
 sprite_change_offset("walljump", 64, 50);
@@ -31,6 +31,7 @@ sprite_change_offset("AT_JAB", 48, 64);
 sprite_change_offset("AT_DATTACK", 90, 82);
 sprite_change_offset("AT_DATTACK_AIR", 90, 82);
 sprite_change_offset("AT_FTILT", 64, 78);
+
 sprite_change_offset("AT_DTILT", 32, 54);
 sprite_change_offset("AT_UTILT", 40, 88);
 sprite_change_offset("AT_NAIR", 32, 50);

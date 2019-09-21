@@ -40,4 +40,5 @@ set_window_value(AT_DSPECIAL, 5, AG_WINDOW_LENGTH, 10);
 set_window_value(AT_DSPECIAL, 5, AG_WINDOW_ANIM_FRAMES, 1);
 set_window_value(AT_DSPECIAL, 5, AG_WINDOW_ANIM_FRAME_START, 8);
 
+
 set_num_hitboxes(AT_DSPECIAL, 0);
