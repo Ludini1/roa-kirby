@@ -1,4 +1,4 @@
-set_attack_value(AT_NAIR, AG_CATEGORY, 1);
+set_attack_value(AT_NAIR, AG_CATEGORY, 2);
 set_attack_value(AT_NAIR, AG_SPRITE, sprite_get("AT_NAIR"));
 set_attack_value(AT_NAIR, AG_NUM_WINDOWS, 3);
 set_attack_value(AT_NAIR, AG_HAS_LANDING_LAG, 1);
