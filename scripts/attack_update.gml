@@ -22,7 +22,7 @@ if (attack == AT_FSPECIAL){
     }
     can_fast_fall = false;
 }
-
+//DSPECIAL charging
 if (attack == AT_DSPECIAL){
 	if (window == 4) and (window_timer > 10) { //IASA on fullcharge usage
 	iasa_script();
@@ -53,9 +53,16 @@ if (attack == AT_DSPECIAL){
     }
 }
 
+//FSPECIAL cooldown
 if (attack == AT_FSPECIAL) and (window == 3) and (window_timer == 7) { //Cutter cooldown
-    move_cooldown[AT_FSPECIAL] = 60
+    move_cooldown[AT_FSPECIAL] = 60;
 }
 if (move_cooldown[AT_FSPECIAL] > 0) {
-    move_cooldown[AT_FSPECIAL] -= 1
+    move_cooldown[AT_FSPECIAL] -= 1;
+}
+
+//NAIR rolling
+if ((attack == AT_NAIR) and !free and (window == 2)){
+	hsp += spr_dir;
+	off_edge = 1;
 }

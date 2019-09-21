@@ -1,1 +1,0 @@
-draw_debug_text( x - 2, y + 10, string( jetcharge ));
