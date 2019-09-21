@@ -1,5 +1,6 @@
 set_attack_value(AT_DTILT, AG_SPRITE, sprite_get("AT_DTILT"));
 set_attack_value(AT_DTILT, AG_NUM_WINDOWS, 3);
+set_attack_value(AT_DTILT, AG_OFF_LEDGE, 1);
 set_attack_value(AT_DTILT, AG_HURTBOX_SPRITE, sprite_get("AT_DTILT_hurt"));
 
 set_window_value(AT_DTILT, 1, AG_WINDOW_TYPE, 1);
@@ -27,12 +28,12 @@ set_num_hitboxes(AT_DTILT,1);
 set_hitbox_value(AT_DTILT, 1, HG_PARENT_HITBOX, 1);
 set_hitbox_value(AT_DTILT, 1, HG_HITBOX_TYPE, 1);
 set_hitbox_value(AT_DTILT, 1, HG_WINDOW, 2);
-set_hitbox_value(AT_DTILT, 1, HG_LIFETIME, 3);
-set_hitbox_value(AT_DTILT, 1, HG_HITBOX_X, 38);
+set_hitbox_value(AT_DTILT, 1, HG_LIFETIME, 15);
+set_hitbox_value(AT_DTILT, 1, HG_HITBOX_X, 20);
 set_hitbox_value(AT_DTILT, 1, HG_HITBOX_Y, -10);
-set_hitbox_value(AT_DTILT, 1, HG_WIDTH, 122);
-set_hitbox_value(AT_DTILT, 1, HG_HEIGHT, 20);
-set_hitbox_value(AT_DTILT, 1, HG_SHAPE, 1);
+set_hitbox_value(AT_DTILT, 1, HG_WIDTH, 50);
+set_hitbox_value(AT_DTILT, 1, HG_HEIGHT, 30);
+set_hitbox_value(AT_DTILT, 1, HG_SHAPE, 0);
 set_hitbox_value(AT_DTILT, 1, HG_PRIORITY, 1);
 set_hitbox_value(AT_DTILT, 1, HG_DAMAGE, 7);
 set_hitbox_value(AT_DTILT, 1, HG_ANGLE, 70);
