@@ -1,20 +1,20 @@
 sprite_change_offset("idle", 32, 54);
 sprite_change_offset("hurtbox", 32, 54);
 sprite_change_offset("crouchhurt", 32, 46);
-sprite_change_offset("hurt", 32, 50);
-sprite_change_offset("bighurt", 64, 64);
+sprite_change_offset("hurt", 32, 56);
+sprite_change_offset("bighurt", 32, 60);
 sprite_change_offset("bouncehurt", 32, 48);
-sprite_change_offset("uphurt", 32, 50);
+sprite_change_offset("uphurt", 32, 56);
 sprite_change_offset("downhurt", 32, 64);
-sprite_change_offset("spinhurt", 32, 50);
-sprite_change_offset("hurtground", 32, 50);
+sprite_change_offset("spinhurt", 32, 56);
+sprite_change_offset("hurtground", 32, 54);
 sprite_change_offset("crouch", 32, 54);
 sprite_change_offset("walk", 32, 56);
 sprite_change_offset("walkturn", 32, 52);
 sprite_change_offset("dash", 32, 62);
 sprite_change_offset("dashstart", 32, 54);
 sprite_change_offset("dashstop", 32, 54);
-sprite_change_offset("dashturn", 32, 50);
+sprite_change_offset("dashturn", 32, 56);
 
 sprite_change_offset("jumpstart", 32, 56);
 sprite_change_offset("jump", 32, 50);
@@ -38,7 +38,7 @@ sprite_change_offset("AT_FTILT", 64, 78);
 
 sprite_change_offset("AT_DTILT", 32, 54);
 sprite_change_offset("AT_UTILT", 40, 88);
-sprite_change_offset("AT_NAIR", 32, 50);
+sprite_change_offset("AT_NAIR", 64, 50);
 sprite_change_offset("AT_FAIR", 32, 50);
 sprite_change_offset("AT_BAIR", 32, 50);
 sprite_change_offset("AT_UAIR", 32, 56);
