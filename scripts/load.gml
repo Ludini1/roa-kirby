@@ -46,7 +46,7 @@ sprite_change_offset("AT_DAIR", 32, 50);
 sprite_change_offset("AT_FSTRONG", 50, 82);
 sprite_change_offset("AT_USTRONG", 48, 90);
 sprite_change_offset("AT_DSTRONG", 92, 90);
-sprite_change_offset("AT_NSPECIAL", 60, 84);
+sprite_change_offset("AT_NSPECIAL_INHALE", 32, 70);
 sprite_change_offset("AT_FSPECIAL_AIR", 44, 92);
 sprite_change_offset("AT_USPECIAL", 38, 94);
 sprite_change_offset("AT_DSPECIAL_CHARGE", 80, 94);
