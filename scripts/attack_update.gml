@@ -27,7 +27,7 @@ if (attack == AT_DSPECIAL){
 	if (window == 4) and (window_timer > 10) { //IASA on fullcharge usage
 	iasa_script();
 	}
-	if (shield_pressed){ //SHIELD CANCEL
+	if (shield_pressed and (window < 4)){ //SHIELD CANCEL
 		window = 5;
 		window_timer = 9;
 		}
@@ -66,3 +66,12 @@ if ((attack == AT_NAIR) and !free and (window == 2)){
 	hsp += spr_dir;
 	off_edge = 1;
 }
+
+//Stop velocity for parried automoves
+if (automove_parried) {
+	window = 3;
+	hsp = 0;
+	automove_parried = 0;
+}
+
+

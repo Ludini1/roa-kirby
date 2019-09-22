@@ -1,6 +1,5 @@
 set_attack_value(AT_DTILT, AG_SPRITE, sprite_get("AT_DTILT"));
 set_attack_value(AT_DTILT, AG_NUM_WINDOWS, 3);
-set_attack_value(AT_DTILT, AG_OFF_LEDGE, 1);
 set_attack_value(AT_DTILT, AG_HURTBOX_SPRITE, sprite_get("AT_DTILT_hurt"));
 
 set_window_value(AT_DTILT, 1, AG_WINDOW_TYPE, 1);
