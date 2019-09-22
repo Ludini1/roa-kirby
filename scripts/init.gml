@@ -101,3 +101,4 @@ bubble_y = 8;
 //Kirby variables
 jetcharge = 0;
 automove_parried = 0;
+prev_djumps = 0; // used for double jump turnarounds in update.gml
