@@ -67,4 +67,11 @@ if ((attack == AT_NAIR) and !free and (window == 2)){
 	off_edge = 1;
 }
 
+//Stop velocity for parried automoves
+if (automove_parried) {
+	window = 3;
+	hsp = 0;
+	automove_parried = 0;
+}
+
 

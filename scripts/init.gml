@@ -100,3 +100,4 @@ bubble_y = 8;
 
 //Kirby variables
 jetcharge = 0;
+automove_parried = 0;
