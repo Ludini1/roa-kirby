@@ -2,16 +2,6 @@
 if (attack == AT_NSPECIAL || attack == AT_FSPECIAL || attack == AT_DSPECIAL || attack == AT_USPECIAL){
     trigger_b_reverse();
 }
-
-if (attack == AT_NSPECIAL){
-    if (window == 3){
-        if (special_pressed){
-            window = 1;
-            window_timer = 0;
-        }
-    }
-}
-
 if (attack == AT_FSPECIAL){
     if (window == 2){
         if (special_pressed){
@@ -25,6 +15,7 @@ if (attack == AT_FSPECIAL){
 
 //DSPECIAL charging
 if (attack == AT_DSPECIAL){
+	can_fast_fall = false;
 	if (window == 5) { //IASA on fullcharge usage + Blast
 		if (special_pressed) and (window_timer > 10){
 			window = 6;
