@@ -39,32 +39,34 @@ if (attack == AT_DSPECIAL){
 		window_timer = 0;
 	}
     if (window == 2){ //CHARGING
-		if (window_timer == 15){ //Loop
-	        window_timer = 0;
-		}
-		if (100 > jetcharge) { //Adding charge
-		jetcharge += 1;
-		}
-		if (special_pressed) { //Using move
-			if (jetcharge == 100) { //FULLCHARGE
-					jetcharge = 0;
-					window = 5;
-					window_timer = 0;
+		if (special_down) {
+			if (window_timer == 15){ //Loop
+				window_timer = 0;
 			}
-			else {
-				if (jetcharge > 50){ //MEDCHARGE
-					jetcharge = 0;
-					window = 4;
-					window_timer = 0;
-				}
-				else { //NOCHARGE
-					jetcharge = 0;
-					window = 3;
-					window_timer = 0;
-				}
+			if (100 > jetcharge) { //Adding charge
+			jetcharge += 2;
 			}
 		}
-	}
+		else { //Using move if special released
+				if (jetcharge == 100) { //FULLCHARGE
+						jetcharge = 0;
+						window = 5;
+						window_timer = 0;
+				}
+				else {
+					if (jetcharge > 50){ //MEDCHARGE
+						jetcharge = 0;
+						window = 4;
+						window_timer = 0;
+					}
+					else { //NOCHARGE
+						jetcharge = 0;
+						window = 3;
+						window_timer = 0;
+					}
+				}
+			}
+		}
 	if ((window == 3) or (window == 4) or (window == 5) ) and (window_timer == 20) { //Endlag
 		window = 7;
 		window_timer = 0;
@@ -79,6 +81,14 @@ if (attack == AT_FSPECIAL) and (window == 3) and (window_timer == 7) { //Cutter 
 }
 if (move_cooldown[AT_FSPECIAL] > 0) {
     move_cooldown[AT_FSPECIAL] -= 1;
+}
+
+//DSPECIAL cooldown
+if (attack == AT_DSPECIAL) and (window > 2) and (7 > window) { //Jet cooldown
+    move_cooldown[AT_DSPECIAL] = 60;
+}
+if (move_cooldown[AT_DSPECIAL] > 0) {
+    move_cooldown[AT_DSPECIAL] -= 1;
 }
 
 //NAIR rolling
