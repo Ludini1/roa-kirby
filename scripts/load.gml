@@ -39,8 +39,11 @@ sprite_change_offset("AT_FTILT", 64, 78);
 sprite_change_offset("AT_DTILT", 32, 54);
 sprite_change_offset("AT_UTILT", 40, 88);
 sprite_change_offset("AT_NAIR", 64, 50);
+
+sprite_change_offset("AT_NAIR_AIR", 64, 50);
+sprite_change_offset("AT_NAIR_GROUND", 64, 58);
 sprite_change_offset("AT_FAIR", 32, 50);
-sprite_change_offset("AT_BAIR", 32, 50);
+sprite_change_offset("AT_BAIR", 30, 50);
 sprite_change_offset("AT_UAIR", 32, 56);
 sprite_change_offset("AT_DAIR", 32, 50);
 sprite_change_offset("AT_FSTRONG", 50, 82);
