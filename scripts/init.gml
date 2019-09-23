@@ -34,7 +34,7 @@ jump_change = 3; //maximum hsp when double jumping. If already going faster, it 
 air_accel = .25;
 prat_fall_accel = .85; //multiplier of air_accel while in pratfall
 air_friction = .04;
-max_djumps = 4;
+max_djumps = 3;
 double_jump_time = 32; //the number of frames to play the djump animation. Can't be less than 31.
 walljump_hsp = 6;
 walljump_vsp = 8;
@@ -49,7 +49,7 @@ land_time = 4; //normal landing frames
 prat_land_time = 3;
 wave_land_time = 8;
 wave_land_adj = 1.35; //the multiplier to your initial hsp when wavelanding. Usually greater than 1
-wave_friction = .04; //grounded deceleration when wavelanding
+wave_friction = .05; //grounded deceleration when wavelanding
 
 //crouch animation frames
 crouch_startup_frames = 1;

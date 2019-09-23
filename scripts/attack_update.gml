@@ -70,17 +70,12 @@ if (attack == AT_DSPECIAL){
 if (attack == AT_FSPECIAL) and (window == 3) and (window_timer == 7) { //Cutter cooldown
     move_cooldown[AT_FSPECIAL] = 60;
 }
-if (move_cooldown[AT_FSPECIAL] > 0) {
-    move_cooldown[AT_FSPECIAL] -= 1;
-}
 
 //DSPECIAL cooldown
 if (attack == AT_DSPECIAL) and (window > 2) and (7 > window) { //Jet cooldown
     move_cooldown[AT_DSPECIAL] = 60;
 }
-if (move_cooldown[AT_DSPECIAL] > 0) {
-    move_cooldown[AT_DSPECIAL] -= 1;
-}
+
 
 //NAIR rolling
 if ((attack == AT_NAIR) and !free and (window == 2)){
@@ -95,4 +90,32 @@ if (automove_parried and !free) {
 	automove_parried = 0;
 }
 
+if (attack == AT_TAUNT) { //Ending taunts
+	if (window == 2 and window_timer == 48) {
+		window = 5
+		window_timer = 0
+	}
+	if (window == 3 and window_timer == 84) {
+		window = 5
+		window_timer = 0
+	}
+	if (window == 4 and window_timer == 24) {
+		window = 5
+		window_timer = 0
+	}
+}
 
+//Taunt controller
+if (attack = AT_TAUNT) and (window == 1) and (window_timer = 10){
+	if (special_pressed) {
+		if (shield_pressed) {
+			window = 3
+			}
+		else {
+			window = 4
+			}
+		}
+	else {
+		window = 2
+		}
+}

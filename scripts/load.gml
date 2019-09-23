@@ -57,6 +57,7 @@ sprite_change_offset("AT_DSPECIAL_NOCHARGE", 88, 88);
 sprite_change_offset("AT_DSPECIAL_MEDCHARGE", 88, 88);
 sprite_change_offset("AT_DSPECIAL_FULLCHARGE", 88, 88);
 sprite_change_offset("AT_TAUNT_GROUND", 32, 56);
+sprite_change_offset("AT_TAUNT_FULL", 32, 56);
 
 sprite_change_offset("plat", 64, 94);
 

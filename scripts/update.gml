@@ -13,3 +13,24 @@ if (jump_pressed and (state == PS_DOUBLE_JUMP) and (prev_djumps != djumps)) {
 if (!free) {
     prev_djumps = 0;
 }
+
+//COOLDOWNS
+if (move_cooldown[AT_FSPECIAL] > 0) {
+    move_cooldown[AT_FSPECIAL] -= 1;
+}
+if (move_cooldown[AT_DSPECIAL] > 0) {
+    move_cooldown[AT_DSPECIAL] -= 1;
+}
+
+if (jetcharge == 100) { //Fully charged
+	outline_color = [ 100, 100, 255 ];
+	}
+else {
+	outline_color = [ 0, 0, 0 ];
+}
+init_shader();
+
+if (free) and (taunt_pressed) {
+    attack = AT_TAUNT
+    set_attack(AT_TAUNT)
+}
