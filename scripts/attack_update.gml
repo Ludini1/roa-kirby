@@ -13,7 +13,7 @@ if (attack == AT_NSPECIAL){
         }
 		else {
 			window_timer = 0;
-			window = 5;
+			window = 7;
 		}
 	}
     can_fast_fall = false;
@@ -111,22 +111,29 @@ if (automove_parried and !free) {
 
 if (attack == AT_TAUNT) { //Ending taunts
 	if (window == 2 and window_timer == 48) {
-		window = 5
+		window = 6
 		window_timer = 0
 	}
 	if (window == 3 and window_timer == 84) {
-		window = 5
+		window = 6
 		window_timer = 0
 	}
 	if (window == 4 and window_timer == 24) {
-		window = 5
+		window = 6
+		window_timer = 0
+	}
+	if (window == 5 and window_timer == 24) {
+		window = 6
 		window_timer = 0
 	}
 }
 
 //Taunt controller
 if (attack = AT_TAUNT) {
-	if (window == 1) and (window_timer = 10){
+	if free and (window == 1){
+		window = 5
+	}	
+	if (window == 1) and (window_timer = 10) and (!free){
 		if (special_pressed) {
 			if (shield_pressed) {
 				window = 3
@@ -139,27 +146,53 @@ if (attack = AT_TAUNT) {
 			window = 2
 			}
 		}
-	if (window == 5) and (taunt_down){
+	if (window == 6) and (taunt_down){
 		current_ability = 0;
 		}
 }
 
 //Nspecial grab
-//if(grabbedid != noone){
-//	grabbedid.state = PS_TUMBLE;
-//}
 
-if (attack = AT_NSPECIAL) {
-	if (window == 3) and (grabbedid != noone) {
-			grabbedid.x = x;
-			grabbedid.y = y-8;
-			grabbedid.visible = false
-			grabbedid.hurtboxID.sprite_index = empty_sprite
-	}
-	if (window == 4) and (grabbedid != noone) {
-			grabbedid.grabbed = 0
-			grabbedid.visible = true
-			grabbedid.hurtboxID.sprite_index = grabbedid.hurtbox_spr
-			grabbedid = noone
-	}
+if (attack == AT_NSPECIAL) {
+		if (down_down) and (window == 3) and (window_timer == 20) {
+					window = 5
+					window_timer = 0
+				}
+		if (window == 3) {
+				grabbedid.x = x;
+				grabbedid.y = y-8;
+				grabbedid.state = PS_HITSTUN
+				grabbedid.visible = false
+				grabbedid.hurtboxID.sprite_index = empty_sprite
+		}
+		if (window == 4){
+				if (window_timer == 0) {
+					grabbedid.grabbed = 0
+					grabbedid.visible = true
+					grabbedid.hurtboxID.sprite_index = grabbedid.hurtbox_spr
+					grabbedid = noone
+				}
+				if (window_timer == 11) {
+					window = 7
+					window_timer = 0
+				}
+		}
+		if (window == 5) and (window_timer == 6){
+				grabbedid.grabbed = 0
+				grabbedid.visible = true
+				grabbedid.hurtboxID.sprite_index = grabbedid.hurtbox_spr
+				grabbedid = noone
+		
+		}
+		if (window == 6) and (window_timer == 12){
+			window = 7
+			window_timer = 8
+		}
+}
+
+if (attack != AT_NSPECIAL) and grabbedid != noone {
+	grabbedid.grabbed = 0
+	grabbedid.visible = true
+	grabbedid.hurtboxID.sprite_index = grabbedid.hurtbox_spr
+	grabbedid = noone
 }
