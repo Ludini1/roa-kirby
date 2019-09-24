@@ -9,13 +9,13 @@ set_attack_value(AT_DSPECIAL, AG_HURTBOX_SPRITE, sprite_get("AT_DSPECIAL_CHARGE_
 set_window_value(AT_DSPECIAL, 1, AG_WINDOW_TYPE, 1);
 set_window_value(AT_DSPECIAL, 1, AG_WINDOW_LENGTH, 8);
 set_window_value(AT_DSPECIAL, 1, AG_WINDOW_ANIM_FRAMES, 3);
-set_window_value(AT_DSPECIAL, 1, AG_WINDOW_HAS_SFX, 1);
-set_window_value(AT_DSPECIAL, 1, AG_WINDOW_SFX, asset_get("sfx_zetter_shine"));
 
 set_window_value(AT_DSPECIAL, 2, AG_WINDOW_TYPE, 1); //CHARGE
 set_window_value(AT_DSPECIAL, 2, AG_WINDOW_LENGTH, 15);
 set_window_value(AT_DSPECIAL, 2, AG_WINDOW_ANIM_FRAMES, 5);
 set_window_value(AT_DSPECIAL, 2, AG_WINDOW_ANIM_FRAME_START, 3);
+set_window_value(AT_DSPECIAL, 1, AG_WINDOW_HAS_SFX, 1);
+set_window_value(AT_DSPECIAL, 1, AG_WINDOW_SFX, sound_get("jet_chargeup"));
 
 set_window_value(AT_DSPECIAL, 3, AG_WINDOW_TYPE, 1); //NOCHARGE
 set_window_value(AT_DSPECIAL, 3, AG_WINDOW_LENGTH, 20);

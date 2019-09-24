@@ -91,7 +91,7 @@ land_sound = asset_get("sfx_land_med");
 landing_lag_sound = asset_get("sfx_land");
 waveland_sound = asset_get("sfx_waveland_zet");
 jump_sound = sound_get("jump");
-djump_sound = asset_get("sfx_jumpair");
+djump_sound = sound_get("djump");
 air_dodge_sound = asset_get("sfx_quick_dodge");
 
 //visual offsets for when you're in Ranno's bubble

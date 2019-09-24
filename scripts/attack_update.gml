@@ -44,6 +44,13 @@ if (attack == AT_DSPECIAL){
 			}
 			if (100 > jetcharge) { //Adding charge
 			jetcharge += 2;
+				if (jetcharge == 100){
+					sound_play(sound_get("jet_full_charge"))
+					}
+				
+				if (jetcharge == 50){
+					sound_play(sound_get("jet_med_charge"))
+					}				
 			}
 		}
 		else { //Using move if special released

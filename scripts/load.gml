@@ -32,8 +32,8 @@ sprite_change_offset("waveland", 32, 54);
 sprite_change_offset("tech", 32, 62);
 
 sprite_change_offset("AT_JAB", 48, 64);
-sprite_change_offset("AT_DATTACK", 94, 82);
-sprite_change_offset("AT_DATTACK_AIR", 94, 82);
+sprite_change_offset("AT_DATTACK", 100, 82);
+sprite_change_offset("AT_DATTACK_AIR", 100, 82);
 sprite_change_offset("AT_FTILT", 64, 78);
 
 sprite_change_offset("AT_DTILT", 32, 54);
