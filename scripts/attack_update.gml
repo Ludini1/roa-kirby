@@ -3,6 +3,10 @@ if (attack == AT_NSPECIAL || attack == AT_FSPECIAL || attack == AT_USPECIAL){
     trigger_b_reverse();
 }
 
+if (attack == AT_USTRONG) {
+	can_move = false
+	}
+	
 if (attack == AT_NSPECIAL){
     if (window == 2){
         if (special_down){
