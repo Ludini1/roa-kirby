@@ -9,7 +9,7 @@ set_window_value(AT_FSPECIAL, 1, AG_WINDOW_TYPE, 1);
 set_window_value(AT_FSPECIAL, 1, AG_WINDOW_LENGTH, 10);
 set_window_value(AT_FSPECIAL, 1, AG_WINDOW_ANIM_FRAMES, 3);
 set_window_value(AT_FSPECIAL, 1, AG_WINDOW_HAS_SFX, 1);
-set_window_value(AT_FSPECIAL, 1, AG_WINDOW_SFX, asset_get("sfx_may_arc_cointoss"));
+set_window_value(AT_FSPECIAL, 1, AG_WINDOW_SFX, sound_get("fspecial"));
 set_window_value(AT_FSPECIAL, 1, AG_WINDOW_SFX_FRAME, 8);
 
 set_window_value(AT_FSPECIAL, 2, AG_WINDOW_TYPE, 1);

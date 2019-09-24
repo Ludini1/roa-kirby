@@ -90,7 +90,7 @@ roll_backward_max = 9;
 land_sound = asset_get("sfx_land_med");
 landing_lag_sound = asset_get("sfx_land");
 waveland_sound = asset_get("sfx_waveland_zet");
-jump_sound = asset_get("sfx_jumpground");
+jump_sound = sound_get("jump");
 djump_sound = asset_get("sfx_jumpair");
 air_dodge_sound = asset_get("sfx_quick_dodge");
 
