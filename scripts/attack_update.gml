@@ -1,17 +1,25 @@
 //B - Reversals
-if (attack == AT_NSPECIAL || attack == AT_FSPECIAL || attack == AT_DSPECIAL || attack == AT_USPECIAL){
+if (attack == AT_NSPECIAL || attack == AT_FSPECIAL || attack == AT_USPECIAL){
     trigger_b_reverse();
 }
-if (attack == AT_FSPECIAL){
+
+if (attack == AT_NSPECIAL){
     if (window == 2){
-        if (special_pressed){
-            window = 3;
-            window_timer = 0;
-            destroy_hitboxes();
+        if (special_down){
+			if (window_timer == 22) {
+			    window = 2;
+				window_timer = 0;
+			}
         }
-    }
+		else {
+			window_timer = 0;
+			window = 5;
+		}
+	}
     can_fast_fall = false;
 }
+
+
 
 //DSPECIAL charging
 if (attack == AT_DSPECIAL){
@@ -76,6 +84,10 @@ if (attack == AT_DSPECIAL) and (window > 2) and (7 > window) { //Jet cooldown
     move_cooldown[AT_DSPECIAL] = 60;
 }
 
+//Fastfall Fixes
+if (attack == AT_DATTACK) or (attack == AT_USPECIAL) {
+	can_fast_fall = false;
+}
 
 //NAIR rolling
 if ((attack == AT_NAIR) and !free and (window == 2)){
@@ -106,16 +118,41 @@ if (attack == AT_TAUNT) { //Ending taunts
 }
 
 //Taunt controller
-if (attack = AT_TAUNT) and (window == 1) and (window_timer = 10){
-	if (special_pressed) {
-		if (shield_pressed) {
-			window = 3
+if (attack = AT_TAUNT) {
+	if (window == 1) and (window_timer = 10){
+		if (special_pressed) {
+			if (shield_pressed) {
+				window = 3
+				}
+			else {
+				window = 4
+				}
 			}
 		else {
-			window = 4
+			window = 2
 			}
 		}
-	else {
-		window = 2
+	if (window == 5) and (taunt_down){
+		current_ability = 0;
 		}
+}
+
+//Nspecial grab
+//if(grabbedid != noone){
+//	grabbedid.state = PS_TUMBLE;
+//}
+
+if (attack = AT_NSPECIAL) {
+	if (window == 3) and (grabbedid != noone) {
+			grabbedid.x = x;
+			grabbedid.y = y-8;
+			grabbedid.visible = false
+			grabbedid.hurtboxID.sprite_index = empty_sprite
+	}
+	if (window == 4) and (grabbedid != noone) {
+			grabbedid.grabbed = 0
+			grabbedid.visible = true
+			grabbedid.hurtboxID.sprite_index = grabbedid.hurtbox_spr
+			grabbedid = noone
+	}
 }

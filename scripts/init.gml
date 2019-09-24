@@ -3,7 +3,7 @@ crouchbox_spr = sprite_get("crouchhurt");
 air_hurtbox_spr = -1;
 hitstun_hurtbox_spr = -1;
 
-char_height = 32;
+char_height = 48;
 idle_anim_speed = .05;
 crouch_anim_speed = .1;
 walk_anim_speed = .125;
@@ -43,10 +43,10 @@ max_fall = 9; //maximum fall speed without fastfalling
 fast_fall = 13; //fast fall speed
 gravity_speed = .5;
 hitstun_grav = .45;
-knockback_adj = 1.15; //the multiplier to KB dealt to you. 1 = default, >1 = lighter, <1 = heavier
+knockback_adj = 1.15;
 
 land_time = 4; //normal landing frames
-prat_land_time = 3;
+prat_land_time = 15;
 wave_land_time = 8;
 wave_land_adj = 1.35; //the multiplier to your initial hsp when wavelanding. Usually greater than 1
 wave_friction = .05; //grounded deceleration when wavelanding
@@ -102,3 +102,5 @@ bubble_y = 8;
 jetcharge = 0;
 automove_parried = 0;
 prev_djumps = 0; // used for double jump turnarounds in update.gml
+current_ability = 0;
+grabbedid = noone;
