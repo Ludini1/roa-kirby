@@ -185,6 +185,10 @@ if (attack == AT_NSPECIAL) {
 					window_timer = 0
 				}
 		}
+		if (window == 5) and (6 > (window_timer)) {
+			grabbedid.x = x;
+			grabbedid.y = y-12;
+		}
 		if (window == 5) and (window_timer == 6){
 				grabbedid.grabbed = 0
 				grabbedid.visible = true
