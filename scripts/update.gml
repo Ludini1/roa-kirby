@@ -29,8 +29,3 @@ else {
 	outline_color = [ 0, 0, 0 ];
 }
 init_shader();
-
-if (free) and (taunt_pressed) {
-    attack = AT_TAUNT
-    set_attack(AT_TAUNT)
-}
