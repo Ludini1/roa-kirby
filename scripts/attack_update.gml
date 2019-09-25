@@ -168,8 +168,7 @@ if (attack == AT_NSPECIAL) {
 						sound_play(sound_get("nspecial_swallow"))
 				}
 				grabbedid.x = x;
-				grabbedid.y = y-8;
-				grabbedid.state = PS_HITSTUN
+				grabbedid.y = y-12;
 				grabbedid.visible = false
 				grabbedid.hurtboxID.sprite_index = empty_sprite
 		}

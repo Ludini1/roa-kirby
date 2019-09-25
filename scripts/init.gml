@@ -46,7 +46,7 @@ hitstun_grav = .45;
 knockback_adj = 1.15;
 
 land_time = 4; //normal landing frames
-prat_land_time = 15;
+prat_land_time = 5;
 wave_land_time = 8;
 wave_land_adj = 1.35; //the multiplier to your initial hsp when wavelanding. Usually greater than 1
 wave_friction = .05; //grounded deceleration when wavelanding

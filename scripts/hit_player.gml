@@ -9,3 +9,9 @@ if my_hitboxID.attack == AT_NSPECIAL { //Grab and stuff
 		current_ability = hit_player_obj.abilitygiven;
 	}
 }
+
+if (my_hitboxID.attack == AT_FAIR) and ((my_hitboxID.hbox_num == 1) or (my_hitboxID.hbox_num == 2)) { //Make sure it links
+	if (vsp > -5) {
+		vsp -= 2
+	}
+}

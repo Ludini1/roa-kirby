@@ -53,7 +53,7 @@ set_window_value(AT_NSPECIAL, 7, AG_WINDOW_ANIM_FRAME_START, 1);
 
 set_num_hitboxes(AT_NSPECIAL, 3);
 
-set_hitbox_value(AT_NSPECIAL, 1, HG_PARENT_HITBOX, 1);
+set_hitbox_value(AT_NSPECIAL, 1, HG_PARENT_HITBOX, 1); //Suck
 set_hitbox_value(AT_NSPECIAL, 1, HG_HITBOX_TYPE, 1);
 set_hitbox_value(AT_NSPECIAL, 1, HG_WINDOW, 2);
 set_hitbox_value(AT_NSPECIAL, 1, HG_LIFETIME, 6);
@@ -67,14 +67,14 @@ set_hitbox_value(AT_NSPECIAL, 1, HG_ANGLE, 135);
 set_hitbox_value(AT_NSPECIAL, 1, HG_BASE_KNOCKBACK, 4);
 set_hitbox_value(AT_NSPECIAL, 1, HG_KNOCKBACK_SCALING, 0);
 set_hitbox_value(AT_NSPECIAL, 1, HG_BASE_HITPAUSE, 1);
-set_hitbox_value(AT_NSPECIAL, 1, HG_HITSTUN_MULTIPLIER, 1.5);
+set_hitbox_value(AT_NSPECIAL, 1, HG_HITSTUN_MULTIPLIER, 3);
 set_hitbox_value(AT_NSPECIAL, 1, HG_VISUAL_EFFECT_X_OFFSET, -32);
 set_hitbox_value(AT_NSPECIAL, 1, HG_VISUAL_EFFECT_Y_OFFSET, -10);
 set_hitbox_value(AT_NSPECIAL, 1, HG_TECHABLE, 1);
 set_hitbox_value(AT_NSPECIAL, 1, HG_ANGLE_FLIPPER, 0);
 
 
-set_hitbox_value(AT_NSPECIAL, 2, HG_PARENT_HITBOX, 2);
+set_hitbox_value(AT_NSPECIAL, 2, HG_PARENT_HITBOX, 2); //Spit
 set_hitbox_value(AT_NSPECIAL, 2, HG_HITBOX_TYPE, 1);
 set_hitbox_value(AT_NSPECIAL, 2, HG_WINDOW, 4);
 set_hitbox_value(AT_NSPECIAL, 2, HG_LIFETIME, 5);
@@ -98,13 +98,13 @@ set_hitbox_value(AT_NSPECIAL, 2, HG_VISUAL_EFFECT_X_OFFSET, 10);
 set_hitbox_value(AT_NSPECIAL, 2, HG_HIT_SFX, asset_get("sfx_blow_medium1"));
 set_hitbox_value(AT_NSPECIAL, 2, HG_HITBOX_GROUP, 1);
 
-set_hitbox_value(AT_NSPECIAL, 3, HG_PARENT_HITBOX, 3);
+set_hitbox_value(AT_NSPECIAL, 3, HG_PARENT_HITBOX, 3); //Swallow
 set_hitbox_value(AT_NSPECIAL, 3, HG_HITBOX_TYPE, 1);
 set_hitbox_value(AT_NSPECIAL, 3, HG_WINDOW, 5);
 set_hitbox_value(AT_NSPECIAL, 3, HG_LIFETIME, 5);
-set_hitbox_value(AT_NSPECIAL, 3, HG_HITBOX_X, 16);
+set_hitbox_value(AT_NSPECIAL, 3, HG_HITBOX_X, 0);
 set_hitbox_value(AT_NSPECIAL, 3, HG_HITBOX_Y, -32);
-set_hitbox_value(AT_NSPECIAL, 3, HG_WIDTH, 70);
+set_hitbox_value(AT_NSPECIAL, 3, HG_WIDTH, 80);
 set_hitbox_value(AT_NSPECIAL, 3, HG_HEIGHT, 100);
 set_hitbox_value(AT_NSPECIAL, 3, HG_SHAPE, 0);
 set_hitbox_value(AT_NSPECIAL, 3, HG_PRIORITY, 2);
