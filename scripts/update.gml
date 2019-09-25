@@ -22,7 +22,7 @@ if (move_cooldown[AT_DSPECIAL] > 0) {
     move_cooldown[AT_DSPECIAL] -= 1;
 }
 
-if (jetcharge == 100) { //Fully charged
+if (jetcharge == 100) and ((get_gameplay_time() mod 30) > 20) { //Fully charged
 	outline_color = [ 100, 100, 255 ];
 	}
 else {
