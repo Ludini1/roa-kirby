@@ -46,7 +46,7 @@ hitstun_grav = .45;
 knockback_adj = 1.15;
 
 land_time = 4; //normal landing frames
-prat_land_time = 5;
+prat_land_time = 15;
 wave_land_time = 8;
 wave_land_adj = 1.35; //the multiplier to your initial hsp when wavelanding. Usually greater than 1
 wave_friction = .05; //grounded deceleration when wavelanding
@@ -87,6 +87,7 @@ roll_back_recovery_frames = 2;
 roll_forward_max = 9; //roll speed
 roll_backward_max = 9;
 
+set_victory_theme(sound_get("kirby_victory"));
 land_sound = asset_get("sfx_land_light");
 landing_lag_sound = asset_get("sfx_land");
 waveland_sound = asset_get("sfx_waveland_zet");
