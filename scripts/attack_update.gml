@@ -155,6 +155,7 @@ if (attack = AT_TAUNT) {
 		}
 }
 
+
 //Nspecial grab
 
 if (attack == AT_NSPECIAL) {
@@ -163,6 +164,9 @@ if (attack == AT_NSPECIAL) {
 					window_timer = 0
 				}
 		if (window == 3) {
+				if (window_timer == 0) {
+						sound_play(sound_get("nspecial_swallow"))
+				}
 				grabbedid.x = x;
 				grabbedid.y = y-8;
 				grabbedid.state = PS_HITSTUN
@@ -175,6 +179,7 @@ if (attack == AT_NSPECIAL) {
 					grabbedid.visible = true
 					grabbedid.hurtboxID.sprite_index = grabbedid.hurtbox_spr
 					grabbedid = noone
+					sound_play(sound_get("nspecial_spit"))
 				}
 				if (window_timer == 11) {
 					window = 7
@@ -186,6 +191,7 @@ if (attack == AT_NSPECIAL) {
 				grabbedid.visible = true
 				grabbedid.hurtboxID.sprite_index = grabbedid.hurtbox_spr
 				grabbedid = noone
+				sound_play(sound_get("nspecial_down"))
 		
 		}
 		if (window == 6) and (window_timer == 12){

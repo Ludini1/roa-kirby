@@ -20,7 +20,7 @@ set_window_value(AT_USPECIAL, 2, AG_WINDOW_ANIM_FRAME_START, 2);
 set_window_value(AT_USPECIAL, 2, AG_WINDOW_VSPEED, -12);
 set_window_value(AT_USPECIAL, 2, AG_WINDOW_HSPEED, 3);
 set_window_value(AT_USPECIAL, 2, AG_WINDOW_HAS_SFX, 1);
-set_window_value(AT_USPECIAL, 2, AG_WINDOW_SFX, asset_get("sfx_swipe_heavy2"));
+set_window_value(AT_USPECIAL, 2, AG_WINDOW_SFX, sound_get("upb"));
 
 set_window_value(AT_USPECIAL, 3, AG_WINDOW_TYPE, 7);
 set_window_value(AT_USPECIAL, 3, AG_WINDOW_LENGTH, 6);

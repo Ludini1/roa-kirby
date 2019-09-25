@@ -87,7 +87,7 @@ roll_back_recovery_frames = 2;
 roll_forward_max = 9; //roll speed
 roll_backward_max = 9;
 
-land_sound = asset_get("sfx_land_med");
+land_sound = asset_get("sfx_land_light");
 landing_lag_sound = asset_get("sfx_land");
 waveland_sound = asset_get("sfx_waveland_zet");
 jump_sound = sound_get("jump");
