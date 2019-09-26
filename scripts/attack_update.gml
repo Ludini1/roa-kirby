@@ -203,35 +203,9 @@ if (attack == AT_NSPECIAL) {
 		}
 }
 
-//Copy Abilities
-if (attack == AT_NSPECIAL_ETA) {
-	can_move = 0;
-}
-
-if (attack == AT_NSPECIAL_ORI) {
-	if (window == 3) and (window_timer = 20) {
-		state = PS_PRATFALL
-		}
-	if (window == 4){
-			can_move = 0;
-			grabbedid.x = x+spr_dir*17;
-			grabbedid.y = y+12;
-			grabbedid.state = PS_WRAPPED
-			grabbedid.invincible = true
-			bash_angle = joy_dir
-		}
-	if (window == 5) {
-		grabbedid.invincible = false
-		grabbedid = noone
-		if spr_dir {
-			set_hitbox_value(AT_NSPECIAL_ORI,2,HG_ANGLE,bash_angle+180)
-		}
-		else {
-			set_hitbox_value(AT_NSPECIAL_ORI,2,HG_ANGLE,360-bash_angle)
-		}
-		
-		hsp = lengthdir_x(10,bash_angle)
-		vsp = lengthdir_y(10,bash_angle)
-		
-		}
+if (attack != AT_NSPECIAL) and grabbedid != noone {
+	grabbedid.grabbed = 0
+	grabbedid.visible = true
+	grabbedid.hurtboxID.sprite_index = grabbedid.hurtbox_spr
+	grabbedid = noone
 }

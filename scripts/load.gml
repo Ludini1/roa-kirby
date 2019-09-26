@@ -59,10 +59,6 @@ sprite_change_offset("AT_DSPECIAL_FULLCHARGE", 88, 88);
 sprite_change_offset("AT_TAUNT_GROUND", 32, 56);
 sprite_change_offset("AT_TAUNT_FULL", 32, 56);
 
-sprite_change_offset("AT_NSPECIAL_ETA_GROUND", 62, 114);
-sprite_change_offset("AT_NSPECIAL_ETA_AIR", 62, 114);
-sprite_change_offset("AT_NSPECIAL_ORI", 32, 58);
-
 sprite_change_offset("plat", 64, 94);
 
 sprite_change_offset("AT_FSPECIAL_PROJECTILE", 64, 94);

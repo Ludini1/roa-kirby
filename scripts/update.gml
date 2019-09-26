@@ -29,12 +29,3 @@ else {
 	outline_color = [ 0, 0, 0 ];
 }
 init_shader();
-
-//CLEAR GRABS
-if (attack != AT_NSPECIAL) and (attack != AT_NSPECIAL_ORI) and grabbedid != noone {
-	grabbedid.grabbed = 0
-	grabbedid.visible = true
-	grabbedid.state = PS_IDLE
-	grabbedid.hurtboxID.sprite_index = grabbedid.hurtbox_spr
-	grabbedid = noone
-}
