@@ -2,26 +2,40 @@
 if (attack == AT_NSPECIAL || attack == AT_FSPECIAL || attack == AT_USPECIAL){
     trigger_b_reverse();
 }
-
-if (attack == AT_USTRONG) {
-	can_move = false
-	}
 	
-if (attack == AT_NSPECIAL){
+if (attack == AT_NSPECIAL){ //Inhale Loop
     if (window == 2){
         if (special_down){
-			if (window_timer == 22) {
-			    window = 2;
-				window_timer = 0;
-			}
+            if (window_timer == 22) {
+                window = 2;
+                window_timer = 0;
+            }
+            with (asset_get("oPlayer")) {
+                var centerY = y - char_height / 2;
+                other.x_dist = (x - other.x) * other.spr_dir;
+                other.y_dist = centerY - other.y + 20;
+                other.math = 15 + char_height / 2 + exp(0.045*other.x_dist)/10;
+                if(other.x_dist > 20 &&  150 > other.x_dist) {
+                    if(other.math > abs(other.y_dist)) {
+                        other.moveX = other.spr_dir * (150 - other.x_dist) / 25;
+                        if(other.moveX >= 0) {
+                            x -= ceil(other.moveX);
+                        } else {
+                            x -= floor(other.moveX);
+                        }
+                    }
+                }
+            }
+            
         }
-		else {
-			window_timer = 0;
-			window = 7;
-		}
-	}
+        else {
+            window_timer = 0;
+            window = 7;
+        }
+    }
     can_fast_fall = false;
 }
+
 
 
 
@@ -29,11 +43,11 @@ if (attack == AT_NSPECIAL){
 if (attack == AT_DSPECIAL){
 	can_fast_fall = false;
 	if (window == 5) { //IASA on fullcharge usage + Blast
-		if (special_pressed) and (window_timer > 10){
+		if (special_pressed) and (window_timer > 6){
 			window = 6;
 			window_timer = 0;
 			}
-		if (window_timer > 20) {
+		if (window_timer > 10) {
 			iasa_script();
 		}
 	}
@@ -118,9 +132,14 @@ if (attack == AT_TAUNT) { //Ending taunts
 		window = 6
 		window_timer = 0
 	}
-	if (window == 3 and window_timer == 84) {
-		window = 6
-		window_timer = 0
+	if (window == 3) {
+		if (window_timer == 40) and (taunt_down) {
+			window_timer = 39
+		}
+		if (window_timer == 84){
+			window = 6
+			window_timer = 0
+		}
 	}
 	if (window == 4 and window_timer == 24) {
 		window = 6
@@ -170,7 +189,6 @@ if (attack == AT_NSPECIAL) {
 				grabbedid.x = x;
 				grabbedid.y = y-12;
 				grabbedid.visible = false
-				grabbedid.hurtboxID.sprite_index = empty_sprite
 		}
 		if (window == 4){
 				if (window_timer == 0) {
@@ -185,11 +203,13 @@ if (attack == AT_NSPECIAL) {
 					window_timer = 0
 				}
 		}
-		if (window == 5) and (6 > (window_timer)) {
+		if (window == 5) {
+		if (6 > (window_timer)) {
 			grabbedid.x = x;
 			grabbedid.y = y-12;
 		}
-		if (window == 5) and (window_timer == 6){
+		
+		if (window_timer == 6){
 				grabbedid.grabbed = 0
 				grabbedid.visible = true
 				grabbedid.hurtboxID.sprite_index = grabbedid.hurtbox_spr
@@ -197,15 +217,140 @@ if (attack == AT_NSPECIAL) {
 				sound_play(sound_get("nspecial_down"))
 		
 		}
+		}
 		if (window == 6) and (window_timer == 12){
 			window = 7
 			window_timer = 8
 		}
 }
 
-if (attack != AT_NSPECIAL) and grabbedid != noone {
-	grabbedid.grabbed = 0
-	grabbedid.visible = true
-	grabbedid.hurtboxID.sprite_index = grabbedid.hurtbox_spr
-	grabbedid = noone
+if (attack == AT_FAIR) { //Fair sounds
+	if (window == 2) {
+		if (window_timer == 9) {
+			sound_play( asset_get( "sfx_swipe_weak2" ) );
+			window_timer += 1
+			}
+		if (window_timer == 17) {
+			sound_play( asset_get( "sfx_swipe_medium1" ) );
+			window_timer += 1
+			}
+	}
 }
+
+//Copy Abilities
+if (attack == AT_NSPECIAL_ETA) {
+	can_move = 0;
+}
+
+if (attack == AT_NSPECIAL_ZET) {
+	if window == 1 and (window_timer > 3) {
+		if !(special_down) {
+			window = 2
+			window_timer = 0
+		}
+		else {
+			if window_timer = 35 {
+				window = 3
+				window_timer = 0
+			}
+		}
+	}
+	if ((window == 2) or (window = 3)) {
+		set_attack_value(AT_NSPECIAL_ZET,AG_SPRITE,sprite_get("AT_NSPECIAL_ZETT_RELEASE_GROUND"))
+		set_attack_value(AT_NSPECIAL_ZET,AG_AIR_SPRITE,sprite_get("AT_NSPECIAL_ZETT_RELEASE_AIR"))
+		if window_timer > 3 can_jump = true;
+		if window_timer == 15 {
+			window = 4
+			window_timer = 0
+		}
+	}
+}
+
+if (attack == AT_NSPECIAL_ORI) {
+	if (window == 3) and (window_timer = 20) {
+		state = PS_PRATFALL
+		}
+	if (window == 4){
+			can_move = 0;
+			grabbedid.x = x+spr_dir*17;
+			grabbedid.y = y+12;
+			grabbedid.state = PS_WRAPPED
+			grabbedid.invincible = true
+			bash_angle = joy_dir
+		}
+	if (window == 5) {
+		grabbedid.invincible = false
+		grabbedid = noone
+		if spr_dir {
+			set_hitbox_value(AT_NSPECIAL_ORI,2,HG_ANGLE,bash_angle+180)
+		}
+		else {
+			set_hitbox_value(AT_NSPECIAL_ORI,2,HG_ANGLE,360-bash_angle)
+		}
+		
+		hsp = lengthdir_x(10,bash_angle)
+		vsp = lengthdir_y(10,bash_angle)
+		
+		if window_timer == 19 {
+		}
+		
+		}
+}
+
+//RANNO NEEDLES
+if (attack == AT_NSPECIAL_FROG){
+	if window == 1 and window_timer == 0 and needlecharge == 0{
+		reset_window_value(AT_NSPECIAL_FROG,2,AG_WINDOW_ANIM_FRAME_START)
+		reset_hitbox_value(AT_NSPECIAL_FROG,2,HG_WINDOW)
+		reset_hitbox_value(AT_NSPECIAL_FROG,3,HG_WINDOW)
+		reset_hitbox_value(AT_NSPECIAL_FROG,4,HG_WINDOW)
+		}
+	if ((shield_pressed) and (3 > window )){ //SHIELD CANCEL
+		window = 5;
+		window_timer = 0;
+	}
+    if (window == 2){ //CHARGING
+
+		if (special_down) {
+			if (window_timer == 24){ //Loop
+				window_timer = 0;
+				if 3 > needlecharge {
+				needlecharge += 1
+				if needlecharge == 1 {
+				sound_play(asset_get("sfx_frog_fspecial_charge_gained_1"))
+				set_window_value(AT_NSPECIAL_FROG,2,AG_WINDOW_ANIM_FRAME_START,12)
+				}
+				if needlecharge == 2 {
+				sound_play(asset_get("sfx_frog_fspecial_charge_gained_2"))
+				set_window_value(AT_NSPECIAL_FROG,2,AG_WINDOW_ANIM_FRAME_START,20)
+				
+				}
+				if needlecharge == 3 {
+				sound_play(asset_get("sfx_frog_fspecial_charge_full"))
+				set_window_value(AT_NSPECIAL_FROG,2,AG_WINDOW_ANIM_FRAME_START,28)
+				
+				}
+				}
+			}
+			}
+		else { //Using move if special released
+			window = 3;
+			window_timer = 0;
+			if (needlecharge > 0) set_hitbox_value(AT_NSPECIAL_FROG,2,HG_WINDOW,3)
+			if (needlecharge > 1) set_hitbox_value(AT_NSPECIAL_FROG,3,HG_WINDOW,3)
+			if (needlecharge > 2) set_hitbox_value(AT_NSPECIAL_FROG,4,HG_WINDOW,3)
+			needlecharge = 0;
+			reset_window_value(AT_NSPECIAL_FROG,2,AG_WINDOW_ANIM_FRAME_START)
+			}
+		}
+		if window == 4 and window_timer == 12 {
+		window = 5;
+		window_timer = 8;
+		move_cooldown[AT_NSPECIAL_FROG] = 60;
+		reset_hitbox_value(AT_NSPECIAL_FROG,2,HG_WINDOW)
+		reset_hitbox_value(AT_NSPECIAL_FROG,3,HG_WINDOW)
+		reset_hitbox_value(AT_NSPECIAL_FROG,4,HG_WINDOW)
+		}
+
+}
+

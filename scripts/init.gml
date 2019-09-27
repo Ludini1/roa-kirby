@@ -105,3 +105,13 @@ automove_parried = 0;
 prev_djumps = 0; // used for double jump turnarounds in update.gml
 current_ability = 0;
 grabbedid = noone;
+bash_angle = -1;
+needlecharge = 0;
+airneedles = 0;
+
+//Attack Indexes
+AT_NSPECIAL_ETA = AT_USPECIAL_GROUND
+AT_NSPECIAL_ORI = AT_USPECIAL_2
+AT_NSPECIAL_ZET = AT_FSTRONG_2
+AT_NSPECIAL_FROG = AT_DSPECIAL_AIR
+AT_NSPECIAL_SYLV = AT_TAUNT_2

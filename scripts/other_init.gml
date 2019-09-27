@@ -36,7 +36,7 @@ switch(str){
 	case "tux":
         abilitygiven = 10;
     break;
-		case "sword":
+	case "sword":
         abilitygiven = 11;
     break;
 	case "mech":

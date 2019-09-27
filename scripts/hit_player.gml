@@ -4,9 +4,21 @@ if my_hitboxID.attack == AT_NSPECIAL { //Grab and stuff
 		window_timer = 0;
 		hit_player_obj.grabbed = 1;
 		grabbedid = hit_player_obj;
+		destroy_hitboxes();
 	}
 	if my_hitboxID.hbox_num == 3 {
 		current_ability = hit_player_obj.abilitygiven;
+	}
+}
+
+if my_hitboxID.attack == AT_NSPECIAL_ORI { //Bash
+	if my_hitboxID.hbox_num == 1 {
+		window = 4;
+		window_timer = 0;
+		grabbedid = hit_player_obj;
+		bash_angle = -1
+		reset_hitbox_value(AT_NSPECIAL_ORI,2,HG_ANGLE)
+		destroy_hitboxes();
 	}
 }
 

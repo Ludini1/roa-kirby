@@ -59,6 +59,20 @@ sprite_change_offset("AT_DSPECIAL_FULLCHARGE", 88, 88);
 sprite_change_offset("AT_TAUNT_GROUND", 32, 56);
 sprite_change_offset("AT_TAUNT_FULL", 32, 56);
 
+sprite_change_offset("AT_NSPECIAL_ETA_GROUND", 62, 114);
+sprite_change_offset("AT_NSPECIAL_ETA_AIR", 62, 114);
+sprite_change_offset("AT_NSPECIAL_ORI", 32, 58);
+sprite_change_offset("AT_NSPECIAL_ZETT_CHARGEUP_GROUND", 104, 122);
+sprite_change_offset("AT_NSPECIAL_ZETT_CHARGEUP_AIR", 104, 122);
+sprite_change_offset("AT_NSPECIAL_ZETT_RELEASE_GROUND", 104, 122);
+sprite_change_offset("AT_NSPECIAL_ZETT_RELEASE_AIR", 104, 122);
+sprite_change_offset("AT_NSPECIAL_ZETT_UNCHRG_FG", 104, 122);
+sprite_change_offset("AT_NSPECIAL_ZETT_UNCHRG_BG", 104, 122);
+sprite_change_offset("AT_NSPECIAL_ZETT_CHRG_BG", 104, 122);
+sprite_change_offset("AT_NSPECIAL_ZETT_CHRG_FG", 104, 122);
+sprite_change_offset("AT_NSPECIAL_RANNO_GROUND", 62, 68);
+sprite_change_offset("AT_NSPECIAL_SYLV", 64, 72);
+
 sprite_change_offset("plat", 64, 94);
 
 sprite_change_offset("AT_FSPECIAL_PROJECTILE", 64, 94);
