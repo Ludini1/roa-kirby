@@ -101,7 +101,7 @@ if (attack == AT_DSPECIAL){
 
 //FSPECIAL cooldown
 if (attack == AT_FSPECIAL) and (window == 3) and (window_timer == 7) { //Cutter cooldown
-    move_cooldown[AT_FSPECIAL] = 60;
+    move_cooldown[AT_FSPECIAL] = 90;
 }
 
 //DSPECIAL cooldown
@@ -170,7 +170,19 @@ if (attack = AT_TAUNT) {
 			}
 		}
 	if (window == 6) and (taunt_down){
+		if current_ability != 0 {
+		set_color_profile_slot(1, 0, 107, 215, 252);
+		set_color_profile_slot(1, 1, 44, 96, 196);
+		set_color_profile_slot(2, 0, 229, 195, 156);
+		set_color_profile_slot(2, 1, 158, 99, 15);
+		set_color_profile_slot(3, 0, 85, 240, 182);
+		set_color_profile_slot(3, 1, 153, 132, 41);
+		set_color_profile_slot(4, 0, 150, 150, 150);
+		set_color_profile_slot(4, 1, 75, 75, 75);
+		set_color_profile_slot(5, 0, 32, 11, 89);
+		set_color_profile_slot(5, 1, 209, 0, 106);
 		current_ability = 0;
+		}
 		}
 }
 
@@ -191,7 +203,7 @@ if (attack == AT_NSPECIAL) {
 				grabbedid.visible = false
 		}
 		if (window == 4){
-				if (window_timer == 0) {
+				if (window_timer == 0) and (grabbedid != noone) {
 					grabbedid.grabbed = 0
 					grabbedid.visible = true
 					grabbedid.hurtboxID.sprite_index = grabbedid.hurtbox_spr
@@ -209,7 +221,7 @@ if (attack == AT_NSPECIAL) {
 			grabbedid.y = y-12;
 		}
 		
-		if (window_timer == 6){
+		if (window_timer == 6) and (grabbedid != noone){
 				grabbedid.grabbed = 0
 				grabbedid.visible = true
 				grabbedid.hurtboxID.sprite_index = grabbedid.hurtbox_spr
@@ -278,7 +290,7 @@ if (attack == AT_NSPECIAL_ORI) {
 			grabbedid.invincible = true
 			bash_angle = joy_dir
 		}
-	if (window == 5) {
+	if (window == 5) and (grabbedid != noone){
 		grabbedid.invincible = false
 		grabbedid = noone
 		if spr_dir {

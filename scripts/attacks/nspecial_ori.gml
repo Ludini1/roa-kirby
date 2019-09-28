@@ -66,7 +66,7 @@ set_hitbox_value(AT_NSPECIAL_ORI, 1, HG_TECHABLE, 1);
 set_hitbox_value(AT_NSPECIAL_ORI, 1, HG_HITSTUN_MULTIPLIER, 3);
 set_hitbox_value(AT_NSPECIAL_ORI, 1, HG_HITBOX_GROUP, -1);
 set_hitbox_value(AT_NSPECIAL_ORI, 1, HG_IGNORES_PROJECTILES, 1);
-
+set_hitbox_value(AT_NSPECIAL_ORI, 1, HG_THROWS_ROCK, 2);
 
 set_hitbox_value(AT_NSPECIAL_ORI, 2, HG_PARENT_HITBOX, 2);
 set_hitbox_value(AT_NSPECIAL_ORI, 2, HG_HITBOX_TYPE, 1);
@@ -83,13 +83,12 @@ set_hitbox_value(AT_NSPECIAL_ORI, 2, HG_WINDOW_CREATION_FRAME, 3);
 set_hitbox_value(AT_NSPECIAL_ORI, 2, HG_BASE_KNOCKBACK, 7);
 set_hitbox_value(AT_NSPECIAL_ORI, 2, HG_KNOCKBACK_SCALING, 0.7);
 set_hitbox_value(AT_NSPECIAL_ORI, 2, HG_BASE_HITPAUSE, 4);
-set_hitbox_value(AT_NSPECIAL_ORI, 2, HG_HITSTUN_MODIFIER, 0.8);
+set_hitbox_value(AT_NSPECIAL_ORI, 2, HG_HITSTUN_MULTIPLIER, 0.8);
 set_hitbox_value(AT_NSPECIAL_ORI, 2, HG_HITPAUSE_SCALING, 0.4);
 set_hitbox_value(AT_NSPECIAL_ORI, 2, HG_VISUAL_EFFECT, 110);
-set_hitbox_value(AT_NSPECIAL_ORI, 2, HG_HIT_SFX, asset_get("sfx_ori_bash_launch"));
 set_hitbox_value(AT_NSPECIAL_ORI, 2, HG_VISUAL_EFFECT_X_OFFSET, 0);
 set_hitbox_value(AT_NSPECIAL_ORI, 2, HG_VISUAL_EFFECT_Y_OFFSET, 0);
 set_hitbox_value(AT_NSPECIAL_ORI, 2, HG_ANGLE_FLIPPER, 0);
 set_hitbox_value(AT_NSPECIAL_ORI, 2, HG_HITBOX_GROUP, -1);
 set_hitbox_value(AT_NSPECIAL_ORI, 2, HG_IGNORES_PROJECTILES, 1);
-set_hitbox_value(AT_NSPECIAL_ORI, 2, HG_THROWS_ROCK, 1);
+set_hitbox_value(AT_NSPECIAL_ORI, 2, HG_THROWS_ROCK, 2);

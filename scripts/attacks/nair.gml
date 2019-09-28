@@ -3,7 +3,6 @@ set_attack_value(AT_NAIR, AG_SPRITE, sprite_get("AT_NAIR_GROUND"));
 set_attack_value(AT_NAIR, AG_AIR_SPRITE, sprite_get("AT_NAIR_AIR"));
 set_attack_value(AT_NAIR, AG_NUM_WINDOWS, 3);
 set_attack_value(AT_NAIR, AG_HAS_LANDING_LAG, 1);
-set_attack_value(AT_NAIR, AG_LANDING_LAG, 4);
 set_attack_value(AT_NAIR, AG_HURTBOX_SPRITE, sprite_get("AT_NAIR_AIR_hurt"));
 set_attack_value(AT_NAIR, AG_HURTBOX_SPRITE, sprite_get("AT_NAIR_GROUND_hurt"));
 

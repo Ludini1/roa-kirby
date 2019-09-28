@@ -29,7 +29,7 @@ short_hop_speed = 7;
 djump_speed = 9;
 leave_ground_max = 7; //the maximum hsp you can have when you go from grounded to aerial without jumping
 max_jump_hsp = 7; //the maximum hsp you can have when jumping from the ground
-air_max_speed = 4; //the maximum hsp you can accelerate to when in a normal aerial state
+air_max_speed = 4.5; //the maximum hsp you can accelerate to when in a normal aerial state
 jump_change = 3; //maximum hsp when double jumping. If already going faster, it will not slow you down
 air_accel = .25;
 prat_fall_accel = .85; //multiplier of air_accel while in pratfall
@@ -115,3 +115,15 @@ AT_NSPECIAL_ORI = AT_USPECIAL_2
 AT_NSPECIAL_ZET = AT_FSTRONG_2
 AT_NSPECIAL_FROG = AT_DSPECIAL_AIR
 AT_NSPECIAL_SYLV = AT_TAUNT_2
+
+//Colours
+set_color_profile_slot(1, 0, 107, 215, 252);
+set_color_profile_slot(1, 1, 44, 96, 196);
+set_color_profile_slot(2, 0, 229, 195, 156);
+set_color_profile_slot(2, 1, 158, 99, 15);
+set_color_profile_slot(3, 0, 85, 240, 182);
+set_color_profile_slot(3, 1, 153, 132, 41);
+set_color_profile_slot(4, 0, 150, 150, 150);
+set_color_profile_slot(4, 1, 75, 75, 75);
+set_color_profile_slot(5, 0, 32, 11, 89);
+set_color_profile_slot(5, 1, 209, 0, 106);
