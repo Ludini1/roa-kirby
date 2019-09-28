@@ -8,6 +8,7 @@ if my_hitboxID.attack == AT_NSPECIAL { //Grab and stuff
 	}
 	if my_hitboxID.hbox_num == 3 {
 		current_ability = hit_player_obj.abilitygiven;
+		if get_player_color(player) != 0 {
 		switch (current_ability) {
 		case 1:
 			set_color_profile_slot(get_player_color(player),0,218,161,106);
@@ -65,6 +66,7 @@ if my_hitboxID.attack == AT_NSPECIAL { //Grab and stuff
 			set_color_profile_slot(get_player_color(player),0,58,210,228);
 			set_color_profile_slot(get_player_color(player),1,200,126,30);
 		break;
+		}
 		}
 	}
 }
