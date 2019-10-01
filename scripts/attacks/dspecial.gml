@@ -155,4 +155,4 @@ set_hitbox_value(AT_DSPECIAL, 4, HG_VISUAL_EFFECT, 304);
 set_hitbox_value(AT_DSPECIAL, 4, HG_VISUAL_EFFECT_X_OFFSET, 8);
 set_hitbox_value(AT_DSPECIAL, 4, HG_VISUAL_EFFECT_Y_OFFSET, 8);
 set_hitbox_value(AT_DSPECIAL, 4, HG_HIT_SFX, asset_get("sfx_blow_medium1"));
-set_hitbox_value(AT_DSPECIAL, 4, HG_HIT_LOCKOUT, 5);
+set_hitbox_value(AT_DSPECIAL, 4, HG_HITBOX_GROUP, 1);

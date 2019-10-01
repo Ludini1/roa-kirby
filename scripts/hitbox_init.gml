@@ -2,8 +2,15 @@
 AT_NSPECIAL_ETA = AT_USPECIAL_GROUND
 AT_NSPECIAL_ORI = AT_USPECIAL_2
 AT_NSPECIAL_ZET = AT_FSTRONG_2
+AT_NSPECIAL_ORCA = AT_DSTRONG_2
 AT_NSPECIAL_FROG = AT_DSPECIAL_AIR
 AT_NSPECIAL_SYLV = AT_TAUNT_2
+AT_NSPECIAL_ELLI = AT_EXTRA_1
+AT_NSPECIAL_ABSA = AT_FSPECIAL_2
+AT_NSPECIAL_SHOV = AT_EXTRA_2
+AT_NSPECIAL_KRAG = AT_USTRONG_2
+absa_ring = hit_fx_create( sprite_get( "AT_NSPECIAL_ABSA_RING" ), 106 );
+
 
 if (attack == AT_FSPECIAL) {
 	if (player_id.up_down) {
@@ -14,7 +21,7 @@ if (attack == AT_FSPECIAL) {
 	}
 }
 
-if (attack == AT_NSPECIAL_SYLV) {
+if (attack == AT_NSPECIAL_SYLV) and (hbox_num == 1){
 	if (player_id.left_down) {
 		hsp = -4
 	}
@@ -62,4 +69,22 @@ if (attack == AT_NSPECIAL_FROG) { //Needles
 			hsp = spr_dir*14.5
 		}
 	}
+}
+
+if attack == AT_NSPECIAL_ELLI {
+	if spr_dir {
+		proj_angle = player_id.bash_angle+spr_dir
+	}
+	else {
+		proj_angle = player_id.bash_angle+180
+	}
+
+}
+
+if attack == AT_NSPECIAL_ABSA and hbox_num == 1 {
+	spawn_hit_fx( x, y-32, absa_ring );
+}
+
+if attack == AT_NSPECIAL_ORCA and hbox_num == 2 {
+	vsp = random_func(2,4,false)-5
 }

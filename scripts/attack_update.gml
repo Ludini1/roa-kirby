@@ -1,5 +1,5 @@
 //B - Reversals
-if (attack == AT_NSPECIAL || attack == AT_FSPECIAL || attack == AT_USPECIAL){
+if (attack == AT_NSPECIAL || attack == AT_NSPECIAL_ORCA || attack == AT_FSPECIAL || attack == AT_USPECIAL){
     trigger_b_reverse();
 }
 	
@@ -37,7 +37,24 @@ if (attack == AT_NSPECIAL){ //Inhale Loop
 }
 
 
-
+if (attack == AT_FSTRONG){
+	if window == 1 {
+		if window_timer = 1 {
+			fstrongcharge = 0
+			reset_hitbox_value(AT_FSTRONG,2,HG_EFFECT)
+		}
+		if window_timer = 9 {
+			fstrongcharge += 1
+			if fstrongcharge == 20 {
+				sound_play(asset_get("sfx_zetter_upb_hit"))
+			}
+		}
+	}
+	if window == 2 and fstrongcharge > 19{
+		set_hitbox_value(AT_FSTRONG,2,HG_EFFECT,1)
+		fstrongcharge = 0
+	}
+}
 
 //DSPECIAL charging
 if (attack == AT_DSPECIAL){
@@ -107,6 +124,21 @@ if (attack == AT_FSPECIAL) and (window == 3) and (window_timer == 7) { //Cutter 
 //DSPECIAL cooldown
 if (attack == AT_DSPECIAL) and (window > 2) and (7 > window) { //Jet cooldown
     move_cooldown[AT_DSPECIAL] = 60;
+}
+
+//NSPECIAL_SYLV cooldown
+if (attack == AT_NSPECIAL_SYLV) and (window = 3) and (window_timer == 15) { //Seed cooldown
+    move_cooldown[AT_NSPECIAL_SYLV] = 90;
+}
+
+//NSPECIAL_ORCA cooldown
+if (attack == AT_NSPECIAL_ORCA) and (window = 4) and (window_timer == 9) { //Droplet cooldown
+    move_cooldown[AT_NSPECIAL_ORCA] = 10;
+}
+
+//NSPECIAL_BIRD cooldown
+if (attack == AT_NSPECIAL_BIRD) and (window = 3) and (window_timer == 9) { //Slipstream cooldown
+    move_cooldown[AT_NSPECIAL_BIRD] = 600;
 }
 
 //Fastfall Fixes
@@ -366,3 +398,200 @@ if (attack == AT_NSPECIAL_FROG){
 
 }
 
+if (attack == AT_NSPECIAL_ELLI){
+	if window == 1 and window_timer == 5 and (place_meeting(x,y+60,asset_get("par_block")) or place_meeting(x,y+60,asset_get("par_jumpthrough"))){
+		y -= 60
+	}
+
+	if (window == 2){
+		bash_angle = joy_dir
+		if spr_dir {
+			if (bash_angle > 90) and (270 > bash_angle) {
+				set_window_value(AT_NSPECIAL_ELLI,2,AG_WINDOW_ANIM_FRAME_START,10)
+			}
+			else {
+				set_window_value(AT_NSPECIAL_ELLI,2,AG_WINDOW_ANIM_FRAME_START,7)
+			}
+		}
+		else {
+			if (90 > bash_angle) or (bash_angle > 270) {
+				set_window_value(AT_NSPECIAL_ELLI,2,AG_WINDOW_ANIM_FRAME_START,10)
+			}
+			else {
+				set_window_value(AT_NSPECIAL_ELLI,2,AG_WINDOW_ANIM_FRAME_START,7)
+			}
+		}
+		if window_timer == 30 {
+			if spr_dir {
+				set_hitbox_value(AT_NSPECIAL_ELLI,1,HG_PROJECTILE_HSPEED,lengthdir_x(15,bash_angle))
+				set_hitbox_value(AT_NSPECIAL_ELLI,1,HG_PROJECTILE_VSPEED,lengthdir_y(15,bash_angle))
+			}
+			else {
+				set_hitbox_value(AT_NSPECIAL_ELLI,1,HG_PROJECTILE_HSPEED,lengthdir_x(15,180-bash_angle))
+				set_hitbox_value(AT_NSPECIAL_ELLI,1,HG_PROJECTILE_VSPEED,lengthdir_y(15,180-bash_angle))
+			}
+			}
+		}
+	if (window == 3) and (window_timer == 1) {
+		hsp = lengthdir_x(10,180+bash_angle)
+		vsp = lengthdir_y(10,180+bash_angle)
+	}
+	can_move = false;
+}
+
+if (attack == AT_NSPECIAL_ABSA) {
+	if (window == 2) and (!special_down) {
+		sound_play(asset_get("sfx_absa_new_whip2"));
+		create_hitbox( AT_NSPECIAL_ABSA, 1, x, y )
+		window = 3
+		window_timer = 0
+	}
+	if (window == 2) and (window_timer == 30) {
+		absa_timer = 105;
+	}
+}
+
+if (attack == AT_NSPECIAL_ORCA) {
+	if (window == 1) and (window_timer == 15) and (special_down) and (MyPuddle != noone) {
+		window = 3
+		window_timer = 0
+		sound_play(asset_get("sfx_bubblepop"));
+		sound_play(asset_get("sfx_bubblespray_breathless"));
+		with obj_article1 {
+			state = 2
+			coolindex = 0
+		}
+		MyPuddle = noone
+	}
+	if (window == 2) and (window_timer == 8) {
+		window = 4
+		window_timer = 0
+	}
+	if (window == 3) and (window_timer == 28) {
+		window = 4
+		window_timer = 10
+	}
+}
+
+if (attack == AT_NSPECIAL_BIRD) and window == 2 and window_timer == 2 {
+	if instance_exists (obj_article1) instance_destroy(obj_article1)
+	instance_create(0,y,"obj_article1")
+	with obj_article1 state = 3
+}
+
+if (attack == AT_NSPECIAL_FORS) and window == 3 and window_timer == 10 {
+	current_ability = 0
+	set_color_profile_slot(1, 0, 107, 215, 252);
+	set_color_profile_slot(1, 1, 44, 96, 196);
+	set_color_profile_slot(2, 0, 229, 195, 156);
+	set_color_profile_slot(2, 1, 158, 99, 15);
+	set_color_profile_slot(3, 0, 85, 240, 182);
+	set_color_profile_slot(3, 1, 153, 132, 41);
+	set_color_profile_slot(4, 0, 150, 150, 150);
+	set_color_profile_slot(4, 1, 75, 75, 75);
+	set_color_profile_slot(5, 0, 32, 11, 89);
+	set_color_profile_slot(5, 1, 209, 0, 106);
+}
+
+if (attack == AT_NSPECIAL_SHOV) {
+	can_move = false;
+	if window == 1 and window_timer == 2 {
+	set_hitbox_value(AT_NSPECIAL_SHOV, 2, HG_PROJECTILE_SPRITE, sprite_get("hook_proj"));
+	set_hitbox_value(AT_NSPECIAL_SHOV, 2, HG_PROJECTILE_VSPEED, -6);
+	}
+	if window == 2 {
+		if special_pressed {
+			window = 4
+			window_timer = 0
+		}
+		if window_timer == 20 {
+			window_timer = 0
+		}
+	}
+	if window == 3 and special_pressed {
+		set_hitbox_value(AT_NSPECIAL_SHOV, 2, HG_PROJECTILE_VSPEED, -10);
+		if 10 > window_timer {
+		set_hitbox_value(AT_NSPECIAL_SHOV, 2, HG_PROJECTILE_SPRITE, sprite_get("maxim_spr"));
+		set_hitbox_value(AT_NSPECIAL_SHOV, 3, HG_PROJECTILE_SPRITE, sprite_get("maxim_spr"));
+		set_hitbox_value(AT_NSPECIAL_SHOV, 3, HG_DAMAGE, -10);
+		}
+		else {
+		set_hitbox_value(AT_NSPECIAL_SHOV, 2, HG_PROJECTILE_SPRITE, sprite_get("melon_spr"));
+		set_hitbox_value(AT_NSPECIAL_SHOV, 3, HG_PROJECTILE_SPRITE, sprite_get("melon_spr"));
+		set_hitbox_value(AT_NSPECIAL_SHOV, 3, HG_DAMAGE, -5);
+		}
+	
+	}
+	if window == 4 {
+		if window_timer == 20 {
+			window_timer = 0
+		}
+	}	
+	if window == 5 {
+		if window_timer == 20 {
+			window = 6
+			window_timer = 20
+		}
+	}
+	if window == 6 and window_timer == 19 {
+		move_cooldown[AT_NSPECIAL_SHOV] = 60;
+	}
+}
+
+if attack == AT_NSPECIAL_KRAG {
+	if window == 1 and window_timer == 5 {
+	set_hitbox_value(AT_NSPECIAL_KRAG, 4, HG_WINDOW, 4);
+	}
+	if window == 2 and window_timer == 1 {
+		if !free {
+			create_hitbox( AT_NSPECIAL_KRAG, 1, x+48*spr_dir, y-64 )
+			sound_play(asset_get("sfx_kragg_spike"))
+		}
+		else {
+			set_hitbox_value(AT_NSPECIAL_KRAG, 4, HG_WINDOW, 2);
+		}
+	}
+	if window == 3 and window_timer == 10 {
+		move_cooldown[AT_NSPECIAL_KRAG] = 60;
+	}
+}
+
+if (attack == AT_NSPECIAL_CLAI) {
+		if ((spr_dir and (left_down)) or (!spr_dir and (right_down))) and (window == 3) and (window_timer == 20) {
+					window = 5
+					window_timer = 0
+				}
+		if (window == 3) {
+				grabbedid.x = x+spr_dir*16;
+				grabbedid.y = y-12;
+		}
+		if (window == 2) and (window_timer == 15){
+			window = 6
+			window_timer = 0
+		}
+		if (window == 4){
+				if (window_timer == 0) and (grabbedid != noone) {
+					grabbedid.grabbed = 0
+					grabbedid = noone
+				}
+				if (window_timer == 11) {
+					window = 6
+					window_timer = 0
+				}
+		}
+		if (window == 5) {
+		if window_timer == 1 {
+			spr_dir *= -1
+		}
+		if (6 > (window_timer)) {
+			grabbedid.x = x+spr_dir*16;
+			grabbedid.y = y-12;
+		}
+		
+		if (window_timer == 6) and (grabbedid != noone){
+				grabbedid.grabbed = 0
+				grabbedid = noone
+		
+		}
+		}
+}

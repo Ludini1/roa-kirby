@@ -58,6 +58,7 @@ sprite_change_offset("AT_DSPECIAL_MEDCHARGE", 88, 88);
 sprite_change_offset("AT_DSPECIAL_FULLCHARGE", 88, 88);
 sprite_change_offset("AT_TAUNT_GROUND", 32, 56);
 sprite_change_offset("AT_TAUNT_FULL", 32, 56);
+sprite_change_offset("doublejump_slipstream", 52, 64);
 
 sprite_change_offset("AT_NSPECIAL_ETA_GROUND", 62, 114);
 sprite_change_offset("AT_NSPECIAL_ETA_AIR", 62, 114);
@@ -72,7 +73,28 @@ sprite_change_offset("AT_NSPECIAL_ZETT_CHRG_BG", 104, 122);
 sprite_change_offset("AT_NSPECIAL_ZETT_CHRG_FG", 104, 122);
 sprite_change_offset("AT_NSPECIAL_RANNO_GROUND", 62, 68);
 sprite_change_offset("AT_NSPECIAL_SYLV", 64, 72);
+sprite_change_offset("AT_NSPECIAL_ELLI", 108, 88);
+sprite_change_offset("AT_NSPECIAL_ELLI_FIST", 4, 16);
+sprite_change_offset("AT_NSPECIAL_ABSA", 32, 52);
+sprite_change_offset("AT_NSPECIAL_ORCA_GROUND", 32, 60);
+sprite_change_offset("AT_NSPECIAL_ORCA_AIR", 32, 60);
+sprite_change_offset("AT_NSPECIAL_WRASTOR_GROUND", 44, 54);
+sprite_change_offset("AT_NSPECIAL_WRASTOR_AIR", 44, 54);
+sprite_change_offset("AT_NSPECIAL_FORS_CLONE", 96, 112);
+sprite_change_offset("AT_NSPECIAL_SHOV", 48, 88);
+sprite_change_offset("AT_NSPECIAL_SHOV_AIR", 64, 88);
+sprite_change_offset("AT_NSPECIAL_KRAGG_SLAM", 44, 92);
 
 sprite_change_offset("plat", 64, 94);
 
 sprite_change_offset("AT_FSPECIAL_PROJECTILE", 64, 94);
+sprite_change_offset("AT_NSPECIAL_ABSA_CLOUD", 32, 64);
+sprite_change_offset("AT_NSPECIAL_ABSA_RING", 58, 70);
+sprite_change_offset("AT_NSPECIAL_ORCA_PROJ", 16, 32);
+sprite_change_offset("puddle_spr", 80, 108);
+sprite_change_offset("puddle_dis_spr", 80, 108);
+sprite_change_offset("puddle_mask", 80, 96);
+
+
+sprite_change_offset("slipstream_mask", 0, 40);
+sprite_change_offset("slipstream_spr", 0, 22);

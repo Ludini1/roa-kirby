@@ -32,6 +32,7 @@ max_jump_hsp = 7; //the maximum hsp you can have when jumping from the ground
 air_max_speed = 4.5; //the maximum hsp you can accelerate to when in a normal aerial state
 jump_change = 3; //maximum hsp when double jumping. If already going faster, it will not slow you down
 air_accel = .25;
+
 prat_fall_accel = .85; //multiplier of air_accel while in pratfall
 air_friction = .04;
 max_djumps = 3;
@@ -108,13 +109,34 @@ grabbedid = noone;
 bash_angle = -1;
 needlecharge = 0;
 airneedles = 0;
+fstrongcharge = 0;
+absa_timer = 0;
+winganim = 0
+createpuddle = 0;
+puddlex = -1;
+puddley = -1;
+hookx = -1;
+hooky = -1;
+MyPuddle = noone;
+skheal = 0;
+
+//FX
+absa_ring = hit_fx_create( sprite_get( "AT_NSPECIAL_ABSA_RING" ), 106 );
 
 //Attack Indexes
 AT_NSPECIAL_ETA = AT_USPECIAL_GROUND
 AT_NSPECIAL_ORI = AT_USPECIAL_2
 AT_NSPECIAL_ZET = AT_FSTRONG_2
+AT_NSPECIAL_ORCA = AT_DSTRONG_2
 AT_NSPECIAL_FROG = AT_DSPECIAL_AIR
 AT_NSPECIAL_SYLV = AT_TAUNT_2
+AT_NSPECIAL_ELLI = AT_EXTRA_1
+AT_NSPECIAL_ABSA = AT_FSPECIAL_2
+AT_NSPECIAL_BIRD = AT_NSPECIAL_AIR
+AT_NSPECIAL_FORS = AT_NSPECIAL_2
+AT_NSPECIAL_SHOV = AT_EXTRA_2
+AT_NSPECIAL_KRAG = AT_USTRONG_2
+AT_NSPECIAL_CLAI = AT_DSPECIAL_2
 
 //Colours
 set_color_profile_slot(1, 0, 107, 215, 252);

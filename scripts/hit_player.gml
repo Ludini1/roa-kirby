@@ -87,3 +87,22 @@ if (my_hitboxID.attack == AT_FAIR) and ((my_hitboxID.hbox_num == 1) or (my_hitbo
 		vsp -= 2
 	}
 }
+
+if (my_hitboxID.attack == AT_NSPECIAL_SYLV) and (my_hitboxID.hbox_num == 1) {
+	create_hitbox( AT_NSPECIAL_SYLV, 2, my_hitboxID.x, my_hitboxID.y )
+}
+
+if (my_hitboxID.attack == AT_NSPECIAL_ELLI) and (my_hitboxID.hbox_num == 1) {
+	create_hitbox( AT_NSPECIAL_ELLI, 2, my_hitboxID.x, my_hitboxID.y )
+}
+
+if my_hitboxID.attack == AT_NSPECIAL_CLAI { //Grab and stuff
+	if my_hitboxID.hbox_num == 1 {
+		window = 3;
+		window_timer = 0;
+		hit_player_obj.grabbed = 1;
+		grabbedid = hit_player_obj;
+		destroy_hitboxes();
+		djumps = 0
+	}
+}
