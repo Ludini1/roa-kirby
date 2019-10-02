@@ -106,3 +106,9 @@ if my_hitboxID.attack == AT_NSPECIAL_CLAI { //Grab and stuff
 		djumps = 0
 	}
 }
+
+if (my_hitboxID.attack == AT_NSPECIAL_MAY) {
+	if (ds_list_find_index(marked_list, hit_player_obj) = -1) {
+		ds_list_add(marked_list, hit_player_obj);
+	}
+}

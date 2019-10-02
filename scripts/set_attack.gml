@@ -16,6 +16,10 @@ if (attack = AT_NSPECIAL) {
 			attack = AT_NSPECIAL_BIRD;
 			set_attack(AT_NSPECIAL_BIRD);
 		break;
+		case 5:
+			attack = AT_NSPECIAL_MAY;
+			set_attack(AT_NSPECIAL_MAY);
+		break;
 		case 6:
 			attack = AT_NSPECIAL_FORS;
 			set_attack(AT_NSPECIAL_FORS);

@@ -119,6 +119,8 @@ hookx = -1;
 hooky = -1;
 MyPuddle = noone;
 skheal = 0;
+tethering = false;
+marked_list = ds_list_create();
 
 //FX
 absa_ring = hit_fx_create( sprite_get( "AT_NSPECIAL_ABSA_RING" ), 106 );
@@ -137,6 +139,7 @@ AT_NSPECIAL_FORS = AT_NSPECIAL_2
 AT_NSPECIAL_SHOV = AT_EXTRA_2
 AT_NSPECIAL_KRAG = AT_USTRONG_2
 AT_NSPECIAL_CLAI = AT_DSPECIAL_2
+AT_NSPECIAL_MAY = AT_FSPECIAL_AIR;
 
 //Colours
 set_color_profile_slot(1, 0, 107, 215, 252);
