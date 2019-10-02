@@ -599,32 +599,42 @@ if (attack == AT_NSPECIAL_CLAI) {
 if (attack == AT_USPECIAL and tethercd == 0
 	 and (window == 1 
 	 and window_timer > 8 
-	 and special_down)
-	 or tethering) {
+	 and special_down
+	 or tethering)) {
 	 	
 	if(ds_list_find_value(marked_list, 0) != undefined) {
 		window = 4
+		can_move = false;
 		tethering = true;
 		var marked_id = ds_list_find_value(marked_list, 0);
 		markedid = marked_id
-		var marked_skew = right_down * 48 - left_down * 48
+		var marked_skew = right_down * 48 - left_down * 48;
 		var marked_dir = point_direction(x, y-char_height*.5, marked_id.x + marked_skew, marked_id.y + marked_skew);
 	    var tether_speed = 20;
 	    
-	    if (point_distance(x, y-char_height*.5, marked_id.x + marked_skew, marked_id.y + marked_skew) < 8){
+	    if (abs(point_distance(x, y-char_height*.5, marked_id.x + marked_skew, marked_id.y + marked_skew)) < 16 or (abs(hsp) < 1 and window_timer > 12)) {
 	    	//stop when close
             hsp = 0;
             vsp = 0;
             set_state(PS_IDLE_AIR);
 			ds_list_delete(marked_list, 0);
 			tethering = false;
+			can_move = true;
+			gravity_speed = .5;
         } else {
         	//zoom towards marked player
 	        hsp = lengthdir_x(tether_speed, marked_dir);
 	        vsp = lengthdir_y(tether_speed, marked_dir);
+	        gravity_speed = 0;
 		}
 	}
 }
+
+if attack = AT_USPECIAL and window = 4 and window_timer = 60 {
+	tethering = 0
+	gravity_speed = .5;
+	can_move = true;
+} 
 
 //NSPECIAL_MAY cooldown
 if (attack == AT_NSPECIAL_MAY) and (window == 3) and (window_timer == 4) { //seed cooldown

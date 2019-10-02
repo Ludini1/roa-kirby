@@ -131,3 +131,16 @@ if skheal == -10 or skheal == -5 {
 	take_damage( player, -1, skheal )
 	skheal = 0 
 }
+
+if (tethering) {
+	gravity_speed =.5;
+	can_move = true;
+}
+
+//CLEAR MARK ON DEATH
+for (var i = 0; i < 3; i++) {
+	if (ds_list_find_value(marked_list, i).state == PS_RESPAWN) {
+		ds_list_delete(marked_list, i);
+		i = 0;
+	}
+}
