@@ -39,6 +39,13 @@ if (move_cooldown[AT_NSPECIAL_SHOV] > 0) {
 if (move_cooldown[AT_NSPECIAL_KRAG] > 0) {
     move_cooldown[AT_NSPECIAL_KRAG] -= 1;
 }
+if (move_cooldown[AT_NSPECIAL_MAY] > 0) {
+    move_cooldown[AT_NSPECIAL_MAY] -= 1;
+}
+
+if tethercd > 0 {
+	tethercd -= 1
+}
 
 
 if (jetcharge == 100) and ((get_gameplay_time() mod 30) > 20) { //Fully charged

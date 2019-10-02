@@ -120,6 +120,7 @@ hooky = -1;
 MyPuddle = noone;
 skheal = 0;
 tethering = false;
+tethercd = 0;
 marked_list = ds_list_create();
 
 //FX

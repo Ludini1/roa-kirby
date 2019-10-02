@@ -1,5 +1,5 @@
 //B - Reversals
-if (attack == AT_NSPECIAL || attack == AT_NSPECIAL_ORCA || attack == AT_FSPECIAL || attack == AT_USPECIAL){
+if (attack == AT_NSPECIAL || attack == AT_NSPECIAL_ORCA || attack == AT_NSPECIAL_MAY || attack == AT_NSPECIAL_FROG || attack == AT_NSPECIAL_BIRD || attack == AT_FSPECIAL || attack == AT_USPECIAL){
     trigger_b_reverse();
 }
 	
@@ -596,7 +596,7 @@ if (attack == AT_NSPECIAL_CLAI) {
 		}
 }
 
-if (attack == AT_USPECIAL 
+if (attack == AT_USPECIAL and tethercd == 0
 	 and (window == 1 
 	 and window_timer > 8 
 	 and special_down)
@@ -606,6 +606,7 @@ if (attack == AT_USPECIAL
 		window = 4
 		tethering = true;
 		var marked_id = ds_list_find_value(marked_list, 0);
+		markedid = marked_id
 		var marked_skew = right_down * 48 - left_down * 48
 		var marked_dir = point_direction(x, y-char_height*.5, marked_id.x + marked_skew, marked_id.y + marked_skew);
 	    var tether_speed = 20;
@@ -627,5 +628,11 @@ if (attack == AT_USPECIAL
 
 //NSPECIAL_MAY cooldown
 if (attack == AT_NSPECIAL_MAY) and (window == 3) and (window_timer == 4) { //seed cooldown
-    move_cooldown[AT_NSPECIAL_MAY] = 60;
+    move_cooldown[AT_NSPECIAL_MAY] = 20;
+}
+
+//Tether Cooldown
+if (attack == AT_USPECIAL) and (window == 4) and (window_timer == 60) {
+tethering = 0
+tethercd = 60
 }

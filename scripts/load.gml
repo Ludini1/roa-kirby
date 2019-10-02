@@ -95,6 +95,6 @@ sprite_change_offset("puddle_spr", 80, 108);
 sprite_change_offset("puddle_dis_spr", 80, 108);
 sprite_change_offset("puddle_mask", 80, 96);
 sprite_change_offset("fer_seed", 24, 32);
-
+sprite_change_offset("tether_spr", 0, 4);
 sprite_change_offset("slipstream_mask", 0, 40);
 sprite_change_offset("slipstream_spr", 0, 22);
