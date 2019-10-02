@@ -52,3 +52,5 @@ switch(str){
         abilitygiven = 1 + random_func( 0, 13, true )
     break;
 }
+
+abilitygiven = kirbyability
