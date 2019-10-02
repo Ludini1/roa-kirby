@@ -3,9 +3,10 @@ if (attack == AT_FSPECIAL) {
 	vsp *= 0.9
 }
 
-if ((attack == AT_NSPECIAL_FROG) or (attack == AT_NSPECIAL_SYLV) or (attack == AT_NSPECIAL_ELLI)) and !free{
+if ((attack == AT_NSPECIAL_FROG) or (attack == AT_NSPECIAL_SYLV) or (attack == AT_NSPECIAL_ELLI) or (attack == AT_NSPECIAL_MAY)) and !free{
 	instance_destroy()
 }
+
 
 if (attack == AT_NSPECIAL_ORCA) and !free {
 	player_id.puddley = y

@@ -51,7 +51,7 @@ sprite_change_offset("AT_USTRONG", 48, 102);
 sprite_change_offset("AT_DSTRONG", 92, 90);
 sprite_change_offset("AT_NSPECIAL_INHALE", 36, 70);
 sprite_change_offset("AT_FSPECIAL_AIR", 44, 92);
-sprite_change_offset("AT_USPECIAL", 38, 92);
+sprite_change_offset("AT_USPECIAL_FULL", 38, 92);
 sprite_change_offset("AT_DSPECIAL_CHARGE", 80, 94);
 sprite_change_offset("AT_DSPECIAL_NOCHARGE", 88, 88);
 sprite_change_offset("AT_DSPECIAL_MEDCHARGE", 88, 88);
@@ -94,7 +94,7 @@ sprite_change_offset("AT_NSPECIAL_ORCA_PROJ", 16, 32);
 sprite_change_offset("puddle_spr", 80, 108);
 sprite_change_offset("puddle_dis_spr", 80, 108);
 sprite_change_offset("puddle_mask", 80, 96);
-
+sprite_change_offset("fer_seed", 24, 32);
 
 sprite_change_offset("slipstream_mask", 0, 40);
 sprite_change_offset("slipstream_spr", 0, 22);
