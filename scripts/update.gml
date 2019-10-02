@@ -135,6 +135,7 @@ if skheal == -10 or skheal == -5 {
 if (tethering) {
 	gravity_speed =.5;
 	can_move = true;
+	solid = 1;
 }
 
 //CLEAR MARK ON DEATH
