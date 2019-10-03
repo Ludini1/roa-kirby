@@ -16,6 +16,8 @@ switch(str){
         abilitygiven = 4;
     break;
 	case "ferret":
+        abilitygiven = 5;
+	break;
 	case "dragon":
         abilitygiven = 5;
 	break;
@@ -26,6 +28,8 @@ switch(str){
         abilitygiven = 7;
     break;
 	case "bear":
+        abilitygiven = 8;
+    break;
 	case "panda":
         abilitygiven = 8;
     break;
@@ -33,6 +37,8 @@ switch(str){
         abilitygiven = 9;
     break;
 	case "frog":
+	    abilitygiven = 10;
+    break;
 	case "tux":
         abilitygiven = 10;
     break;
@@ -49,7 +55,7 @@ switch(str){
         abilitygiven = 14;
     break;
     default:
-        abilitygiven = 1 + random_func( 0, 13, true )
+        abilitygiven = 0;
     break;
 }
 

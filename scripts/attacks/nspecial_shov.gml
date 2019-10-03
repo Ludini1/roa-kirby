@@ -90,6 +90,7 @@ set_hitbox_value(AT_NSPECIAL_SHOV, 1, HG_PROJECTILE_SPRITE, sprite_get("hook_pro
 set_hitbox_value(AT_NSPECIAL_SHOV, 1, HG_PROJECTILE_MASK, sprite_get("hook_proj"));
 set_hitbox_value(AT_NSPECIAL_SHOV, 1, HG_PROJECTILE_VSPEED, 8);
 set_hitbox_value(AT_NSPECIAL_SHOV, 1, HG_PROJECTILE_ENEMY_BEHAVIOR, 1);
+set_hitbox_value(AT_NSPECIAL_SHOV, 1, HG_PROJECTILE_IS_TRANSCENDENT, true);
 
 set_hitbox_value(AT_NSPECIAL_SHOV, 2, HG_PARENT_HITBOX, 2);
 set_hitbox_value(AT_NSPECIAL_SHOV, 2, HG_HITBOX_TYPE, 2);
@@ -114,6 +115,7 @@ set_hitbox_value(AT_NSPECIAL_SHOV, 2, HG_PROJECTILE_SPRITE, sprite_get("hook_pro
 set_hitbox_value(AT_NSPECIAL_SHOV, 2, HG_PROJECTILE_MASK, sprite_get("hook_proj"));
 set_hitbox_value(AT_NSPECIAL_SHOV, 2, HG_PROJECTILE_VSPEED, -8);
 set_hitbox_value(AT_NSPECIAL_SHOV, 2, HG_PROJECTILE_ENEMY_BEHAVIOR, 1);
+set_hitbox_value(AT_NSPECIAL_SHOV, 2, HG_PROJECTILE_IS_TRANSCENDENT, true);
 
 set_hitbox_value(AT_NSPECIAL_SHOV, 3, HG_PARENT_HITBOX, 3);
 set_hitbox_value(AT_NSPECIAL_SHOV, 3, HG_HITBOX_TYPE, 2);
@@ -143,3 +145,4 @@ set_hitbox_value(AT_NSPECIAL_SHOV, 3, HG_PROJECTILE_HSPEED, -8);
 set_hitbox_value(AT_NSPECIAL_SHOV, 3, HG_PROJECTILE_AIR_FRICTION, 0.08);
 set_hitbox_value(AT_NSPECIAL_SHOV, 3, HG_PROJECTILE_WALL_BEHAVIOR, 2);
 set_hitbox_value(AT_NSPECIAL_SHOV, 3, HG_PROJECTILE_GROUND_BEHAVIOR, 2);
+set_hitbox_value(AT_NSPECIAL_SHOV, 3, HG_PROJECTILE_IS_TRANSCENDENT, true);

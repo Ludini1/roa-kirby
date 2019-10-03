@@ -47,6 +47,10 @@ if (attack == AT_FSTRONG){
 			fstrongcharge += 1
 			if fstrongcharge == 20 {
 				sound_play(asset_get("sfx_zetter_upb_hit"))
+				burned = true;
+			}
+			if burned == true {
+				burn_timer = 148
 			}
 		}
 	}
@@ -318,6 +322,7 @@ if (attack == AT_NSPECIAL_ORI) {
 			can_move = 0;
 			grabbedid.x = x+spr_dir*17;
 			grabbedid.y = y+12;
+			grabbedid.wrap_time = 90
 			grabbedid.state = PS_WRAPPED
 			grabbedid.invincible = true
 			bash_angle = joy_dir
@@ -445,9 +450,11 @@ if (attack == AT_NSPECIAL_ABSA) {
 		create_hitbox( AT_NSPECIAL_ABSA, 1, x, y )
 		window = 3
 		window_timer = 0
+		move_cooldown[AT_NSPECIAL_ABSA] = 105;
 	}
 	if (window == 2) and (window_timer == 30) {
 		absa_timer = 105;
+		move_cooldown[AT_NSPECIAL_ABSA] = 105;
 	}
 }
 
@@ -529,6 +536,7 @@ if (attack == AT_NSPECIAL_SHOV) {
 	}	
 	if window == 5 {
 		if window_timer == 20 {
+			move_cooldown[AT_NSPECIAL_SHOV] = 60;
 			window = 6
 			window_timer = 20
 		}

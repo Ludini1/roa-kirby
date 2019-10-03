@@ -52,13 +52,15 @@ sprite_change_offset("AT_DSTRONG", 92, 90);
 sprite_change_offset("AT_NSPECIAL_INHALE", 36, 70);
 sprite_change_offset("AT_FSPECIAL_AIR", 44, 92);
 sprite_change_offset("AT_USPECIAL_FULL", 38, 92);
+sprite_change_offset("AT_USPECIAL_GROUND", 38, 92);
+sprite_change_offset("AT_USPECIAL", 38, 92);
 sprite_change_offset("AT_DSPECIAL_CHARGE", 80, 94);
 sprite_change_offset("AT_DSPECIAL_NOCHARGE", 88, 88);
 sprite_change_offset("AT_DSPECIAL_MEDCHARGE", 88, 88);
 sprite_change_offset("AT_DSPECIAL_FULLCHARGE", 88, 88);
 sprite_change_offset("AT_TAUNT_GROUND", 32, 56);
 sprite_change_offset("AT_TAUNT_FULL", 32, 56);
-sprite_change_offset("doublejump_slipstream", 52, 64);
+sprite_change_offset("doublejump_slipstream", 52, 88);
 
 sprite_change_offset("AT_NSPECIAL_ETA_GROUND", 62, 114);
 sprite_change_offset("AT_NSPECIAL_ETA_AIR", 62, 114);

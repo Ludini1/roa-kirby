@@ -1,5 +1,5 @@
 set_attack_value(AT_USPECIAL, AG_CATEGORY, 2);
-set_attack_value(AT_USPECIAL, AG_SPRITE, sprite_get("AT_USPECIAL_FULL"));
+set_attack_value(AT_USPECIAL, AG_SPRITE, sprite_get("AT_USPECIAL"));
 set_attack_value(AT_USPECIAL, AG_NUM_WINDOWS, 3);
 set_attack_value(AT_USPECIAL, AG_HAS_LANDING_LAG, 4);
 set_attack_value(AT_USPECIAL, AG_OFF_LEDGE, 1);

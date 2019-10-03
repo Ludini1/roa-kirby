@@ -10,7 +10,7 @@ switch (state){
     break;
 }
 
-if jump_pressed and place_meeting(x,y,obj_article1) and obj_article1.state = 3{
+if state == PS_DOUBLE_JUMP and state_timer == 1 and place_meeting(x,y,obj_article1) and obj_article1.state = 3{
 winganim = 25
 }
 

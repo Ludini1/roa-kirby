@@ -1,4 +1,4 @@
-//draw_debug_text(x-8,y+16,string(tethering))
+//draw_debug_text(x-8,y+16,string(jump_pressed))
 //draw_debug_text(x-8,y+24,string(bash_angle))
 //draw_debug_text(x-8,y+40,string(attack))
 //draw_debug_text(x-8,y+64,string(window))

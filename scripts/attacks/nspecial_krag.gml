@@ -47,6 +47,7 @@ set_hitbox_value(AT_NSPECIAL_KRAG, 1, HG_PROJECTILE_MASK, sprite_get("bug_spike1
 set_hitbox_value(AT_NSPECIAL_KRAG, 1, HG_PROJECTILE_ANIM_SPEED, 0.2);
 set_hitbox_value(AT_NSPECIAL_KRAG, 1, HG_PROJECTILE_GRAVITY, 0);
 set_hitbox_value(AT_NSPECIAL_KRAG, 1, HG_PROJECTILE_ENEMY_BEHAVIOR, 1);
+set_hitbox_value(AT_NSPECIAL_KRAG, 1, HG_PROJECTILE_IS_TRANSCENDENT, true);
 
 set_hitbox_value(AT_NSPECIAL_KRAG, 2, HG_PARENT_HITBOX, 2);
 set_hitbox_value(AT_NSPECIAL_KRAG, 2, HG_HITBOX_TYPE, 2);
@@ -71,6 +72,7 @@ set_hitbox_value(AT_NSPECIAL_KRAG, 2, HG_PROJECTILE_MASK, sprite_get("bug_spike2
 set_hitbox_value(AT_NSPECIAL_KRAG, 2, HG_PROJECTILE_ANIM_SPEED, 0.2);
 set_hitbox_value(AT_NSPECIAL_KRAG, 2, HG_PROJECTILE_GRAVITY, 0);
 set_hitbox_value(AT_NSPECIAL_KRAG, 2, HG_PROJECTILE_ENEMY_BEHAVIOR, 1);
+set_hitbox_value(AT_NSPECIAL_KRAG, 2, HG_PROJECTILE_IS_TRANSCENDENT, true);
 
 set_hitbox_value(AT_NSPECIAL_KRAG, 3, HG_PARENT_HITBOX, 3);
 set_hitbox_value(AT_NSPECIAL_KRAG, 3, HG_HITBOX_TYPE, 2);
@@ -95,6 +97,7 @@ set_hitbox_value(AT_NSPECIAL_KRAG, 3, HG_PROJECTILE_MASK, sprite_get("bug_spike3
 set_hitbox_value(AT_NSPECIAL_KRAG, 3, HG_PROJECTILE_ANIM_SPEED, 0.2);
 set_hitbox_value(AT_NSPECIAL_KRAG, 3, HG_PROJECTILE_GRAVITY, 0);
 set_hitbox_value(AT_NSPECIAL_KRAG, 3, HG_PROJECTILE_ENEMY_BEHAVIOR, 1);
+set_hitbox_value(AT_NSPECIAL_KRAG, 3, HG_PROJECTILE_IS_TRANSCENDENT, true);
 
 
 set_hitbox_value(AT_NSPECIAL_KRAG, 4, HG_HITBOX_TYPE, 1);

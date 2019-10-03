@@ -82,3 +82,4 @@ set_hitbox_value(AT_NSPECIAL_ORCA, 2, HG_PROJECTILE_MASK, asset_get("dark_bubble
 set_hitbox_value(AT_NSPECIAL_ORCA, 2, HG_PROJECTILE_ANIM_SPEED, 0.08);
 set_hitbox_value(AT_NSPECIAL_ORCA, 2, HG_PROJECTILE_VSPEED, -7);
 set_hitbox_value(AT_NSPECIAL_ORCA, 2, HG_PROJECTILE_ENEMY_BEHAVIOR, 1);
+set_hitbox_value(AT_NSPECIAL_ORCA, 2, HG_PROJECTILE_IS_TRANSCENDENT, true);

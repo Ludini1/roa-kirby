@@ -1,5 +1,5 @@
 //Double jump turns kirb around
-if (jump_pressed and (state == PS_DOUBLE_JUMP) and (prev_djumps != djumps)) {
+if (state_timer == 5 and (state == PS_DOUBLE_JUMP) and (prev_djumps != djumps)) {
     if (right_down and -spr_dir) {
         spr_dir = 1;
         prev_djump = djumps;
@@ -41,6 +41,9 @@ if (move_cooldown[AT_NSPECIAL_KRAG] > 0) {
 }
 if (move_cooldown[AT_NSPECIAL_MAY] > 0) {
     move_cooldown[AT_NSPECIAL_MAY] -= 1;
+}
+if (move_cooldown[AT_NSPECIAL_ABSA] > 0) {
+    move_cooldown[AT_NSPECIAL_ABSA] -= 1;
 }
 
 if tethercd > 0 {
