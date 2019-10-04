@@ -8,6 +8,7 @@ if my_hitboxID.attack == AT_NSPECIAL { //Grab and stuff
 	}
 	if my_hitboxID.hbox_num == 3 {
 		current_ability = hit_player_obj.abilitygiven;
+		hit_player_obj.current_ability = 0
 		if get_player_color(player) != 0 {
 		switch (current_ability) {
 		case 1:

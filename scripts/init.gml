@@ -141,6 +141,7 @@ AT_NSPECIAL_SHOV = AT_EXTRA_2
 AT_NSPECIAL_KRAG = AT_USTRONG_2
 AT_NSPECIAL_CLAI = AT_DSPECIAL_2
 AT_NSPECIAL_MAY = AT_FSPECIAL_AIR;
+AT_NSPECIAL_MOLL = AT_UTHROW;
 
 //Colours
 set_color_profile_slot(1, 0, 107, 215, 252);
@@ -153,3 +154,13 @@ set_color_profile_slot(4, 0, 150, 150, 150);
 set_color_profile_slot(4, 1, 75, 75, 75);
 set_color_profile_slot(5, 0, 32, 11, 89);
 set_color_profile_slot(5, 1, 209, 0, 106);
+set_color_profile_slot(6, 0, 194, 133, 220);
+set_color_profile_slot(6, 1, 192, 0, 147);
+set_color_profile_slot(7, 0, 143, 70, 56);
+set_color_profile_slot(7, 1, 82, 27, 22);
+set_color_profile_slot(8, 0, 220, 220, 220);
+set_color_profile_slot(8, 1, 120, 120, 120);
+set_color_profile_slot(9, 0, 253, 117, 89);
+set_color_profile_slot(9, 1, 171, 44, 44);
+set_color_profile_slot(10, 0, 184, 46, 65);
+set_color_profile_slot(10, 1, 42, 42, 42);

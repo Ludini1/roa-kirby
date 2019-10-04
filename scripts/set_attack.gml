@@ -56,6 +56,10 @@ if (attack = AT_NSPECIAL) {
 			attack = AT_NSPECIAL_SHOV;
 			set_attack(AT_NSPECIAL_SHOV);
 		break;
+		case 15:
+			attack = AT_NSPECIAL_MOLL;
+			set_attack(AT_NSPECIAL_MOLL);
+		break;
 
 	}
 }

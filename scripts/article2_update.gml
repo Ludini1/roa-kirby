@@ -8,8 +8,8 @@ if !init{
 with (asset_get("pHitBox")) {
     if player_id == other.player_id && place_meeting(x,y,other) && player != 0 {
        
-        if attack != AT_EXTRA_2 other.hsp = lengthdir_x(kb_value/other.weight, get_hitbox_angle(id));
-        if attack != AT_EXTRA_2 other.vsp = lengthdir_y(kb_value/other.weight, get_hitbox_angle(id));
+        if attack != AT_NSPECIAL_MOLL other.hsp = lengthdir_x(kb_value/other.weight, get_hitbox_angle(id));
+        if attack != AT_NSPECIAL_MOLL other.vsp = lengthdir_y(kb_value/other.weight, get_hitbox_angle(id));
         other.free = true;
         if !other.hitboxed {
             sound_play(sound_get("mollo_pap"));
@@ -28,7 +28,7 @@ if projectile {
     if hitted != noone && hitted != player_id && !hitted.invincible {
  
  
-        if !hitted.hitpause create_hitbox(AT_EXTRA_2,1,x,y);
+        if !hitted.hitpause create_hitbox(AT_NSPECIAL_MOLL,3,x,y);
        
  
             if hitted.state == PS_PARRY && hitted.state_timer <= hitted.dodge_active_frames+hitted.dodge_startup_frames {
@@ -92,9 +92,9 @@ if fuse <= 0 {
             sound_play(sound_get("mollo_boomdistant"));
         break;
         default:
-            var tossdir = create_hitbox(AT_EXTRA_1,1,x,y);
+            var tossdir = create_hitbox(AT_NSPECIAL_MOLL,1,x,y);
             tossdir.player = 0;
-            var tossbox = create_hitbox(AT_EXTRA_1,2,x,y);
+            var tossbox = create_hitbox(AT_NSPECIAL_MOLL,2,x,y);
             tossbox.player = 0;
             tossbox.hbox_num = tossdir.hbox_num
            

@@ -1,62 +1,52 @@
 //Saves the name of the character as abilitygiven
 abilitygiven = 0
 
-var idlesprite = sprite_get_name( sprite_index ), str = string_copy(idlesprite, 1, string_pos("_",idlesprite) - 1);
-switch(str){
-    case "zet":
-        abilitygiven = 1;
+switch(select-1){
+    case 1:
+        abilitygiven = 1; //ZET
     break;
-	case "orca":
-        abilitygiven = 2;
+	case 2:
+        abilitygiven = 2; //ORCANE
     break;
-	case "bug":
-        abilitygiven = 3;
+	case 4:
+        abilitygiven = 3; //KRAGG
     break;
-	case "bird":
-        abilitygiven = 4;
+	case 3:
+        abilitygiven = 4; //WRASTOR
     break;
-	case "ferret":
-        abilitygiven = 5;
+	case 6:
+        abilitygiven = 5; //MAYPUL
 	break;
-	case "dragon":
-        abilitygiven = 5;
-	break;
-	case "smoke":
-        abilitygiven = 6;
+	case 5:
+        abilitygiven = 6; //FORSBURN
     break;
-	case "goat":
-        abilitygiven = 7;
+	case 7:
+        abilitygiven = 7; //ABSA
     break;
-	case "bear":
-        abilitygiven = 8;
+	case 8:
+        abilitygiven = 8; //ETALUS
     break;
-	case "panda":
-        abilitygiven = 8;
+	case 9:
+        abilitygiven = 9; //ORI
     break;
-	case "cat":
-        abilitygiven = 9;
+	case 10:
+	    abilitygiven = 10; //RANNO
     break;
-	case "frog":
-	    abilitygiven = 10;
+	case 11:
+        abilitygiven = 11; //CLAIREN
     break;
-	case "tux":
-        abilitygiven = 10;
+	case 13:
+        abilitygiven = 12; //ELLIANA
     break;
-	case "sword":
-        abilitygiven = 11;
+	case 12:
+        abilitygiven = 13; //SYLVANOS
     break;
-	case "mech":
-        abilitygiven = 12;
-    break;
-	case "wolf":
-        abilitygiven = 13;
-    break;
-	case "gus":
-        abilitygiven = 14;
+	case 14:
+        abilitygiven = 14; //SHOVEL KNIGHT
     break;
     default:
-        abilitygiven = 0;
+        abilitygiven = 15; //MOLLO
     break;
 }
-
+current_ability = 0
 abilitygiven = kirbyability

@@ -1,6 +1,8 @@
+set_num_palettes( 11 );
+
 //DEFAULT COLOR (R,G,B)
 set_color_profile_slot(0, 0, 240, 112, 160); //SKIN
-set_color_profile_slot(0, 1, 208, 0, 80); //SKIN
+set_color_profile_slot(0, 1, 208, 0, 80); //FEET
 
 //COLOR RANGE (H,S,V)
 set_color_profile_slot_range(0, 24, 31, 58);
@@ -22,6 +24,27 @@ set_color_profile_slot(3, 1, 153, 132, 41);
 set_color_profile_slot(4, 0, 150, 150, 150);
 set_color_profile_slot(4, 1, 75, 75, 75);
 
-//Purple Color
+//MK Color
 set_color_profile_slot(5, 0, 32, 11, 89);
 set_color_profile_slot(5, 1, 209, 0, 106);
+
+//Purple Color
+set_color_profile_slot(6, 0, 194, 133, 220);
+set_color_profile_slot(6, 1, 192, 0, 147);
+
+//Brown Color
+set_color_profile_slot(7, 0, 143, 70, 56);
+set_color_profile_slot(7, 1, 82, 27, 22);
+
+//White Color
+set_color_profile_slot(8, 0, 220, 220, 220);
+set_color_profile_slot(8, 1, 120, 120, 120);
+
+//Orange Color
+set_color_profile_slot(9, 0, 253, 117, 89);
+set_color_profile_slot(9, 1, 171, 44, 44);
+
+//Cherry Color
+set_color_profile_slot(10, 0, 184, 46, 65);
+set_color_profile_slot(10, 1, 42, 42, 42);
+
