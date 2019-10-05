@@ -10,6 +10,8 @@ if (state_timer == 5 and (state == PS_DOUBLE_JUMP) and (prev_djumps != djumps)) 
     }
 }
 
+kirbyability = current_ability
+
 if (!free) {
     prev_djumps = 0;
 }
@@ -45,6 +47,9 @@ if (move_cooldown[AT_NSPECIAL_MAY] > 0) {
 if (move_cooldown[AT_NSPECIAL_ABSA] > 0) {
     move_cooldown[AT_NSPECIAL_ABSA] -= 1;
 }
+if (move_cooldown[AT_NSPECIAL_MOLL] > 0) {
+    move_cooldown[AT_NSPECIAL_MOLL] -= 1;
+}
 
 if tethercd > 0 {
 	tethercd -= 1
@@ -68,10 +73,14 @@ else {
 	}
 }
 
-
-
-
 init_shader();
+
+if taunt_pressed and free and state_cat == SC_AIR_NEUTRAL {
+attack = AT_TAUNT
+set_attack(AT_TAUNT)
+window = 5
+window_timer = 0
+}
 
 //CLEAR GRABS
 if ((attack == AT_NSPECIAL) or (attack == AT_NSPECIAL_ORI)) and (window == 0) and (grabbedid != noone) {
@@ -88,7 +97,6 @@ if (attack == AT_NSPECIAL_ZET) and (window == 0) {
 	reset_attack_value(AT_NSPECIAL_ZET,AG_AIR_SPRITE)
 	}
 }
-
 
 //ABSA
 if (absa_timer > 0) {

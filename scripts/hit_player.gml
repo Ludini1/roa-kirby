@@ -5,9 +5,18 @@ if my_hitboxID.attack == AT_NSPECIAL { //Grab and stuff
 		hit_player_obj.grabbed = 1;
 		grabbedid = hit_player_obj;
 		destroy_hitboxes();
+		if get_player_team( hit_player_obj.player ) == get_player_team( player ) {
+			take_damage(hit_player_obj.player, -1, -5)
+		}
 	}
 	if my_hitboxID.hbox_num == 3 {
 		current_ability = hit_player_obj.abilitygiven;
+		if get_player_team( hit_player_obj.player ) == get_player_team( player ) {
+			take_damage(hit_player_obj.player, -1, -5)
+		}
+		hit_player_obj.current_ability = 0
+		hit_player_obj.swallowed = 1
+		hit_player_obj.enemykirby = self
 		if get_player_color(player) != 0 {
 		switch (current_ability) {
 		case 1:
@@ -67,6 +76,12 @@ if my_hitboxID.attack == AT_NSPECIAL { //Grab and stuff
 			set_color_profile_slot(get_player_color(player),1,200,126,30);
 		break;
 		}
+		}
+	}
+	if my_hitboxID.hbox_num == 2 {
+		if get_player_team( hit_player_obj.player ) == get_player_team( player ) {
+			take_damage(hit_player_obj.player, -1, -5)
+			hit_player_obj.state = PS_IDLE
 		}
 	}
 }

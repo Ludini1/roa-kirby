@@ -1,5 +1,5 @@
 //B - Reversals
-if (attack == AT_NSPECIAL || attack == AT_NSPECIAL_ORCA || attack == AT_NSPECIAL_MAY || attack == AT_NSPECIAL_FROG || attack == AT_NSPECIAL_BIRD || attack == AT_FSPECIAL || attack == AT_USPECIAL){
+if (attack == AT_NSPECIAL || attack == AT_NSPECIAL_ORCA || attack == AT_NSPECIAL_MAY || attack == AT_NSPECIAL_FROG || attack == AT_NSPECIAL_BIRD || attack == AT_FSPECIAL || attack == AT_DSPECIAL || attack == AT_USPECIAL){
     trigger_b_reverse();
 }
 	
@@ -47,15 +47,11 @@ if (attack == AT_FSTRONG){
 			fstrongcharge += 1
 			if fstrongcharge == 20 {
 				sound_play(asset_get("sfx_zetter_upb_hit"))
-				burned = true;
-			}
-			if burned == true {
-				burn_timer = 148
 			}
 		}
 	}
 	if window == 2 and fstrongcharge > 19{
-		set_hitbox_value(AT_FSTRONG,2,HG_EFFECT,1)
+		//set_hitbox_value(AT_FSTRONG,2,HG_EFFECT,1)
 		fstrongcharge = 0
 	}
 }
@@ -189,9 +185,6 @@ if (attack == AT_TAUNT) { //Ending taunts
 
 //Taunt controller
 if (attack = AT_TAUNT) {
-	if free and (window == 1){
-		window = 5
-	}	
 	if (window == 1) and (window_timer = 10) and (!free){
 		if (special_pressed) {
 			if (shield_pressed) {
@@ -217,6 +210,16 @@ if (attack = AT_TAUNT) {
 		set_color_profile_slot(4, 1, 75, 75, 75);
 		set_color_profile_slot(5, 0, 32, 11, 89);
 		set_color_profile_slot(5, 1, 209, 0, 106);
+		set_color_profile_slot(6, 0, 194, 133, 220);
+		set_color_profile_slot(6, 1, 192, 0, 147);
+		set_color_profile_slot(7, 0, 143, 70, 56);
+		set_color_profile_slot(7, 1, 82, 27, 22);
+		set_color_profile_slot(8, 0, 220, 220, 220);
+		set_color_profile_slot(8, 1, 120, 120, 120);
+		set_color_profile_slot(9, 0, 253, 117, 89);
+		set_color_profile_slot(9, 1, 171, 44, 44);
+		set_color_profile_slot(10, 0, 184, 46, 65);
+		set_color_profile_slot(10, 1, 42, 42, 42);
 		current_ability = 0;
 		}
 		}
@@ -226,7 +229,7 @@ if (attack = AT_TAUNT) {
 //Nspecial grab
 
 if (attack == AT_NSPECIAL) {
-		if (down_down) and (window == 3) and (window_timer == 20) {
+		if ((down_down) or (special_down)) and (window == 3) and (window_timer == 20) {
 					window = 5
 					window_timer = 0
 				}
@@ -498,6 +501,16 @@ if (attack == AT_NSPECIAL_FORS) and window == 3 and window_timer == 10 {
 	set_color_profile_slot(4, 1, 75, 75, 75);
 	set_color_profile_slot(5, 0, 32, 11, 89);
 	set_color_profile_slot(5, 1, 209, 0, 106);
+	set_color_profile_slot(6, 0, 194, 133, 220);
+	set_color_profile_slot(6, 1, 192, 0, 147);
+	set_color_profile_slot(7, 0, 143, 70, 56);
+	set_color_profile_slot(7, 1, 82, 27, 22);
+	set_color_profile_slot(8, 0, 220, 220, 220);
+	set_color_profile_slot(8, 1, 120, 120, 120);
+	set_color_profile_slot(9, 0, 253, 117, 89);
+	set_color_profile_slot(9, 1, 171, 44, 44);
+	set_color_profile_slot(10, 0, 184, 46, 65);
+	set_color_profile_slot(10, 1, 42, 42, 42);
 }
 
 if (attack == AT_NSPECIAL_SHOV) {
@@ -601,6 +614,17 @@ if (attack == AT_NSPECIAL_CLAI) {
 				grabbedid = noone
 		
 		}
+		}
+}
+
+if attack == AT_NSPECIAL_MOLL  {
+	if window = 1 and window_timer = 8 {
+		newbomb = instance_create(x+spr_dir*16,y-16,"obj_article2")
+		newbomb.vsp = -5
+		newbomb.hsp = spr_dir*1 + right_down*2 - left_down*2
+		}
+	if window = 3 and window_timer = 8 {
+		move_cooldown[AT_NSPECIAL_MOLL] = 50;
 		}
 }
 

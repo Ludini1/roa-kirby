@@ -1,4 +1,5 @@
 //MOLLO INIT
+AT_NSPECIAL_MOLL = AT_UTHROW;
 init = 0;
 sprite_index = sprite_get("bomb0");
 mask_index = sprite_get("bombmask");
