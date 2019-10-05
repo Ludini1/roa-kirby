@@ -64,6 +64,5 @@ if (attack = AT_NSPECIAL) {
 			attack = AT_EXTRA_3;
 			set_attack(AT_EXTRA_3);
 		break;
-
 	}
 }
