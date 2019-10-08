@@ -52,6 +52,9 @@ if (move_cooldown[AT_NSPECIAL_ABSA] > 0) {
 if (move_cooldown[AT_NSPECIAL_MOLL] > 0) {
     move_cooldown[AT_NSPECIAL_MOLL] -= 1;
 }
+if (move_cooldown[AT_NSPECIAL_ELLI] > 0) {
+    move_cooldown[AT_NSPECIAL_ELLI] -= 1;
+}
 if (move_cooldown[AT_EXTRA_3] > 0) {
     move_cooldown[AT_EXTRA_3] -= 1;
 }

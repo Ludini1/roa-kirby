@@ -143,6 +143,11 @@ if (attack == AT_NSPECIAL_BIRD) and (window = 3) and (window_timer == 9) { //Sli
     move_cooldown[AT_NSPECIAL_BIRD] = 600;
 }
 
+//NSPECIAL_ELLI cooldown
+if (attack == AT_NSPECIAL_ELLI) and (window = 3) and (window_timer == 9) { //Missile cooldown
+    move_cooldown[AT_NSPECIAL_ELLI] = 300;
+}
+
 //Fastfall Fixes
 if (attack == AT_DATTACK) or (attack == AT_USPECIAL) {
 	can_fast_fall = false;
