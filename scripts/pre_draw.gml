@@ -1,4 +1,4 @@
-//draw_debug_text(x-8,y+16,string(get_num_hitboxes( AT_EXTRA_3 )))
+//draw_debug_text(x-8,y+16,string(state = PS_RESPAWN))
 //draw_debug_text(x-8,y+32,string(get_hitbox_value(AT_EXTRA_3,2,HG_WINDOW)))
 //draw_debug_text(x-8,y+48,string(free))
 //draw_debug_text(x-8,y+64,string(window))

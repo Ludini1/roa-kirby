@@ -71,6 +71,8 @@ set_hitbox_value(AT_NSPECIAL_ABSA, 2, HG_BASE_HITPAUSE, 8);
 set_hitbox_value(AT_NSPECIAL_ABSA, 2, HG_HITPAUSE_SCALING, .6);
 set_hitbox_value(AT_NSPECIAL_ABSA, 2, HG_PROJECTILE_SPRITE, asset_get("empty_sprite"));
 set_hitbox_value(AT_NSPECIAL_ABSA, 2, HG_PROJECTILE_MASK, sprite_get("AT_NSPECIAL_ABSA_RING"));
+set_hitbox_value(AT_NSPECIAL_ABSA, 2, HG_PROJECTILE_PARRY_STUN, 1);
+set_hitbox_value(AT_NSPECIAL_ABSA, 2, HG_PROJECTILE_IS_TRANSCENDENT, true);
 
 set_hitbox_value(AT_NSPECIAL_ABSA, 3, HG_PARENT_HITBOX, 3);
 set_hitbox_value(AT_NSPECIAL_ABSA, 3, HG_HITBOX_TYPE, 1);

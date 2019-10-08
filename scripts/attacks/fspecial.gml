@@ -44,5 +44,6 @@ set_hitbox_value(AT_FSPECIAL, 1, HG_BASE_HITPAUSE, 6);
 set_hitbox_value(AT_FSPECIAL, 1, HG_HITPAUSE_SCALING, .25);
 set_hitbox_value(AT_FSPECIAL, 1, HG_PROJECTILE_SPRITE, sprite_get("AT_FSPECIAL_PROJECTILE"));
 set_hitbox_value(AT_FSPECIAL, 1, HG_PROJECTILE_MASK, sprite_get("AT_FSPECIAL_PROJECTILE"));
+set_hitbox_value(AT_FSPECIAL, 1, HG_PROJECTILE_DESTROY_EFFECT, cutter_destroy);
 set_hitbox_value(AT_FSPECIAL, 1, HG_PROJECTILE_ANIM_SPEED, 0.8);
 set_hitbox_value(AT_FSPECIAL, 1, HG_PROJECTILE_HSPEED, 15);

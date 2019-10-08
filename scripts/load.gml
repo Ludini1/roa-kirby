@@ -87,9 +87,12 @@ sprite_change_offset("AT_NSPECIAL_SHOV", 48, 88);
 sprite_change_offset("AT_NSPECIAL_SHOV_AIR", 64, 88);
 sprite_change_offset("AT_NSPECIAL_KRAGG_SLAM", 44, 92);
 
-sprite_change_offset("plat", 64, 94);
+sprite_change_offset("plat", 32, 64);
+sprite_change_offset("platform_respawn", 48, 80);
+
 
 sprite_change_offset("AT_FSPECIAL_PROJECTILE", 64, 94);
+sprite_change_offset("AT_FSPECIAL_DESTROYED", 64, 94);
 sprite_change_offset("AT_NSPECIAL_ABSA_CLOUD", 32, 64);
 sprite_change_offset("AT_NSPECIAL_ABSA_RING", 58, 70);
 sprite_change_offset("AT_NSPECIAL_ORCA_PROJ", 16, 32);

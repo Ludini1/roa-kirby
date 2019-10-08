@@ -47,11 +47,13 @@ if (attack == AT_FSTRONG){
 			fstrongcharge += 1
 			if fstrongcharge == 20 {
 				sound_play(asset_get("sfx_zetter_upb_hit"))
+				burned = true
+				burn_timer = 140
 			}
 		}
 	}
-	if window == 2 and fstrongcharge > 19{
-		//set_hitbox_value(AT_FSTRONG,2,HG_EFFECT,1)
+	if window == 1 and fstrongcharge > 19{
+		set_hitbox_value(AT_FSTRONG,2,HG_EFFECT,1)
 		fstrongcharge = 0
 	}
 }
@@ -147,9 +149,15 @@ if (attack == AT_DATTACK) or (attack == AT_USPECIAL) {
 }
 
 //NAIR rolling
-if ((attack == AT_NAIR) and !free and (window == 2)){
-	hsp += spr_dir;
-	off_edge = 1;
+if (attack == AT_NAIR) {
+	if window = 1 {
+		reset_hitbox_value(AT_NAIR,3, HG_BASE_KNOCKBACK)
+	}
+	if !free and (window == 2) {
+		hsp += spr_dir;
+		off_edge = 1;
+		set_hitbox_value(AT_NAIR, 3, HG_BASE_KNOCKBACK, 7+(hsp*0.5));
+	}
 }
 
 //Stop velocity for parried automoves
@@ -188,6 +196,7 @@ if (attack = AT_TAUNT) {
 	if (window == 1) and (window_timer = 10) and (!free){
 		if (special_pressed) {
 			if (shield_pressed) {
+				sound_play(sound_get("sleep"))
 				window = 3
 				}
 			else {
@@ -225,11 +234,10 @@ if (attack = AT_TAUNT) {
 		}
 }
 
-
 //Nspecial grab
 
 if (attack == AT_NSPECIAL) {
-		if ((down_down) or (special_down)) and (window == 3) and (window_timer == 20) {
+		if ((down_down) or (special_down)) and (window == 3) and (window_timer == 16) {
 					window = 5
 					window_timer = 0
 				}
@@ -251,7 +259,7 @@ if (attack == AT_NSPECIAL) {
 				}
 				if (window_timer == 11) {
 					window = 7
-					window_timer = 0
+					window_timer = 3
 				}
 		}
 		if (window == 5) {
@@ -271,7 +279,7 @@ if (attack == AT_NSPECIAL) {
 		}
 		if (window == 6) and (window_timer == 12){
 			window = 7
-			window_timer = 8
+			window_timer = 10
 		}
 }
 

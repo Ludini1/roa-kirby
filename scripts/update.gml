@@ -10,7 +10,9 @@ if (state_timer == 5 and (state == PS_DOUBLE_JUMP) and (prev_djumps != djumps)) 
     }
 }
 
-kirbyability = current_ability
+
+
+abilitygiven = current_ability
 
 if (!free) {
     prev_djumps = 0;
@@ -49,6 +51,9 @@ if (move_cooldown[AT_NSPECIAL_ABSA] > 0) {
 }
 if (move_cooldown[AT_NSPECIAL_MOLL] > 0) {
     move_cooldown[AT_NSPECIAL_MOLL] -= 1;
+}
+if (move_cooldown[AT_EXTRA_3] > 0) {
+    move_cooldown[AT_EXTRA_3] -= 1;
 }
 
 if tethercd > 0 {

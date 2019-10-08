@@ -13,6 +13,9 @@ set_window_value(AT_TAUNT, 2, AG_WINDOW_TYPE, 1); //spin
 set_window_value(AT_TAUNT, 2, AG_WINDOW_LENGTH, 48);
 set_window_value(AT_TAUNT, 2, AG_WINDOW_ANIM_FRAMES, 16);
 set_window_value(AT_TAUNT, 2, AG_WINDOW_ANIM_FRAME_START, 12);
+set_window_value(AT_TAUNT, 2, AG_WINDOW_HAS_SFX, 1);
+set_window_value(AT_TAUNT, 2, AG_WINDOW_SFX, sound_get("taunt"));
+set_window_value(AT_TAUNT, 2, AG_WINDOW_SFX_FRAME, 32);
 
 set_window_value(AT_TAUNT, 3, AG_WINDOW_TYPE, 1); //sleep
 set_window_value(AT_TAUNT, 3, AG_WINDOW_LENGTH, 84);
@@ -28,6 +31,9 @@ set_window_value(AT_TAUNT, 5, AG_WINDOW_TYPE, 1); //puff
 set_window_value(AT_TAUNT, 5, AG_WINDOW_LENGTH, 24);
 set_window_value(AT_TAUNT, 5, AG_WINDOW_ANIM_FRAMES, 8);
 set_window_value(AT_TAUNT, 5, AG_WINDOW_ANIM_FRAME_START, 3);
+set_window_value(AT_TAUNT, 5, AG_WINDOW_HAS_SFX, 1);
+set_window_value(AT_TAUNT, 5, AG_WINDOW_SFX, sound_get("nspecial_spit"));
+set_window_value(AT_TAUNT, 5, AG_WINDOW_SFX_FRAME, 12);
 
 
 set_window_value(AT_TAUNT, 6, AG_WINDOW_TYPE, 1); //lag

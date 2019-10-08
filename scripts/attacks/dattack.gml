@@ -25,7 +25,7 @@ set_window_value(AT_DATTACK, 1, AG_WINDOW_HAS_SFX, 1);
 set_window_value(AT_DATTACK, 1, AG_WINDOW_SFX, sound_get("dattack"));
 
 set_window_value(AT_DATTACK, 3, AG_WINDOW_TYPE, 1);
-set_window_value(AT_DATTACK, 3, AG_WINDOW_LENGTH, 8);
+set_window_value(AT_DATTACK, 3, AG_WINDOW_LENGTH, 12);
 set_window_value(AT_DATTACK, 3, AG_WINDOW_ANIM_FRAMES, 4);
 set_window_value(AT_DATTACK, 3, AG_WINDOW_ANIM_FRAME_START, 11);
 set_window_value(AT_DATTACK, 3, AG_WINDOW_HAS_CUSTOM_FRICTION, 1);

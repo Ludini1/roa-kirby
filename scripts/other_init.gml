@@ -48,6 +48,7 @@ switch(select-1){
         abilitygiven = 15; //MOLLO
     break;
 }
+
 current_ability = 0
 abilitygiven = kirbyability
 swallowed = 0

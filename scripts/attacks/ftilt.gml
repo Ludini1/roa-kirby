@@ -4,7 +4,7 @@ set_attack_value(AT_FTILT, AG_HURTBOX_SPRITE, sprite_get("AT_FTILT_hurt"));
 set_window_value(AT_FTILT, 2, AG_WINDOW_SFX, sound_get("ftilt_star_rod"));
 
 set_window_value(AT_FTILT, 1, AG_WINDOW_TYPE, 1);
-set_window_value(AT_FTILT, 1, AG_WINDOW_LENGTH, 7);
+set_window_value(AT_FTILT, 1, AG_WINDOW_LENGTH, 8);
 set_window_value(AT_FTILT, 1, AG_WINDOW_ANIM_FRAMES, 3);
 
 set_window_value(AT_FTILT, 2, AG_WINDOW_TYPE, 1);
@@ -16,7 +16,7 @@ set_window_value(AT_FTILT, 2, AG_WINDOW_SFX, sound_get("ftilt_star_rod"));
 set_window_value(AT_FTILT, 2, AG_WINDOW_SFX_FRAME, 1);
 
 set_window_value(AT_FTILT, 3, AG_WINDOW_TYPE, 1);
-set_window_value(AT_FTILT, 3, AG_WINDOW_LENGTH, 8);
+set_window_value(AT_FTILT, 3, AG_WINDOW_LENGTH, 12);
 set_window_value(AT_FTILT, 3, AG_WINDOW_ANIM_FRAMES, 2);
 set_window_value(AT_FTILT, 3, AG_WINDOW_ANIM_FRAME_START, 6);
 
@@ -28,8 +28,8 @@ set_hitbox_value(AT_FTILT, 1, HG_WINDOW_CREATION_FRAME, 3);
 set_hitbox_value(AT_FTILT, 1, HG_WINDOW, 2);
 set_hitbox_value(AT_FTILT, 1, HG_LIFETIME, 3);
 set_hitbox_value(AT_FTILT, 1, HG_HITBOX_Y, -25);
-set_hitbox_value(AT_FTILT, 1, HG_HITBOX_X, 30);
-set_hitbox_value(AT_FTILT, 1, HG_WIDTH, 70);
+set_hitbox_value(AT_FTILT, 1, HG_HITBOX_X, 28);
+set_hitbox_value(AT_FTILT, 1, HG_WIDTH, 80);
 set_hitbox_value(AT_FTILT, 1, HG_HEIGHT, 100);
 set_hitbox_value(AT_FTILT, 1, HG_SHAPE, 0);
 set_hitbox_value(AT_FTILT, 1, HG_PRIORITY, 1);

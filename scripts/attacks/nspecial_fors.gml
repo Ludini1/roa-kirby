@@ -7,10 +7,8 @@ set_attack_value(AT_NSPECIAL_FORS, AG_HURTBOX_SPRITE, sprite_get("AT_NSPECIAL_FO
 
 
 set_window_value(AT_NSPECIAL_FORS, 1, AG_WINDOW_TYPE, 1);
-set_window_value(AT_NSPECIAL_FORS, 1, AG_WINDOW_LENGTH, 10);
+set_window_value(AT_NSPECIAL_FORS, 1, AG_WINDOW_LENGTH, 15);
 set_window_value(AT_NSPECIAL_FORS, 1, AG_WINDOW_ANIM_FRAMES, 3);
-set_window_value(AT_NSPECIAL_FORS, 1, AG_WINDOW_HAS_SFX, 1);
-set_window_value(AT_NSPECIAL_FORS, 1, AG_WINDOW_SFX, asset_get("sfx_ice_hammerstart"));
 
 set_window_value(AT_NSPECIAL_FORS, 2, AG_WINDOW_TYPE, 1);
 set_window_value(AT_NSPECIAL_FORS, 2, AG_WINDOW_LENGTH, 12);
@@ -43,7 +41,7 @@ set_hitbox_value(AT_NSPECIAL_FORS, 1, HG_DAMAGE, 10);
 set_hitbox_value(AT_NSPECIAL_FORS, 1, HG_ANGLE, 90);
 set_hitbox_value(AT_NSPECIAL_FORS, 1, HG_HITSTUN_MULTIPLIER, 0.8);
 set_hitbox_value(AT_NSPECIAL_FORS, 1, HG_BASE_KNOCKBACK, 6);
-set_hitbox_value(AT_NSPECIAL_FORS, 1, HG_KNOCKBACK_SCALING, 1.1);
+set_hitbox_value(AT_NSPECIAL_FORS, 1, HG_KNOCKBACK_SCALING, 1.0);
 set_hitbox_value(AT_NSPECIAL_FORS, 1, HG_BASE_HITPAUSE, 10);
 set_hitbox_value(AT_NSPECIAL_FORS, 1, HG_HITPAUSE_SCALING, 0.6);
 set_hitbox_value(AT_NSPECIAL_FORS, 1, HG_VISUAL_EFFECT, 4);
@@ -65,7 +63,7 @@ set_hitbox_value(AT_NSPECIAL_FORS, 2, HG_DAMAGE, 10);
 set_hitbox_value(AT_NSPECIAL_FORS, 2, HG_ANGLE, 90);
 set_hitbox_value(AT_NSPECIAL_FORS, 2, HG_HITSTUN_MULTIPLIER, 0.8);
 set_hitbox_value(AT_NSPECIAL_FORS, 2, HG_BASE_KNOCKBACK, 7);
-set_hitbox_value(AT_NSPECIAL_FORS, 2, HG_KNOCKBACK_SCALING, 1.3);
+set_hitbox_value(AT_NSPECIAL_FORS, 2, HG_KNOCKBACK_SCALING, 1.2);
 set_hitbox_value(AT_NSPECIAL_FORS, 2, HG_BASE_HITPAUSE, 10);
 set_hitbox_value(AT_NSPECIAL_FORS, 2, HG_HITPAUSE_SCALING, 0.6);
 set_hitbox_value(AT_NSPECIAL_FORS, 2, HG_VISUAL_EFFECT, 4);
