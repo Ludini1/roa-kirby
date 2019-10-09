@@ -17,7 +17,7 @@ if my_hitboxID.attack == AT_NSPECIAL { //Grab and stuff
 		hit_player_obj.current_ability = 0
 		hit_player_obj.swallowed = 1
 		hit_player_obj.enemykirby = self
-		if get_player_color(player) != 0 {
+		if get_player_color(player) != 0 and get_player_color(player) != 13  {
 		switch (current_ability) {
 		case 1:
 			set_color_profile_slot(get_player_color(player),0,218,161,106);

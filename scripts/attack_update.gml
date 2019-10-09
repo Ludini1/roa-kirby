@@ -46,12 +46,15 @@ if (attack == AT_FSTRONG){
 		if window_timer = 9 {
 			fstrongcharge += 1
 			if fstrongcharge == 20 {
-				sound_play(asset_get("sfx_zetter_upb_hit"))
+				sound_play(asset_get("sfx_burnapplied"))
+				burned = true
+				burnt_id = id
+				burn_timer = 90
 			}
 		}
 	}
 	if window == 2 and fstrongcharge > 19{
-		//set_hitbox_value(AT_FSTRONG,2,HG_EFFECT,1)
+		set_hitbox_value(AT_FSTRONG,2,HG_EFFECT,1)
 		fstrongcharge = 0
 	}
 }
@@ -141,15 +144,26 @@ if (attack == AT_NSPECIAL_BIRD) and (window = 3) and (window_timer == 9) { //Sli
     move_cooldown[AT_NSPECIAL_BIRD] = 600;
 }
 
+//NSPECIAL_ELLI cooldown
+if (attack == AT_NSPECIAL_ELLI) and (window = 3) and (window_timer == 9) { //Missile cooldown
+    move_cooldown[AT_NSPECIAL_ELLI] = 300;
+}
+
 //Fastfall Fixes
 if (attack == AT_DATTACK) or (attack == AT_USPECIAL) {
 	can_fast_fall = false;
 }
 
 //NAIR rolling
-if ((attack == AT_NAIR) and !free and (window == 2)){
-	hsp += spr_dir;
-	off_edge = 1;
+if (attack == AT_NAIR) {
+	if window = 1 {
+		reset_hitbox_value(AT_NAIR,3, HG_BASE_KNOCKBACK)
+	}
+	if !free and (window == 2) {
+		hsp += spr_dir;
+		off_edge = 1;
+		set_hitbox_value(AT_NAIR, 3, HG_BASE_KNOCKBACK, 7+(hsp*0.5));
+	}
 }
 
 //Stop velocity for parried automoves
@@ -188,6 +202,7 @@ if (attack = AT_TAUNT) {
 	if (window == 1) and (window_timer = 10) and (!free){
 		if (special_pressed) {
 			if (shield_pressed) {
+				sound_play(sound_get("sleep"))
 				window = 3
 				}
 			else {
@@ -200,36 +215,16 @@ if (attack = AT_TAUNT) {
 		}
 	if (window == 6) and (taunt_down){
 		if current_ability != 0 {
-		set_color_profile_slot(1, 0, 107, 215, 252);
-		set_color_profile_slot(1, 1, 44, 96, 196);
-		set_color_profile_slot(2, 0, 229, 195, 156);
-		set_color_profile_slot(2, 1, 158, 99, 15);
-		set_color_profile_slot(3, 0, 85, 240, 182);
-		set_color_profile_slot(3, 1, 153, 132, 41);
-		set_color_profile_slot(4, 0, 150, 150, 150);
-		set_color_profile_slot(4, 1, 75, 75, 75);
-		set_color_profile_slot(5, 0, 32, 11, 89);
-		set_color_profile_slot(5, 1, 209, 0, 106);
-		set_color_profile_slot(6, 0, 194, 133, 220);
-		set_color_profile_slot(6, 1, 192, 0, 147);
-		set_color_profile_slot(7, 0, 143, 70, 56);
-		set_color_profile_slot(7, 1, 82, 27, 22);
-		set_color_profile_slot(8, 0, 220, 220, 220);
-		set_color_profile_slot(8, 1, 120, 120, 120);
-		set_color_profile_slot(9, 0, 253, 117, 89);
-		set_color_profile_slot(9, 1, 171, 44, 44);
-		set_color_profile_slot(10, 0, 184, 46, 65);
-		set_color_profile_slot(10, 1, 42, 42, 42);
+		resetcolours = 1
 		current_ability = 0;
 		}
 		}
 }
 
-
 //Nspecial grab
 
 if (attack == AT_NSPECIAL) {
-		if ((down_down) or (special_down)) and (window == 3) and (window_timer == 20) {
+		if ((down_down) or (special_down)) and (window == 3) and (window_timer == 16) {
 					window = 5
 					window_timer = 0
 				}
@@ -251,7 +246,7 @@ if (attack == AT_NSPECIAL) {
 				}
 				if (window_timer == 11) {
 					window = 7
-					window_timer = 0
+					window_timer = 3
 				}
 		}
 		if (window == 5) {
@@ -271,7 +266,7 @@ if (attack == AT_NSPECIAL) {
 		}
 		if (window == 6) and (window_timer == 12){
 			window = 7
-			window_timer = 8
+			window_timer = 10
 		}
 }
 
@@ -491,26 +486,7 @@ if (attack == AT_NSPECIAL_BIRD) and window == 2 and window_timer == 2 {
 
 if (attack == AT_NSPECIAL_FORS) and window == 3 and window_timer == 10 {
 	current_ability = 0
-	set_color_profile_slot(1, 0, 107, 215, 252);
-	set_color_profile_slot(1, 1, 44, 96, 196);
-	set_color_profile_slot(2, 0, 229, 195, 156);
-	set_color_profile_slot(2, 1, 158, 99, 15);
-	set_color_profile_slot(3, 0, 85, 240, 182);
-	set_color_profile_slot(3, 1, 153, 132, 41);
-	set_color_profile_slot(4, 0, 150, 150, 150);
-	set_color_profile_slot(4, 1, 75, 75, 75);
-	set_color_profile_slot(5, 0, 32, 11, 89);
-	set_color_profile_slot(5, 1, 209, 0, 106);
-	set_color_profile_slot(6, 0, 194, 133, 220);
-	set_color_profile_slot(6, 1, 192, 0, 147);
-	set_color_profile_slot(7, 0, 143, 70, 56);
-	set_color_profile_slot(7, 1, 82, 27, 22);
-	set_color_profile_slot(8, 0, 220, 220, 220);
-	set_color_profile_slot(8, 1, 120, 120, 120);
-	set_color_profile_slot(9, 0, 253, 117, 89);
-	set_color_profile_slot(9, 1, 171, 44, 44);
-	set_color_profile_slot(10, 0, 184, 46, 65);
-	set_color_profile_slot(10, 1, 42, 42, 42);
+	resetcolours = 1
 }
 
 if (attack == AT_NSPECIAL_SHOV) {

@@ -18,3 +18,8 @@ if winganim > 0 {
 	if state == PS_DOUBLE_JUMP sprite_index = sprite_get("doublejump_slipstream")
 	else winganim -= 1
 }
+
+
+if state == PS_RESPAWN {
+sprite_index = sprite_get("platform_respawn")
+}

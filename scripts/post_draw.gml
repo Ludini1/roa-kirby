@@ -12,3 +12,7 @@ draw_sprite_ext(sprite_get("AT_NSPECIAL_ZETT_UNCHRG_FG"),window_timer / 3.3,x,y,
 if (absa_timer > 0) {
 draw_sprite_ext(sprite_get("AT_NSPECIAL_ABSA_RING"),(105-absa_timer)/5.83,x,y-32,1,1,0,c_white,1)
 }
+
+if state = PS_RESPAWN {
+	draw_sprite_ext(sprite_get("platform_respawn"),0,x,y,spr_dir,1,0,c_white,1)
+}

@@ -10,7 +10,9 @@ if (state_timer == 5 and (state == PS_DOUBLE_JUMP) and (prev_djumps != djumps)) 
     }
 }
 
-kirbyability = current_ability
+
+
+abilitygiven = current_ability
 
 if (!free) {
     prev_djumps = 0;
@@ -50,6 +52,12 @@ if (move_cooldown[AT_NSPECIAL_ABSA] > 0) {
 if (move_cooldown[AT_NSPECIAL_MOLL] > 0) {
     move_cooldown[AT_NSPECIAL_MOLL] -= 1;
 }
+if (move_cooldown[AT_NSPECIAL_ELLI] > 0) {
+    move_cooldown[AT_NSPECIAL_ELLI] -= 1;
+}
+if (move_cooldown[AT_EXTRA_3] > 0) {
+    move_cooldown[AT_EXTRA_3] -= 1;
+}
 
 if tethercd > 0 {
 	tethercd -= 1
@@ -72,6 +80,31 @@ else {
 	}
 	}
 }
+
+//MAGIC COLOUR CODE
+if get_player_color(player) = 13 {
+	hue+=1 if hue>255 hue-=255;
+	//make hue shift every step + loop around
+
+	color_rgb=make_color_rgb(240, 112, 160);
+	//make a gamemaker color variable using kirby's default color (body)
+	hue2=(color_get_hue(color_rgb)+hue) mod 255;
+	//shift that colour by Hue, make sure it also loops
+	color_hsv=make_color_hsv(hue2,color_get_saturation(color_rgb),color_get_value(color_rgb)); 
+	//make a gamemaker color variable using the new hue
+	set_color_profile_slot(13,0,color_get_red(color_hsv),color_get_green(color_hsv),color_get_blue(color_hsv));
+	//set the new color using rgb values from the gamemaker color
+
+
+	color_rgb=make_color_rgb(208, 0, 80);
+	//make a gamemaker color variable using kirby's default color (feet)
+	//hue2=(color_get_hue(color_rgb)+hue) mod 255;
+	//kirby's feet keep the same hue as his skin
+	color_hsv=make_color_hsv(hue2,color_get_saturation(color_rgb),color_get_value(color_rgb)); 
+	//make a gamemaker color variable using the new hue
+	set_color_profile_slot(13,1,color_get_red(color_hsv),color_get_green(color_hsv),color_get_blue(color_hsv));
+	//set the new color using rgb values from the gamemaker color
+	}
 
 init_shader();
 
@@ -147,6 +180,34 @@ if (tethering) {
 	gravity_speed =.5;
 	can_move = true;
 	solid = 1;
+}
+
+if resetcolours {
+	resetcolours = 0
+	set_color_profile_slot(1, 0, 107, 215, 252);
+	set_color_profile_slot(1, 1, 44, 96, 196);
+	set_color_profile_slot(2, 0, 184, 46, 65);
+	set_color_profile_slot(2, 1, 42, 42, 42);
+	set_color_profile_slot(3, 0, 85, 240, 182);
+	set_color_profile_slot(3, 1, 153, 132, 41);
+	set_color_profile_slot(4, 0, 150, 150, 150);
+	set_color_profile_slot(4, 1, 75, 75, 75);
+	set_color_profile_slot(5, 0, 32, 11, 89);
+	set_color_profile_slot(5, 1, 209, 0, 106);
+	set_color_profile_slot(6, 0, 236, 78, 58);
+	set_color_profile_slot(6, 1, 44, 98, 255);
+	set_color_profile_slot(7, 0, 194, 133, 220);
+	set_color_profile_slot(7, 1, 192, 0, 147);
+	set_color_profile_slot(8, 0, 167, 186, 74);
+	set_color_profile_slot(8, 1, 83, 122, 62);
+	set_color_profile_slot(9, 0, 143, 70, 56);
+	set_color_profile_slot(9, 1, 82, 27, 22);
+	set_color_profile_slot(10, 0, 220, 220, 220);
+	set_color_profile_slot(10, 1, 120, 120, 120);
+	set_color_profile_slot(11, 0, 253, 117, 89);
+	set_color_profile_slot(11, 1, 171, 44, 44);
+	set_color_profile_slot(12, 0, 229, 195, 156);
+	set_color_profile_slot(12, 1, 158, 99, 15);
 }
 
 //CLEAR MARK ON DEATH

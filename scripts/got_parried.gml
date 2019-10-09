@@ -4,6 +4,11 @@ if ((my_hitboxID.attack == AT_DATTACK) or (my_hitboxID.attack == AT_DTILT)
 	automove_parried = 1;
 }
 
+if (my_hitboxID.attack == AT_NSPECIAL) and my_hitboxID.hbox_num = 1 {
+	window = 7
+	window_timer = 0
+}
+
 jetcharge = 0
 needlecharge = 0;
 if instance_exists(obj_article1) {
