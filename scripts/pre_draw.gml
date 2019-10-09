@@ -1,6 +1,6 @@
-//draw_debug_text(x-8,y+16,string(current_day))
-//draw_debug_text(x-8,y+32,string(current_month))
-//draw_debug_text(x-8,y+48,string(current_year))
+//draw_debug_text(x-8,y+16,string(state = PS_RESPAWN))
+//draw_debug_text(x-8,y+32,string(get_hitbox_value(AT_EXTRA_3,2,HG_WINDOW)))
+//draw_debug_text(x-8,y+48,string(free))
 //draw_debug_text(x-8,y+64,string(window))
 //draw_debug_text(x-8,y+88,string(window_timer))
 
