@@ -224,7 +224,7 @@ if (attack = AT_TAUNT) {
 //Nspecial grab
 
 if (attack == AT_NSPECIAL) {
-		if ((down_down) or (special_down)) and (window == 3) and (window_timer == 16) {
+		if (((down_down) or (special_down)) and (window == 3) and (window_timer == 16)) or ((window == 3) and special_pressed and window_timer > 6) {
 					window = 5
 					window_timer = 0
 				}
@@ -602,6 +602,22 @@ if attack == AT_NSPECIAL_MOLL  {
 	if window = 3 and window_timer = 8 {
 		move_cooldown[AT_NSPECIAL_MOLL] = 50;
 		}
+}
+
+
+if attack == AT_NSPECIAL_SAND {
+    if (window == 3){
+        if (special_pressed){
+            window = 1;
+            window_timer = 0;
+        }
+    }
+}
+
+if attack == AT_NSPECIAL_GUAD and has_hit_player and window = 3{
+	if 11 > window_timer {
+        take_damage(player, -1, -1);
+	}
 }
 
 if (attack == AT_USPECIAL and tethercd == 0

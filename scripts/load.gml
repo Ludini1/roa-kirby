@@ -103,6 +103,7 @@ sprite_change_offset("fer_seed", 24, 32);
 sprite_change_offset("tether_spr", 0, 4);
 sprite_change_offset("slipstream_mask", 0, 40);
 sprite_change_offset("slipstream_spr", 0, 22);
+sprite_change_offset("nspecial_proj", 64, 94);
 
 //MOLLO
 sprite_change_offset("bomb0",65,73)
@@ -110,3 +111,6 @@ sprite_change_offset("bombmask",9,9)
 sprite_change_offset("boom0",166,138)
 sprite_change_offset("sparkfx1",56,46)
 sprite_change_offset("bombpop",20,20)
+
+
+set_victory_bg( sprite_get( "kirbyvictorybg" ))

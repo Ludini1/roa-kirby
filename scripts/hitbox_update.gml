@@ -86,6 +86,10 @@ if (attack == AT_NSPECIAL_SHOV){
 	}
 }
 
+if attack == AT_NSPECIAL_SHOV and (hbox_num = 1 or hbox_num = 2) and player_id.state != PS_ATTACK_AIR and player_id.state != PS_ATTACK_GROUND {
+	instance_destroy();
+}
+
 if attack == AT_NSPECIAL_KRAG {
 	while !instance_place(x, y, asset_get("par_block")) and !instance_place(x, y, asset_get("par_jumpthrough")){
 		y += 1

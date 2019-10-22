@@ -69,14 +69,19 @@ if (jetcharge == 100) and ((get_gameplay_time() mod 30) > 20) { //Fully charged
 	}
 else {
 	if current_ability == 6 and ((get_gameplay_time() mod 30) > 20) { //Fully charged and forsburn flavoured
-	outline_color = [ 230, 50, 0 ];
-	}
+		outline_color = [ 230, 50, 0 ];
+		}
 	else {
-	if (needlecharge == 3) and ((get_gameplay_time() mod 30) > 20) { //Fully charged and ranno flavoured
-	outline_color = [ 182, 244, 48 ];
-	}
-	else {
-	outline_color = [ 0, 0, 0 ];
+		if (needlecharge == 3) and ((get_gameplay_time() mod 30) > 20) { //Fully charged and ranno flavoured
+			outline_color = [ 182, 244, 48 ];
+		}
+		else {
+			if has_hit_player and 11 > window_timer and attack = AT_NSPECIAL_GUAD and window = 3 {
+				outline_color = [ 10, 160, 10 ];
+		}
+		else {
+			outline_color = [ 0, 0, 0 ];
+		}
 	}
 	}
 }
@@ -182,6 +187,11 @@ if (tethering) {
 	solid = 1;
 }
 
+if gameOver() and current_ability != 0 {
+	current_ability = 0
+	resetcolours = 1
+}
+
 if resetcolours {
 	resetcolours = 0
 	set_color_profile_slot(1, 0, 107, 215, 252);
@@ -217,3 +227,32 @@ for (var i = 0; i < 3; i++) {
 		i = 0;
 	}
 }
+
+#define gameOver
+var stocks = [-1, -1, -1, -1];
+var damage = [-1, -1, -1, -1];
+with(asset_get("oPlayer")){
+    stocks[get_player_team(player)-1] = max(0,stocks[get_player_team(player)-1]);
+    damage[get_player_team(player)-1] = max(0,damage[get_player_team(player)-1]);
+    stocks[get_player_team(player)-1] += get_player_stocks(player);
+    damage[get_player_team(player)-1] += get_player_damage(player);
+}
+for(var i = 0; i < 4; i++){
+    for(var i2 = 0; i2 < 4; i2++){
+        if(stocks[i2] == -1){break;}
+        if(stocks[i2] == 0 || (get_game_timer() <= 0 && stocks[i] > stocks[i2]) || (get_game_timer() <= 0 && stocks[i] == stocks[i2] && damage[i] < damage[i2])){
+            stocks[i2] = 0;
+            damage[i2] = 0;
+        }
+    }
+}
+var players = 0;
+for(var i = 0; i < 4; i++){
+    if(stocks[i] > 0){
+        players++;
+        if(players >= 2){
+            return false;
+        }
+    }
+}
+return true;

@@ -49,6 +49,13 @@ switch(select-1){
     break;
 }
 
+if url = 1865940669 { //Sandbert
+	abilitygiven = 17
+}
+if url = 1866016173 { //Guadua
+	abilitygiven = 18
+}
+
 current_ability = 0
 abilitygiven = kirbyability
 swallowed = 0

@@ -64,5 +64,13 @@ if (attack = AT_NSPECIAL) {
 			attack = AT_EXTRA_3;
 			set_attack(AT_EXTRA_3);
 		break;
+		case 17:
+			attack = AT_NSPECIAL_SAND;
+			set_attack(AT_NSPECIAL_SAND);
+		break;
+		case 18:
+			attack = AT_NSPECIAL_GUAD;
+			set_attack(AT_NSPECIAL_GUAD);
+		break;
 	}
 }
