@@ -194,6 +194,7 @@ if gameOver() and current_ability != 0 {
 
 if resetcolours {
 	resetcolours = 0
+	newicon = 0
 	set_color_profile_slot(1, 0, 107, 215, 252);
 	set_color_profile_slot(1, 1, 44, 96, 196);
 	set_color_profile_slot(2, 0, 184, 46, 65);

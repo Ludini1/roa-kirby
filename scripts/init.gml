@@ -123,10 +123,13 @@ tethering = false;
 tethercd = 0;
 marked_list = ds_list_create();
 kirbyability = 0;
+newicon = 0;
 
 //FX
 absa_ring = hit_fx_create( sprite_get( "AT_NSPECIAL_ABSA_RING" ), 106 );
 cutter_destroy = hit_fx_create( sprite_get( "AT_FSPECIAL_DESTROYED" ), 23 );
+taunt_star = hit_fx_create( sprite_get( "hfx_taunt" ), 18 );
+
 
 //Attack Indexes
 AT_NSPECIAL_ETA = AT_USPECIAL_GROUND

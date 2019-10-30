@@ -96,6 +96,7 @@ sprite_change_offset("AT_FSPECIAL_DESTROYED", 80, 128);
 sprite_change_offset("AT_NSPECIAL_ABSA_CLOUD", 32, 64);
 sprite_change_offset("AT_NSPECIAL_ABSA_RING", 58, 70);
 sprite_change_offset("AT_NSPECIAL_ORCA_PROJ", 16, 32);
+sprite_change_offset("hfx_taunt", 20, 48);
 sprite_change_offset("puddle_spr", 80, 108);
 sprite_change_offset("puddle_dis_spr", 80, 108);
 sprite_change_offset("puddle_mask", 80, 96);

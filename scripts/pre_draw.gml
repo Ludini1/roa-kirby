@@ -1,4 +1,4 @@
-//draw_debug_text(x-8,y+16,string(state = PS_RESPAWN))
+
 //draw_debug_text(x-8,y+32,string(get_hitbox_value(AT_EXTRA_3,2,HG_WINDOW)))
 //draw_debug_text(x-8,y+48,string(free))
 //draw_debug_text(x-8,y+64,string(window))
@@ -36,3 +36,5 @@ draw_sprite_ext(sprite_get("slipstream_spr"),0,0,obj_article1.y-20,960,obj_artic
 if tethering {
 draw_sprite_ext(sprite_get("tether_spr"),0,x,y-16,point_distance(x,y,markedid.x,markedid.y-16)/92,1,point_direction(x,y,markedid.x,markedid.y-16),c_white,1)
 }
+
+//if is_ai draw_debug_text(x-8,y+16,string(AIwait))

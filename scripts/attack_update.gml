@@ -111,9 +111,12 @@ if (attack == AT_DSPECIAL){
 				}
 			}
 		}
-	if ((window == 3) or (window == 4) or (window == 5) ) and (window_timer == 20) { //Endlag
-		window = 7;
-		window_timer = 0;
+	if ((window == 3) or (window == 4) or (window == 5) ) { //Endlag
+		can_wall_jump = true
+		if window_timer == 20 {
+			window = 7;
+			window_timer = 0;
+		}
 		}
 }
 	
@@ -150,8 +153,9 @@ if (attack == AT_NSPECIAL_ELLI) and (window = 3) and (window_timer == 9) { //Mis
 }
 
 //Fastfall Fixes
-if (attack == AT_DATTACK) or (attack == AT_USPECIAL) {
+if (attack == AT_DATTACK) or (attack == AT_USPECIAL) and vsp >= 1 {
 	can_fast_fall = false;
+	can_wall_jump = true;
 }
 
 //NAIR rolling
@@ -217,6 +221,7 @@ if (attack = AT_TAUNT) {
 		if current_ability != 0 {
 		resetcolours = 1
 		current_ability = 0;
+		spawn_hit_fx( x, y-36, taunt_star );
 		}
 		}
 }
@@ -600,7 +605,7 @@ if attack == AT_NSPECIAL_MOLL  {
 		newbomb.hsp = spr_dir*1 + right_down*2 - left_down*2
 		}
 	if window = 3 and window_timer = 8 {
-		move_cooldown[AT_NSPECIAL_MOLL] = 50;
+		move_cooldown[AT_NSPECIAL_MOLL] = 180;
 		}
 }
 
