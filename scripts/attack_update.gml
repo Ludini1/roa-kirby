@@ -29,6 +29,7 @@ if (attack == AT_NSPECIAL){ //Inhale Loop
             
         }
         else {
+			sound_stop(sound_get("inhale"))
             window_timer = 0;
             window = 7;
         }
@@ -235,6 +236,7 @@ if (attack == AT_NSPECIAL) {
 				}
 		if (window == 3) {
 				if (window_timer == 0) {
+						sound_stop(sound_get("inhale"))
 						sound_play(sound_get("nspecial_swallow"))
 				}
 				grabbedid.x = x;
