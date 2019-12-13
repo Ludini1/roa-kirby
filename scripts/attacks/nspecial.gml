@@ -7,9 +7,11 @@ set_attack_value(AT_NSPECIAL, AG_AIR_SPRITE, sprite_get("AT_NSPECIAL_INHALE"));
 set_attack_value(AT_NSPECIAL, AG_HURTBOX_SPRITE, sprite_get("AT_NSPECIAL_INHALE_hurt"));
 
 set_window_value(AT_NSPECIAL, 1, AG_WINDOW_TYPE, 1);
-set_window_value(AT_NSPECIAL, 1, AG_WINDOW_LENGTH, 10);
+set_window_value(AT_NSPECIAL, 1, AG_WINDOW_LENGTH, 13);
 set_window_value(AT_NSPECIAL, 1, AG_WINDOW_ANIM_FRAMES, 4);
 set_window_value(AT_NSPECIAL, 1, AG_WINDOW_HAS_SFX, 1);
+set_window_value(AT_NSPECIAL, 1, AG_WINDOW_SFX, sound_get("inhale"));
+set_window_value(AT_NSPECIAL, 1, AG_WINDOW_SFX_FRAME, 10);
 
 set_window_value(AT_NSPECIAL, 2, AG_WINDOW_TYPE, 1);
 set_window_value(AT_NSPECIAL, 2, AG_WINDOW_LENGTH, 22);
@@ -43,8 +45,9 @@ set_window_value(AT_NSPECIAL, 6, AG_WINDOW_ANIM_FRAMES, 2);
 set_window_value(AT_NSPECIAL, 6, AG_WINDOW_ANIM_FRAME_START, 31);
 
 set_window_value(AT_NSPECIAL, 7, AG_WINDOW_TYPE, 1);
-set_window_value(AT_NSPECIAL, 7, AG_WINDOW_LENGTH, 10);
+set_window_value(AT_NSPECIAL, 7, AG_WINDOW_LENGTH, 15);
 set_window_value(AT_NSPECIAL, 7, AG_WINDOW_ANIM_FRAMES, 1);
+set_window_value(AT_NSPECIAL, 7, AG_WINDOW_HAS_WHIFFLAG, 1);
 set_window_value(AT_NSPECIAL, 7, AG_WINDOW_ANIM_FRAME_START, 1);
 
 

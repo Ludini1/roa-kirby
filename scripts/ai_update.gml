@@ -1,5 +1,4 @@
 //ai_update - called every frame for this character as a CPU
-
 temp_level = 9;
 rangedtimer -= 1
 xdist = abs(ai_target.x - x);
@@ -94,6 +93,7 @@ if !free and ai_target.y - 70 > y and !ai_target.free {
 if free and has_hit_player and hitpause and can_fast_fall and get_stage_data(SD_Y_POS) - y > 60 and 1 > get_stage_data(SD_Y_POS) - y {
 	down_hard_pressed = true;
 }
+
 
 if state_cat != SC_HITSTUN {
 	if x > room_width - get_stage_data( SD_X_POS ) {
@@ -230,6 +230,7 @@ if attack = AT_FSPECIAL and window = 2{
 	}
 }
 
+
 //Dspecial
 if 	(recoverytimer > 60) and can_special and get_stage_data( SD_Y_POS ) > y+24 {
     joy_pad_idle = true;
@@ -269,7 +270,6 @@ if attack = AT_DSPECIAL and window = 5 {
 	special_pressed = false;
 	}
 }
-
 
 //Tilts
 if !free and can_attack and 0 > AIwait{
@@ -419,6 +419,7 @@ if (0 > AIwait and get_gameplay_time() mod 17 == 0 and ai_target.state_cat = SC_
 if attack = AT_NSPECIAL and window = 2 and 90 > xdist and facing and 90 > ydist {
 special_down = true;
 }
+
 
 if attack != AT_DSPECIAL{ 
 	nearbyhitbox = collision_circle( x-32, y-32, 64, asset_get("pHitBox"), true, true ) 

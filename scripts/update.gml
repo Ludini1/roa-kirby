@@ -192,6 +192,76 @@ if gameOver() and current_ability != 0 {
 	resetcolours = 1
 }
 
+if trummelcodecneeded{
+    trummelcodec = 17;
+    trummelcodecmax = 5;
+    trummelcodecsprite1 = asset_get("empty_sprite");
+    trummelcodecsprite2 = asset_get("empty_sprite");
+    var page = 0;
+
+    //Page 0
+    trummelcodecspeaker[page] = 2;
+    trummelcodecexpression[page] = 0;
+
+    trummelcodecline[page,1] = "is that--";
+    trummelcodecline[page,2] = "";
+    trummelcodecline[page,3] = "";
+    trummelcodecline[page,4] = "";
+    page++; 
+
+    //Page 1
+    trummelcodecspeaker[page] = 0;
+    trummelcodecexpression[page] = 0;
+
+    trummelcodecline[page,1] = "...";
+    trummelcodecline[page,2] = "";
+    trummelcodecline[page,3] = "";
+    trummelcodecline[page,4] = "";
+    page++; 
+
+    //Page 2
+    trummelcodecspeaker[page] = 1;
+    trummelcodecexpression[page] = 2;
+
+    trummelcodecline[page,1] = "That's Kirby, from Planet";
+    trummelcodecline[page,2] = "Popstar. He can copy his ";
+    trummelcodecline[page,3] = "foes' abilities! Hm, does";
+    trummelcodecline[page,4] = "he seem familiar to you?";
+    page++; 
+
+    //Page 3
+    trummelcodecspeaker[page] = 0;
+    trummelcodecexpression[page] = 2;
+
+    trummelcodecline[page,1] = "...Nope.";
+    trummelcodecline[page,2] = "";
+    trummelcodecline[page,3] = "";
+    trummelcodecline[page,4] = "";
+    page++; 
+
+    //Page 4
+    trummelcodecspeaker[page] = 1;
+    trummelcodecexpression[page] = 0;
+
+    trummelcodecline[page,1] = "Anyway, he has a pretty";
+    trummelcodecline[page,2] = "versatile kit on him.";
+    trummelcodecline[page,3] = "We should be cautious ";
+    trummelcodecline[page,4] = "around his Jet Crackle.";
+    page++; 
+
+    //Page 5
+    trummelcodecspeaker[page] = 1;
+    trummelcodecexpression[page] = 3;
+
+    trummelcodecline[page,1] = "Hey, Muno, do you think";
+    trummelcodecline[page,2] = "they ever got around to";
+    trummelcodecline[page,3] = "adding 'swallowed = 0' to";
+    trummelcodecline[page,4] = "his tutorial?";
+    page++; 
+
+    //repeat...
+}
+
 if resetcolours {
 	resetcolours = 0
 	newicon = 0

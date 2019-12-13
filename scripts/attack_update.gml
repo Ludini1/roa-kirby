@@ -5,6 +5,7 @@ if (attack == AT_NSPECIAL || attack == AT_NSPECIAL_ORCA || attack == AT_NSPECIAL
 	
 if (attack == AT_NSPECIAL){ //Inhale Loop
     if (window == 2){
+	move_cooldown[AT_NSPECIAL] = 60
         if (special_down){
             if (window_timer == 22) {
                 window = 2;
@@ -29,8 +30,15 @@ if (attack == AT_NSPECIAL){ //Inhale Loop
             
         }
         else {
+			sound_stop(sound_get("inhale"))
             window_timer = 0;
             window = 7;
+			var Kirby = self
+			with (asset_get("pHitBox")) {
+				if attack == AT_NSPECIAL and player_id = Kirby {
+					hitbox_timer = 22
+				}
+			}
         }
     }
     can_fast_fall = false;
@@ -63,7 +71,7 @@ if (attack == AT_FSTRONG){
 if (attack == AT_DSPECIAL){
 	can_fast_fall = false;
 	if (window == 5) { //IASA on fullcharge usage + Blast
-		if (special_pressed) and (window_timer > 6){
+		if (special_down) and (window_timer > 10){
 			window = 6;
 			window_timer = 0;
 			}
@@ -166,7 +174,8 @@ if (attack == AT_NAIR) {
 	if !free and (window == 2) {
 		hsp += spr_dir;
 		off_edge = 1;
-		set_hitbox_value(AT_NAIR, 3, HG_BASE_KNOCKBACK, 7+(hsp*0.5));
+		can_ustrong = true
+		set_hitbox_value(AT_NAIR, 3, HG_BASE_KNOCKBACK, 7+(abs(hsp)*0.5));
 	}
 }
 
@@ -235,6 +244,7 @@ if (attack == AT_NSPECIAL) {
 				}
 		if (window == 3) {
 				if (window_timer == 0) {
+						sound_stop(sound_get("inhale"))
 						sound_play(sound_get("nspecial_swallow"))
 				}
 				grabbedid.x = x;

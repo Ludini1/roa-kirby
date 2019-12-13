@@ -124,6 +124,8 @@ tethercd = 0;
 marked_list = ds_list_create();
 kirbyability = 0;
 newicon = 0;
+trummelcodecneeded = false;
+trummelcodec_id = noone;
 
 //FX
 absa_ring = hit_fx_create( sprite_get( "AT_NSPECIAL_ABSA_RING" ), 106 );
