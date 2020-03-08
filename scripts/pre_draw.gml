@@ -23,14 +23,14 @@ draw_sprite_ext(sprite_get("AT_NSPECIAL_SHOV_RIBBON_FLAP"),(get_gameplay_time() 
 }
 
 
-if instance_exists( obj_article1 ) and (obj_article1.state == 0 or obj_article1.state ==  1 or obj_article1.state == 2) {
-draw_sprite(obj_article1.coolsprite,obj_article1.coolindex,obj_article1.x,obj_article1.y+12)
-//draw_debug_text(x-8,y+88,string(obj_article1.coolindex))
+if MyPuddle != noone and (MyPuddle.state == 0 or MyPuddle.state ==  1 or MyPuddle.state == 2) {
+draw_sprite(MyPuddle.coolsprite,MyPuddle.coolindex,MyPuddle.x,MyPuddle.y+12)
+//draw_debug_text(x-8,y+88,string(MyPuddle.coolindex))
 }
 
 
-if instance_exists (obj_article1) and obj_article1.state == 3 {
-draw_sprite_ext(sprite_get("slipstream_spr"),0,0,obj_article1.y-20,960,obj_article1.ysize,0,c_white,0.5)
+if MyPuddle != noone and MyPuddle.state == 3 {
+draw_sprite_ext(sprite_get("slipstream_spr"),0,0,MyPuddle.y-20,960,MyPuddle.ysize,0,c_white,0.5)
 }
 
 if tethering {

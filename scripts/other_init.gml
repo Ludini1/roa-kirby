@@ -45,7 +45,8 @@ switch(select-1){
         abilitygiven = 14; //SHOVEL KNIGHT
     break;
     default:
-        abilitygiven = 15; //MOLLO
+	abilitygiven = ((real(url)+5) mod 15) +1
+        //abilitygiven = 15; //MOLLO
     break;
 }
 

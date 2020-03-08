@@ -25,13 +25,13 @@ set_window_value(AT_DATTACK, 1, AG_WINDOW_HAS_SFX, 1);
 set_window_value(AT_DATTACK, 1, AG_WINDOW_SFX, sound_get("dattack"));
 
 set_window_value(AT_DATTACK, 3, AG_WINDOW_TYPE, 1);
-set_window_value(AT_DATTACK, 3, AG_WINDOW_LENGTH, 12);
+set_window_value(AT_DATTACK, 3, AG_WINDOW_LENGTH, 18);
 set_window_value(AT_DATTACK, 3, AG_WINDOW_ANIM_FRAMES, 4);
 set_window_value(AT_DATTACK, 3, AG_WINDOW_ANIM_FRAME_START, 11);
 set_window_value(AT_DATTACK, 3, AG_WINDOW_HAS_CUSTOM_FRICTION, 1);
 set_window_value(AT_DATTACK, 3, AG_WINDOW_CUSTOM_AIR_FRICTION, .1);
 set_window_value(AT_DATTACK, 3, AG_WINDOW_CUSTOM_GROUND_FRICTION, .4);
-set_window_value(AT_DATTACK, 3, AG_WINDOW_HAS_WHIFFLAG, 1);
+set_window_value(AT_DATTACK, 3, AG_WINDOW_HAS_WHIFFLAG, 0);
 set_window_value(AT_DATTACK, 3, AG_WINDOW_CUSTOM_GRAVITY, 0.2);
 
 
@@ -40,7 +40,7 @@ set_num_hitboxes(AT_DATTACK, 2);
 set_hitbox_value(AT_DATTACK, 1, HG_PARENT_HITBOX, 1);
 set_hitbox_value(AT_DATTACK, 1, HG_HITBOX_TYPE, 1);
 set_hitbox_value(AT_DATTACK, 1, HG_WINDOW, 2);
-set_hitbox_value(AT_DATTACK, 1, HG_LIFETIME, 18);
+set_hitbox_value(AT_DATTACK, 1, HG_LIFETIME, 14);
 set_hitbox_value(AT_DATTACK, 1, HG_HITBOX_X, 4);
 set_hitbox_value(AT_DATTACK, 1, HG_HITBOX_Y, -18);
 set_hitbox_value(AT_DATTACK, 1, HG_WIDTH, 56);

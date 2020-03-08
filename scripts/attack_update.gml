@@ -79,6 +79,16 @@ if (attack == AT_DSPECIAL){
 			iasa_script();
 		}
 	}
+	if (window == 4) { //IASA on medcharge usage
+		if (window_timer > 12) {
+			iasa_script();
+		}
+	}
+	if (window == 4) { //IASA on nocharge usage
+		if (window_timer > 18) {
+			iasa_script();
+		}
+	}
 	if ((shield_pressed) and (3 > window )){ //SHIELD CANCEL
 		window = 7;
 		window_timer = 0;
@@ -89,7 +99,7 @@ if (attack == AT_DSPECIAL){
 				window_timer = 0;
 			}
 			if (100 > jetcharge) { //Adding charge
-			jetcharge += 2;
+			jetcharge += 1.25;
 				if (jetcharge == 100){
 					sound_play(sound_get("jet_full_charge"))
 					}
@@ -161,9 +171,9 @@ if (attack == AT_NSPECIAL_ELLI) and (window = 3) and (window_timer == 9) { //Mis
 }
 
 //Fastfall Fixes
-if (attack == AT_DATTACK) or (attack == AT_USPECIAL) and vsp >= 1 {
+if (attack == AT_DATTACK) or (attack == AT_USPECIAL) {
+	if vsp >= 1 can_wall_jump = true;
 	can_fast_fall = false;
-	can_wall_jump = true;
 }
 
 //NAIR rolling
@@ -494,9 +504,9 @@ if (attack == AT_NSPECIAL_ORCA) {
 }
 
 if (attack == AT_NSPECIAL_BIRD) and window == 2 and window_timer == 2 {
-	if instance_exists (obj_article1) instance_destroy(obj_article1)
-	instance_create(0,y,"obj_article1")
-	with obj_article1 state = 3
+	if MyPuddle != noone instance_destroy(MyPuddle)
+	MyPuddle = instance_create(0,y,"obj_article1")
+	with MyPuddle state = 3
 }
 
 if (attack == AT_NSPECIAL_FORS) and window == 3 and window_timer == 10 {

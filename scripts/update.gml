@@ -11,6 +11,12 @@ if (state_timer == 5 and (state == PS_DOUBLE_JUMP) and (prev_djumps != djumps)) 
 }
 
 
+if state = PS_ATTACK_AIR or state = PS_ATTACK_GROUND and attack = AT_DSPECIAL {
+	charging = 1
+}
+else {
+	charging = 0
+}
 
 abilitygiven = current_ability
 
@@ -146,7 +152,7 @@ if (absa_timer == 1) {
 }
 
 //WRASTOR
-if place_meeting(x,y,obj_article1) and obj_article1.state = 3 {
+if place_meeting(x,y,MyPuddle) and MyPuddle.state = 3 {
 air_accel = .36;
 air_max_speed = 7;
 initial_dash_speed = 8.5;
@@ -154,7 +160,7 @@ dash_speed = 8.5;
 walk_speed = 6.5;
 djump_sound = asset_get("sfx_birdflap");
 }
-if !place_meeting(x,y,obj_article1) and air_accel = .36  {
+if !place_meeting(x,y,MyPuddle) and air_accel = .36  {
 air_accel = .25;
 air_max_speed = 4.5;
 initial_dash_speed = 6;

@@ -126,6 +126,7 @@ kirbyability = 0;
 newicon = 0;
 trummelcodecneeded = false;
 trummelcodec_id = noone;
+charging = false;
 
 //FX
 absa_ring = hit_fx_create( sprite_get( "AT_NSPECIAL_ABSA_RING" ), 106 );
