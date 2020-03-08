@@ -1,6 +1,5 @@
 //MAGIC COLOUR CODE
-var hue = 0
-
+if !("hue" in self) hue = 0
 if get_player_color(player) = 13 {
 	hue+=1 
 	if hue>255 hue-=255;
@@ -25,7 +24,4 @@ if get_player_color(player) = 13 {
 	set_color_profile_slot(13,1,color_get_red(color_hsv),color_get_green(color_hsv),color_get_blue(color_hsv));
 	//set the new color using rgb values from the gamemaker color
 	}
-else {
-	hue = 0
-}
 init_shader();
