@@ -15,7 +15,7 @@ switch(select-1){
         abilitygiven = 4; //WRASTOR
     break;
 	case 6:
-        abilitygiven = 5; //MAYPUL
+        abilitygiven = 10; //MAYPUL
 	break;
 	case 5:
         abilitygiven = 6; //FORSBURN

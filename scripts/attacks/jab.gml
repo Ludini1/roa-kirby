@@ -52,7 +52,6 @@ set_window_value(AT_JAB, 8, AG_WINDOW_ANIM_FRAME_START, 10);
 set_window_value(AT_JAB, 9, AG_WINDOW_LENGTH, 12);
 set_window_value(AT_JAB, 9, AG_WINDOW_ANIM_FRAMES, 1);
 set_window_value(AT_JAB, 9, AG_WINDOW_ANIM_FRAME_START, 11);
-set_window_value(AT_JAB, 9, AG_WINDOW_HAS_WHIFFLAG, 1);
 
 set_num_hitboxes(AT_JAB, 4);
 
@@ -70,6 +69,7 @@ set_hitbox_value(AT_JAB, 1, HG_ANGLE, 361);
 set_hitbox_value(AT_JAB, 1, HG_HITSTUN_MULTIPLIER, 0.7);
 set_hitbox_value(AT_JAB, 1, HG_BASE_KNOCKBACK, 5);
 set_hitbox_value(AT_JAB, 1, HG_BASE_HITPAUSE, 6);
+set_hitbox_value(AT_JAB, 1, HG_HIT_PARTICLE_NUM, 2);
 set_hitbox_value(AT_JAB, 1, HG_VISUAL_EFFECT_X_OFFSET, 0);
 set_hitbox_value(AT_JAB, 1, HG_FORCE_FLINCH, 1);
 set_hitbox_value(AT_JAB, 1, HG_HIT_SFX, asset_get("sfx_blow_weak1"));
@@ -87,6 +87,7 @@ set_hitbox_value(AT_JAB, 2, HG_DAMAGE, 3);
 set_hitbox_value(AT_JAB, 2, HG_ANGLE, 361);
 set_hitbox_value(AT_JAB, 2, HG_BASE_KNOCKBACK, 4.5);
 set_hitbox_value(AT_JAB, 2, HG_BASE_HITPAUSE, 6);
+set_hitbox_value(AT_JAB, 2, HG_HIT_PARTICLE_NUM, 2);
 set_hitbox_value(AT_JAB, 2, HG_VISUAL_EFFECT_X_OFFSET, 0);
 set_hitbox_value(AT_JAB, 2, HG_FORCE_FLINCH, 1);
 set_hitbox_value(AT_JAB, 2, HG_HIT_SFX, asset_get("sfx_blow_weak1"));
@@ -105,6 +106,7 @@ set_hitbox_value(AT_JAB, 3, HG_ANGLE, 361);
 set_hitbox_value(AT_JAB, 3, HG_BASE_KNOCKBACK, 4);
 set_hitbox_value(AT_JAB, 3, HG_BASE_HITPAUSE, 6);
 set_hitbox_value(AT_JAB, 3, HG_FORCE_FLINCH, 1);
+set_hitbox_value(AT_JAB, 3, HG_HIT_PARTICLE_NUM, 2);
 set_hitbox_value(AT_JAB, 3, HG_VISUAL_EFFECT_X_OFFSET, 0);
 set_hitbox_value(AT_JAB, 3, HG_HIT_SFX, asset_get("sfx_blow_weak2"));
 
@@ -123,5 +125,6 @@ set_hitbox_value(AT_JAB, 4, HG_BASE_KNOCKBACK, 7);
 set_hitbox_value(AT_JAB, 4, HG_KNOCKBACK_SCALING, .45);
 set_hitbox_value(AT_JAB, 4, HG_BASE_HITPAUSE, 8);
 set_hitbox_value(AT_JAB, 4, HG_HITPAUSE_SCALING, .6);
+set_hitbox_value(AT_JAB, 4, HG_HIT_PARTICLE_NUM, 2);
 set_hitbox_value(AT_JAB, 4, HG_VISUAL_EFFECT_X_OFFSET, 0);
 set_hitbox_value(AT_JAB, 4, HG_HIT_SFX, asset_get("sfx_blow_medium1"));
