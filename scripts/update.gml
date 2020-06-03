@@ -65,10 +65,9 @@ if (move_cooldown[AT_EXTRA_3] > 0) {
     move_cooldown[AT_EXTRA_3] -= 1;
 }
 
-if tethercd > 0 {
-	tethercd -= 1
+if tether_cooldown > 0 {
+	tether_cooldown -= 1
 }
-
 
 if (jetcharge == 100) and ((get_gameplay_time() mod 30) > 20) { //Fully charged
 	outline_color = [ 100, 100, 255 ];
@@ -297,6 +296,7 @@ if resetcolours {
 	set_color_profile_slot(12, 1, 158, 99, 15);
 }
 
+// Ludi
 //CLEAR MARK ON DEATH
 for (var i = 0; i < 3; i++) {
 	if (ds_list_find_value(marked_list, i).state == PS_RESPAWN) {

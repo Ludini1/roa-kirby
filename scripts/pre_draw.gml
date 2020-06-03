@@ -34,7 +34,8 @@ draw_sprite_ext(sprite_get("slipstream_spr"),0,0,MyPuddle.y-20,960,MyPuddle.ysiz
 }
 
 if tethering {
-draw_sprite_ext(sprite_get("tether_spr"),0,x,y-16,point_distance(x,y,markedid.x,markedid.y-16)/92,1,point_direction(x,y,markedid.x,markedid.y-16),c_white,1)
+var marked_id = ds_list_find_value(marked_list, 0);
+draw_sprite_ext(sprite_get("tether_spr"),0,x,y-16,point_distance(x,y,marked_id.x,marked_id.y-16)/92,1,point_direction(x,y,marked_id.x,marked_id.y-16),c_white,1)
 }
 
 //if is_ai draw_debug_text(x-8,y+16,string(AIwait))

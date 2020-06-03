@@ -1,3 +1,4 @@
+// ludi
 set_attack_value(AT_USPECIAL, AG_CATEGORY, 2);
 set_attack_value(AT_USPECIAL, AG_SPRITE, sprite_get("AT_USPECIAL"));
 set_attack_value(AT_USPECIAL, AG_NUM_WINDOWS, 3);
@@ -27,7 +28,7 @@ set_window_value(AT_USPECIAL, 3, AG_WINDOW_LENGTH, 6);
 set_window_value(AT_USPECIAL, 3, AG_WINDOW_ANIM_FRAMES, 1);
 set_window_value(AT_USPECIAL, 3, AG_WINDOW_ANIM_FRAME_START, 4);
 
-set_window_value(AT_USPECIAL, 4, AG_WINDOW_LENGTH, 60);
+set_window_value(AT_USPECIAL, 4, AG_WINDOW_LENGTH, 999);
 set_window_value(AT_USPECIAL, 4, AG_WINDOW_ANIM_FRAMES, 1);
 set_window_value(AT_USPECIAL, 4, AG_WINDOW_ANIM_FRAME_START, 7);
 

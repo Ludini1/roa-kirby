@@ -119,9 +119,14 @@ hookx = -1;
 hooky = -1;
 MyPuddle = noone;
 skheal = 0;
+
+// Focus on this stuff ludi
+
 tethering = false;
-tethercd = 0;
+tether_direction = 0;
 marked_list = ds_list_create();
+tether_cooldown = 0;
+
 kirbyability = 0;
 newicon = 0;
 trummelcodecneeded = false;

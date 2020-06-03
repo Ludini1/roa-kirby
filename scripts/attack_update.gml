@@ -645,57 +645,95 @@ if attack == AT_NSPECIAL_GUAD and has_hit_player and window = 3{
 	}
 }
 
-if (attack == AT_USPECIAL and tethercd == 0
-	 and (window == 1 
-	 and window_timer > 8 
-	 and special_down
-	 or tethering)) {
-	 	
-	if(ds_list_find_value(marked_list, 0) != undefined) {
-		window = 4
-		can_move = false;
+// Ludi
+if (attack == AT_USPECIAL
+	and window == 1 
+	and window_timer == 8 
+	and special_down
+	and !tethering
+	and ds_list_find_value(marked_list, 0) != undefined) {
 		tethering = true;
-		var marked_id = ds_list_find_value(marked_list, 0);
-		markedid = marked_id
-		var marked_skew = right_down * 48 - left_down * 48;
-		var marked_dir = point_direction(x, y-char_height*.5, marked_id.x + marked_skew, marked_id.y + marked_skew);
-	    var tether_speed = 20;
-	    
-	    if (abs(point_distance(x, y-char_height*.5, marked_id.x + marked_skew, marked_id.y + marked_skew)) < 16 or (abs(hsp) < 2 and window_timer > 12)) {
-	    	//stop when close
-            hsp = 0;
+	}
+
+if (tethering) {
+	can_move = false;
+	var marked_id = ds_list_find_value(marked_list, 0);
+	if (window != 4) {
+		window = 4;
+	}
+
+	if (window_timer == 16) {
+	 // Which direction to tether
+	 	tether_direction = right_down - left_down;
+		
+		
+	} else if (window_timer > 16) {
+		
+		
+
+		var marked_skew_x = tether_direction * 40
+		var marked_skew_y = 70 - abs(tether_direction) * (70 - char_height * 0.5)
+		var marked_distance = abs(point_distance(x, y - char_height * 0.5, marked_id.x + marked_skew_x, marked_id.y - marked_skew_y));
+		var marked_dir = point_direction(x, y - char_height * 0.5, marked_id.x + marked_skew_x, marked_id.y - marked_skew_y);
+		var tether_speed = 25;
+		go_through = true;
+		fall_through = true;
+
+		// How close to target
+		if (marked_distance < 16) {
+			hsp = 0;
             vsp = 0;
             set_state(PS_IDLE_AIR);
 			ds_list_delete(marked_list, 0);
 			tethering = false;
 			can_move = true;
-			gravity_speed = .5;
-			solid = 1;
-        } else {
+			gravity_speed = 0.5;
+			go_through = false;
+			fall_through = false;
+			tether_cooldown = 60;
+			//solid = 1;
+		} else {
         	//zoom towards marked player
 	        hsp = lengthdir_x(tether_speed, marked_dir);
 	        vsp = lengthdir_y(tether_speed, marked_dir);
-	        spr_dir = sign(marked_id.x - x);;
+	        spr_dir = sign(marked_id.x - x);
 	        gravity_speed = 0;
-	        solid = 0;
+	       //solid = 0;
 		}
+
+		if (marked_distance < 200) {
+			// reduce targets speed till 0
+			if (abs(marked_id.hsp) > 2) {
+				marked_id.hsp = marked_id.hsp / 2;
+			} else {
+				marked_id.hsp = 0;
+			}
+
+			if (abs(marked_id.vsp) > 2) {
+				marked_id.vsp = marked_id.vsp / 2;
+			} else {
+				marked_id.vsp = 0;
+			}
+		}
+	}
+
+	// prevents infinite tether glitch if marked_id dies mid tether
+	if ((marked_id.state == PS_RESPAWN) || (ds_list_find_index(marked_list, marked_id) == -1)) {
+		hsp = 0;
+        vsp = 0;
+        set_state(PS_IDLE_AIR);
+		ds_list_delete(marked_list, 0);
+		tethering = false;
+		can_move = true;
+		gravity_speed = 0.5;
+		go_through = false;
+		fall_through = false;
+		tether_cooldown = 60;
 	}
 }
 
-if attack = AT_USPECIAL and window = 4 and window_timer = 60 {
-	tethering = 0
-	gravity_speed = .5;
-	can_move = true;
-	solid = 1;
-} 
-
-//NSPECIAL_MAY cooldown
 if (attack == AT_NSPECIAL_MAY) and (window == 3) and (window_timer == 4) { //seed cooldown
     move_cooldown[AT_NSPECIAL_MAY] = 20;
 }
 
-//Tether Cooldown
-if (attack == AT_USPECIAL) and (window == 4) and (window_timer == 60) {
-tethering = 0
-tethercd = 60
-}
+
