@@ -137,6 +137,10 @@ charging = false;
 absa_ring = hit_fx_create( sprite_get( "AT_NSPECIAL_ABSA_RING" ), 106 );
 cutter_destroy = hit_fx_create( sprite_get( "AT_FSPECIAL_DESTROYED" ), 23 );
 taunt_star = hit_fx_create( sprite_get( "hfx_taunt" ), 18 );
+chrg_fg = hit_fx_create( sprite_get( "AT_NSPECIAL_ZETT_CHRG_FG" ), 18 );
+chrg_bg = hit_fx_create( sprite_get( "AT_NSPECIAL_ZETT_CHRG_BG" ), 18 );
+unchrg_fg = hit_fx_create( sprite_get( "AT_NSPECIAL_ZETT_UNCHRG_FG" ), 12 );
+unchrg_bg = hit_fx_create( sprite_get( "AT_NSPECIAL_ZETT_UNCHRG_BG" ), 12 );
 
 
 //Attack Indexes

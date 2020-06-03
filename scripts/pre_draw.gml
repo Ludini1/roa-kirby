@@ -6,13 +6,21 @@
 
 
 
-if (attack == AT_NSPECIAL_ZET) and (window == 2) and ((state == PS_ATTACK_AIR) or (state == PS_ATTACK_GROUND)) { 
+/* if (attack == AT_NSPECIAL_ZET) and (window == 2) and ((state == PS_ATTACK_AIR) or (state == PS_ATTACK_GROUND)) { 
 draw_sprite_ext(sprite_get("AT_NSPECIAL_ZETT_UNCHRG_BG"),window_timer / 3.3,x,y,1,1,0,c_white,1)
 }
 if (attack == AT_NSPECIAL_ZET) and (window == 3) and ((state == PS_ATTACK_AIR) or (state == PS_ATTACK_GROUND)) {
 draw_sprite_ext(sprite_get("AT_NSPECIAL_ZETT_CHRG_BG"),window_timer / 3.3,x,y,1,1,0,c_white,1)
+} */
+
+ 
+ if (attack == AT_NSPECIAL_ZET) and (window == 2) and (window_timer == 0) and ((state == PS_ATTACK_AIR) or (state == PS_ATTACK_GROUND)){
+	spawn_hit_fx( x, y, unchrg_fg);
 }
 
+if (attack == AT_NSPECIAL_ZET) and (window == 3) and (window_timer == 0) and ((state == PS_ATTACK_AIR) or (state == PS_ATTACK_GROUND)){
+	spawn_hit_fx( x, y, chrg_fg);
+}
 
 if (attack == AT_NSPECIAL_ELLI) and (window == 2) and ((state == PS_ATTACK_AIR) or (state == PS_ATTACK_GROUND)){
 draw_sprite_ext(sprite_get("AT_NSPECIAL_ELLI_FIST"),0,x+spr_dir*16,y,1,1,bash_angle,c_white,1)

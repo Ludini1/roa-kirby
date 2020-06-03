@@ -3,11 +3,11 @@ set_attack_value(AT_DTILT, AG_NUM_WINDOWS, 3);
 set_attack_value(AT_DTILT, AG_HURTBOX_SPRITE, sprite_get("AT_DTILT_hurt"));
 
 set_window_value(AT_DTILT, 1, AG_WINDOW_TYPE, 1);
-set_window_value(AT_DTILT, 1, AG_WINDOW_LENGTH, 5);
+set_window_value(AT_DTILT, 1, AG_WINDOW_LENGTH, 7);
 set_window_value(AT_DTILT, 1, AG_WINDOW_ANIM_FRAMES, 2);
 set_window_value(AT_DTILT, 1, AG_WINDOW_HAS_SFX, 1);
 set_window_value(AT_DTILT, 1, AG_WINDOW_SFX, sound_get("dtilt_slide"));
-set_window_value(AT_DTILT, 1, AG_WINDOW_SFX_FRAME, 2);
+set_window_value(AT_DTILT, 1, AG_WINDOW_SFX_FRAME, 4);
 
 set_window_value(AT_DTILT, 2, AG_WINDOW_TYPE, 1);
 set_window_value(AT_DTILT, 2, AG_WINDOW_LENGTH, 15);
@@ -40,6 +40,7 @@ set_hitbox_value(AT_DTILT, 1, HG_BASE_KNOCKBACK, 7);
 set_hitbox_value(AT_DTILT, 1, HG_KNOCKBACK_SCALING, .5);
 set_hitbox_value(AT_DTILT, 1, HG_BASE_HITPAUSE, 5);
 set_hitbox_value(AT_DTILT, 1, HG_HITPAUSE_SCALING, .35);
+set_hitbox_value(AT_DTILT, 1, HG_HIT_PARTICLE_NUM, 2);
 set_hitbox_value(AT_DTILT, 1, HG_VISUAL_EFFECT_X_OFFSET, 30);
 set_hitbox_value(AT_DTILT, 1, HG_VISUAL_EFFECT_Y_OFFSET, 10);
 set_hitbox_value(AT_DTILT, 1, HG_HIT_SFX, asset_get("sfx_blow_medium2"));

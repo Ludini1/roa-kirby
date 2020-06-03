@@ -7,6 +7,7 @@ if ((my_hitboxID.attack == AT_DATTACK) or (my_hitboxID.attack == AT_DTILT)
 if (my_hitboxID.attack == AT_NSPECIAL) and my_hitboxID.hbox_num = 1 {
 	window = 7
 	window_timer = 0
+	sound_stop(sound_get("inhale"))
 }
 
 jetcharge = 0

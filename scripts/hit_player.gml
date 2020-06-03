@@ -3,6 +3,7 @@ if my_hitboxID.attack == AT_NSPECIAL { //Grab and stuff
 		window = 3;
 		window_timer = 0;
 		hit_player_obj.grabbed = 1;
+		hit_player_obj.should_make_shockwave = false;
 		grabbedid = hit_player_obj;
 		destroy_hitboxes();
 		if get_player_team( hit_player_obj.player ) == get_player_team( player ) {
