@@ -98,6 +98,12 @@ if my_hitboxID.attack == AT_NSPECIAL_ORI { //Bash
 	}
 }
 
+if my_hitboxID.attack == AT_USPECIAL {
+	if my_hitboxID.hbox_num == 1 or my_hitboxID.hbox_num == 2 or my_hitboxID.hbox_num == 3 {
+		hit_player_obj.should_make_shockwave = false;
+	}
+}
+
 if (my_hitboxID.attack == AT_FAIR) and ((my_hitboxID.hbox_num == 1) or (my_hitboxID.hbox_num == 2)) { //Make sure it links
 	if (vsp > -5) {
 		vsp -= 2
