@@ -21,3 +21,8 @@ if (attack == AT_NSPECIAL_ZET) and (window == 3) and (window_timer == 0) and ((s
 if (absa_timer > 0) {
 draw_sprite_ext(sprite_get("AT_NSPECIAL_ABSA_RING"),(105-absa_timer)/5.83,x,y-32,1,1,0,c_white,1)
 }
+
+//Summer Hat
+if wearing_hat {
+    draw_sprite_ext(sprite_get("idle_summer_hat"), image_index, x, y, spr_dir, 1, 0, c_white, 1);
+}

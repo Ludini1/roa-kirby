@@ -119,6 +119,7 @@ hookx = -1;
 hooky = -1;
 MyPuddle = noone;
 skheal = 0;
+wearing_hat = get_player_color(player) == 6;
 
 // Focus on this stuff ludi
 

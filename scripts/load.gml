@@ -90,6 +90,9 @@ sprite_change_offset("AT_NSPECIAL_KRAGG_SLAM", 44, 92);
 sprite_change_offset("plat", 32, 64);
 sprite_change_offset("platform_respawn", 48, 80);
 
+sprite_change_offset("idle_summer_hat", 16, 63);
+sprite_change_offset("idle_summer_hat_toss", 8, 62);
+
 //WIZARD
 sprite_change_offset("kirby_wizard_r", 131, 97);
 sprite_change_offset("kirby_wizard_l", 131, 97);

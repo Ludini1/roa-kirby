@@ -280,11 +280,11 @@ if resetcolours {
 	set_color_profile_slot(4, 1, 75, 75, 75);
 	set_color_profile_slot(5, 0, 32, 11, 89);
 	set_color_profile_slot(5, 1, 209, 0, 106);
-	set_color_profile_slot(6, 0, 236, 78, 58);
-	set_color_profile_slot(6, 1, 44, 98, 255);
+	set_color_profile_slot(6, 0, 89, 204, 233);
+	set_color_profile_slot(6, 1, 208, 198, 73);
 	set_color_profile_slot(7, 0, 194, 133, 220);
 	set_color_profile_slot(7, 1, 192, 0, 147);
-	set_color_profile_slot(8, 0, 167, 186, 74);
+	set_color_profile_slot(8, 0, 186, 203, 108);
 	set_color_profile_slot(8, 1, 83, 122, 62);
 	set_color_profile_slot(9, 0, 143, 70, 56);
 	set_color_profile_slot(9, 1, 82, 27, 22);
@@ -295,6 +295,20 @@ if resetcolours {
 	set_color_profile_slot(12, 0, 229, 195, 156);
 	set_color_profile_slot(12, 1, 158, 99, 15);
 }
+
+//Summer Idle Hat
+if wearing_hat == 1 {
+    if state != PS_SPAWN && state != PS_RESPAWN && state != PS_IDLE {
+        wearing_hat = -1;
+        var newfx = spawn_hit_fx(x, y, hit_fx_create(sprite_get("idle_summer_hat_toss"), 30));
+        newfx.depth = depth-1;
+    }
+} else if wearing_hat == -1 {
+    if state == PS_RESPAWN or state == PS_SPAWN {
+    wearing_hat = 1;
+    }
+}
+
 
 // Ludi
 //CLEAR MARK ON DEATH

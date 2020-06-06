@@ -29,15 +29,15 @@ set_color_profile_slot(5, 0, 32, 11, 89);
 set_color_profile_slot(5, 1, 209, 0, 106);
 
 //SEASONAL COLOUR
-set_color_profile_slot(6, 0, 236, 78, 58);
-set_color_profile_slot(6, 1, 44, 98, 255);
+set_color_profile_slot(6, 0, 89, 204, 233);
+set_color_profile_slot(6, 1, 208, 198, 73);
 
 //Purple Color
 set_color_profile_slot(7, 0, 194, 133, 220);
 set_color_profile_slot(7, 1, 192, 0, 147);
 
 //Early Access Color
-set_color_profile_slot(8, 0, 167, 186, 74);
+set_color_profile_slot(8, 0, 186, 203, 108);
 set_color_profile_slot(8, 1, 83, 122, 62);
 
 //Brown Color
@@ -59,3 +59,6 @@ set_color_profile_slot(12, 1, 158, 99, 15);
 //Rainbow Color
 set_color_profile_slot(13, 0, 255, 0, 255);
 set_color_profile_slot(13, 1, 255, 0, 255);
+
+
+
