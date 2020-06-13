@@ -121,8 +121,8 @@ MyPuddle = noone;
 skheal = 0;
 wearing_hat = get_player_color(player) == 6;
 
-// Focus on this stuff ludi
 
+// Tether realted things
 tethering = false;
 tether_direction = 0;
 marked_list = ds_list_create();
