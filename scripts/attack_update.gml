@@ -99,7 +99,7 @@ if (attack == AT_DSPECIAL){
 				window_timer = 0;
 			}
 			if (100 > jetcharge) { //Adding charge
-			jetcharge += 1.25;
+			jetcharge += 2;
 				if (jetcharge == 100){
 					sound_play(sound_get("jet_full_charge"))
 					}
@@ -185,8 +185,10 @@ if (attack == AT_NAIR) {
 		hsp += spr_dir;
 		off_edge = 1;
 		can_ustrong = true
+		if window_timer > 5 can_jump = true
 		set_hitbox_value(AT_NAIR, 3, HG_BASE_KNOCKBACK, 7+(abs(hsp)*0.5));
 	}
+	if !free and window == 3 can_jump = true
 }
 
 //Stop velocity for parried automoves
@@ -487,7 +489,7 @@ if (attack == AT_NSPECIAL_ORCA) {
 		window_timer = 0
 		sound_play(asset_get("sfx_bubblepop"));
 		sound_play(asset_get("sfx_bubblespray_breathless"));
-		with obj_article1 {
+		with MyPuddle {
 			state = 2
 			coolindex = 0
 		}

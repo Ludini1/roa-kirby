@@ -11,7 +11,7 @@ set_window_value(AT_FSTRONG, 1, AG_WINDOW_HAS_CUSTOM_FRICTION, 1);
 set_window_value(AT_FSTRONG, 1, AG_WINDOW_CUSTOM_GROUND_FRICTION, .3);
 
 set_window_value(AT_FSTRONG, 2, AG_WINDOW_TYPE, 1);
-set_window_value(AT_FSTRONG, 2, AG_WINDOW_LENGTH, 6);
+set_window_value(AT_FSTRONG, 2, AG_WINDOW_LENGTH, 3);
 set_window_value(AT_FSTRONG, 2, AG_WINDOW_ANIM_FRAMES, 1);
 set_window_value(AT_FSTRONG, 2, AG_WINDOW_ANIM_FRAME_START, 1);
 set_window_value(AT_FSTRONG, 2, AG_WINDOW_HSPEED, 7);
@@ -25,10 +25,10 @@ set_window_value(AT_FSTRONG, 3, AG_WINDOW_ANIM_FRAMES, 2);
 set_window_value(AT_FSTRONG, 3, AG_WINDOW_ANIM_FRAME_START, 2);
 
 set_window_value(AT_FSTRONG, 4, AG_WINDOW_TYPE, 1);
-set_window_value(AT_FSTRONG, 4, AG_WINDOW_LENGTH, 12);
+set_window_value(AT_FSTRONG, 4, AG_WINDOW_LENGTH, 14);
 set_window_value(AT_FSTRONG, 4, AG_WINDOW_ANIM_FRAMES, 1);
 set_window_value(AT_FSTRONG, 4, AG_WINDOW_ANIM_FRAME_START, 4);
-set_window_value(AT_FSTRONG, 4, AG_WINDOW_HAS_WHIFFLAG, 10);
+set_window_value(AT_FSTRONG, 4, AG_WINDOW_HAS_WHIFFLAG, 1);
 
 set_num_hitboxes(AT_FSTRONG,2);
 
@@ -52,7 +52,7 @@ set_hitbox_value(AT_FSTRONG, 1, HG_VISUAL_EFFECT, 304);
 set_hitbox_value(AT_FSTRONG, 1, HG_VISUAL_EFFECT_Y_OFFSET, -10);
 set_hitbox_value(AT_FSTRONG, 1, HG_HIT_SFX, asset_get("sfx_blow_medium1"));
 set_hitbox_value(AT_FSTRONG, 1, HG_HIT_LOCKOUT, 10);
-set_hitbox_value(AT_FSTRONG, 1, HG_WINDOW_CREATION_FRAME, 2);
+set_hitbox_value(AT_FSTRONG, 1, HG_WINDOW_CREATION_FRAME, 3);
 
 set_hitbox_value(AT_FSTRONG, 2, HG_PARENT_HITBOX, 2);
 set_hitbox_value(AT_FSTRONG, 2, HG_HITBOX_TYPE, 1);

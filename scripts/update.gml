@@ -11,7 +11,7 @@ if (state_timer == 5 and (state == PS_DOUBLE_JUMP) and (prev_djumps != djumps)) 
 }
 
 
-if state = PS_ATTACK_AIR or state = PS_ATTACK_GROUND and attack = AT_DSPECIAL {
+if (state = PS_ATTACK_AIR or state = PS_ATTACK_GROUND) and attack = AT_DSPECIAL {
 	charging = 1
 }
 else {
@@ -171,7 +171,7 @@ djump_sound = sound_get("djump");
 //ORCANE
 if createpuddle == 1 {
 	if MyPuddle != noone {
-		with obj_article1 {
+		with MyPuddle {
 			state = 1
 			coolindex = 0
 		}

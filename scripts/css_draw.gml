@@ -30,9 +30,9 @@ init_shader();
 var temp_x = x + 8;
 var temp_y = y + 9;
  
-patch_ver = "2.92";
-patch_day = "06";
-patch_month = "JUNE";
+patch_ver = "3.0";
+patch_day = "03";
+patch_month = "NOV";
  
 var num_alts = 14;
 var alt_cur = get_player_color(player);

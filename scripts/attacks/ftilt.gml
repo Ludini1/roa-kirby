@@ -16,7 +16,8 @@ set_window_value(AT_FTILT, 2, AG_WINDOW_SFX, sound_get("ftilt_star_rod"));
 set_window_value(AT_FTILT, 2, AG_WINDOW_SFX_FRAME, 1);
 
 set_window_value(AT_FTILT, 3, AG_WINDOW_TYPE, 1);
-set_window_value(AT_FTILT, 3, AG_WINDOW_LENGTH, 12);
+set_window_value(AT_FTILT, 3, AG_WINDOW_LENGTH, 9);
+set_window_value(AT_FTILT, 3, AG_WINDOW_HAS_WHIFFLAG, 1);
 set_window_value(AT_FTILT, 3, AG_WINDOW_ANIM_FRAMES, 2);
 set_window_value(AT_FTILT, 3, AG_WINDOW_ANIM_FRAME_START, 6);
 
@@ -33,8 +34,8 @@ set_hitbox_value(AT_FTILT, 1, HG_WIDTH, 80);
 set_hitbox_value(AT_FTILT, 1, HG_HEIGHT, 100);
 set_hitbox_value(AT_FTILT, 1, HG_SHAPE, 0);
 set_hitbox_value(AT_FTILT, 1, HG_PRIORITY, 1);
-set_hitbox_value(AT_FTILT, 1, HG_DAMAGE, 9);
-set_hitbox_value(AT_FTILT, 1, HG_ANGLE, 361);
+set_hitbox_value(AT_FTILT, 1, HG_DAMAGE, 7);
+set_hitbox_value(AT_FTILT, 1, HG_ANGLE, 50);
 set_hitbox_value(AT_FTILT, 1, HG_BASE_KNOCKBACK, 8);
 set_hitbox_value(AT_FTILT, 1, HG_KNOCKBACK_SCALING, .4);
 set_hitbox_value(AT_FTILT, 1, HG_BASE_HITPAUSE, 8);

@@ -14,6 +14,7 @@ if my_hitboxID.attack == AT_NSPECIAL { //Grab and stuff
 		current_ability = hit_player_obj.abilitygiven;
 		if get_player_team( hit_player_obj.player ) == get_player_team( player ) {
 			take_damage(hit_player_obj.player, -1, -5)
+			hit_player_obj.state = PS_IDLE
 		}
 		hit_player_obj.current_ability = 0
 		hit_player_obj.swallowed = 1
@@ -104,11 +105,11 @@ if my_hitboxID.attack == AT_USPECIAL {
 	}
 }
 
-if (my_hitboxID.attack == AT_FAIR) and ((my_hitboxID.hbox_num == 1) or (my_hitboxID.hbox_num == 2)) { //Make sure it links
-	if (vsp > -5) {
-		vsp -= 2
-	}
-}
+//if (my_hitboxID.attack == AT_FAIR) and ((my_hitboxID.hbox_num == 1) or (my_hitboxID.hbox_num == 2)) { //Make sure it links
+//	if (vsp > -5) {
+//		vsp -= 2
+//	}
+//}
 
 if (my_hitboxID.attack == AT_NSPECIAL_SYLV) and (my_hitboxID.hbox_num == 1) {
 	create_hitbox( AT_NSPECIAL_SYLV, 2, my_hitboxID.x, my_hitboxID.y )
