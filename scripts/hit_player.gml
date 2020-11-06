@@ -105,11 +105,11 @@ if my_hitboxID.attack == AT_USPECIAL {
 	}
 }
 
-//if (my_hitboxID.attack == AT_FAIR) and ((my_hitboxID.hbox_num == 1) or (my_hitboxID.hbox_num == 2)) { //Make sure it links
-//	if (vsp > -5) {
-//		vsp -= 2
-//	}
-//}
+// if (my_hitboxID.attack == AT_FAIR) and ((my_hitboxID.hbox_num == 1) or (my_hitboxID.hbox_num == 2)) { //Make sure it links
+	// if (vsp > -5) {
+		// vsp -= 2
+	// }
+// }
 
 if (my_hitboxID.attack == AT_NSPECIAL_SYLV) and (my_hitboxID.hbox_num == 1) {
 	create_hitbox( AT_NSPECIAL_SYLV, 2, my_hitboxID.x, my_hitboxID.y )

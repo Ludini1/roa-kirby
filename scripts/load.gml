@@ -37,7 +37,7 @@ sprite_change_offset("AT_DATTACK_AIR", 100, 82);
 sprite_change_offset("AT_FTILT", 64, 78);
 
 sprite_change_offset("AT_DTILT", 32, 54);
-sprite_change_offset("AT_UTILT", 40, 88);
+sprite_change_offset("AT_UTILT", 40, 86);
 sprite_change_offset("AT_NAIR", 64, 50);
 
 sprite_change_offset("AT_NAIR_AIR", 64, 50);
@@ -66,6 +66,7 @@ sprite_change_offset("AT_NSPECIAL_ETA_GROUND", 62, 114);
 sprite_change_offset("AT_NSPECIAL_ETA_AIR", 62, 114);
 sprite_change_offset("AT_NSPECIAL_ORI", 32, 58);
 sprite_change_offset("AT_NSPECIAL_ZETT_CHARGEUP_GROUND", 104, 122);
+sprite_change_offset("AT_NSPECIAL_ZETT_hurt", 104, 122);
 sprite_change_offset("AT_NSPECIAL_ZETT_CHARGEUP_AIR", 104, 122);
 sprite_change_offset("AT_NSPECIAL_ZETT_RELEASE_GROUND", 104, 122);
 sprite_change_offset("AT_NSPECIAL_ZETT_RELEASE_AIR", 104, 122);
@@ -92,6 +93,12 @@ sprite_change_offset("platform_respawn", 48, 80);
 
 sprite_change_offset("idle_summer_hat", 16, 63);
 sprite_change_offset("idle_summer_hat_toss", 8, 62);
+
+sprite_change_offset("idle_halloween_hat", 32, 54);
+sprite_change_offset("idle_halloween_hat_toss", 8, 62);
+
+sprite_change_offset("idle_xmas_hat", 32, 70);
+sprite_change_offset("idle_xmas_hat_toss", 32, 70);
 
 //WIZARD
 sprite_change_offset("kirby_wizard_r", 131, 97);

@@ -24,5 +24,5 @@ draw_sprite_ext(sprite_get("AT_NSPECIAL_ABSA_RING"),(105-absa_timer)/5.83,x,y-32
 
 //Summer Hat
 if wearing_hat {
-    draw_sprite_ext(sprite_get("idle_summer_hat"), image_index, x, y, spr_dir, 1, 0, c_white, 1);
+    draw_sprite_ext(sprite_get("idle_xmas_hat"), image_index, x, y, spr_dir, 1, 0, c_white, 1);
 }

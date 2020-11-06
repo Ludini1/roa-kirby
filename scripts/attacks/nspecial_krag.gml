@@ -8,7 +8,7 @@ set_attack_value(AT_NSPECIAL_KRAG, AG_HURTBOX_SPRITE, sprite_get("AT_FSPECIAL_AI
 set_window_value(AT_NSPECIAL_KRAG, 1, AG_WINDOW_TYPE, 1);
 set_window_value(AT_NSPECIAL_KRAG, 1, AG_WINDOW_LENGTH, 15);
 set_window_value(AT_NSPECIAL_KRAG, 1, AG_WINDOW_ANIM_FRAMES, 3);
-set_window_value(AT_NSPECIAL_KRAG, 1, AG_WINDOW_HAS_SFX, 1);
+set_window_value(AT_NSPECIAL_KRAG, 1, AG_WINDOW_HAS_SFX, 0);
 set_window_value(AT_NSPECIAL_KRAG, 1, AG_WINDOW_SFX, asset_get("sfx_zetter_downb"));
 set_window_value(AT_NSPECIAL_KRAG, 1, AG_WINDOW_SFX_FRAME, 14);
 

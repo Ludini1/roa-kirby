@@ -44,6 +44,9 @@ if (attack == AT_NSPECIAL){ //Inhale Loop
     can_fast_fall = false;
 }
 
+if (attack == AT_USPECIAL and window == 3 and window_timer > 5){
+	can_wall_jump = true;
+}
 
 if (attack == AT_FSTRONG){
 	if window == 1 {
@@ -316,7 +319,7 @@ if (attack == AT_NSPECIAL_ETA) {
 }
 
 if (attack == AT_NSPECIAL_ZET) {
-	if window == 1 and (window_timer > 3) {
+	if window == 1 {
 		if !(special_down) {
 			window = 2
 			window_timer = 0
@@ -331,7 +334,7 @@ if (attack == AT_NSPECIAL_ZET) {
 	if ((window == 2) or (window = 3)) {
 		set_attack_value(AT_NSPECIAL_ZET,AG_SPRITE,sprite_get("AT_NSPECIAL_ZETT_RELEASE_GROUND"))
 		set_attack_value(AT_NSPECIAL_ZET,AG_AIR_SPRITE,sprite_get("AT_NSPECIAL_ZETT_RELEASE_AIR"))
-		if window_timer > 3 can_jump = true;
+		if window_timer >= 3 can_jump = true;
 		if window_timer == 15 {
 			window = 4
 			window_timer = 0
@@ -489,7 +492,7 @@ if (attack == AT_NSPECIAL_ORCA) {
 		window_timer = 0
 		sound_play(asset_get("sfx_bubblepop"));
 		sound_play(asset_get("sfx_bubblespray_breathless"));
-		with MyPuddle {
+		with obj_article1 {
 			state = 2
 			coolindex = 0
 		}
@@ -565,6 +568,14 @@ if (attack == AT_NSPECIAL_SHOV) {
 if attack == AT_NSPECIAL_KRAG {
 	if window == 1 and window_timer == 5 {
 	set_hitbox_value(AT_NSPECIAL_KRAG, 4, HG_WINDOW, 4);
+	}
+	if window == 1 and window_timer == 14 {
+		if !free {
+			sound_play(asset_get("sfx_zetter_downb"))
+		}
+		else {
+			sound_play(asset_get("sfx_swipe_heavy1"))
+		}
 	}
 	if window == 2 and window_timer == 1 {
 		if !free {

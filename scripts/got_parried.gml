@@ -10,14 +10,6 @@ if (my_hitboxID.attack == AT_NSPECIAL) and my_hitboxID.hbox_num = 1 {
 	sound_stop(sound_get("inhale"))
 }
 
-if (my_hitboxID.attack == AT_JAB and window == 2) {
-	window = 3;
-	window_timer = 15;
-	clear_button_buffer(PC_ATTACK_PRESSED);
-}
-
-
-
 jetcharge = 0
 needlecharge = 0;
 if instance_exists(obj_article1) {

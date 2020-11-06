@@ -11,7 +11,7 @@ if (state_timer == 5 and (state == PS_DOUBLE_JUMP) and (prev_djumps != djumps)) 
 }
 
 
-if (state = PS_ATTACK_AIR or state = PS_ATTACK_GROUND) and attack = AT_DSPECIAL {
+if attack = AT_DSPECIAL and state = PS_ATTACK_AIR or state = PS_ATTACK_GROUND  {
 	charging = 1
 }
 else {
@@ -92,7 +92,7 @@ else {
 }
 
 //MAGIC COLOUR CODE
-if get_player_color(player) = 13 {
+if get_player_color(player) = 14 {
 	hue+=1 if hue>255 hue-=255;
 	//make hue shift every step + loop around
 
@@ -102,7 +102,7 @@ if get_player_color(player) = 13 {
 	//shift that colour by Hue, make sure it also loops
 	color_hsv=make_color_hsv(hue2,color_get_saturation(color_rgb),color_get_value(color_rgb)); 
 	//make a gamemaker color variable using the new hue
-	set_color_profile_slot(13,0,color_get_red(color_hsv),color_get_green(color_hsv),color_get_blue(color_hsv));
+	set_color_profile_slot(14,0,color_get_red(color_hsv),color_get_green(color_hsv),color_get_blue(color_hsv));
 	//set the new color using rgb values from the gamemaker color
 
 
@@ -112,7 +112,7 @@ if get_player_color(player) = 13 {
 	//kirby's feet keep the same hue as his skin
 	color_hsv=make_color_hsv(hue2,color_get_saturation(color_rgb),color_get_value(color_rgb)); 
 	//make a gamemaker color variable using the new hue
-	set_color_profile_slot(13,1,color_get_red(color_hsv),color_get_green(color_hsv),color_get_blue(color_hsv));
+	set_color_profile_slot(14,1,color_get_red(color_hsv),color_get_green(color_hsv),color_get_blue(color_hsv));
 	//set the new color using rgb values from the gamemaker color
 	}
 
@@ -280,31 +280,31 @@ if resetcolours {
 	set_color_profile_slot(4, 1, 75, 75, 75);
 	set_color_profile_slot(5, 0, 32, 11, 89);
 	set_color_profile_slot(5, 1, 209, 0, 106);
-	set_color_profile_slot(6, 0, 89, 204, 233);
-	set_color_profile_slot(6, 1, 208, 198, 73);
-	set_color_profile_slot(7, 0, 194, 133, 220);
-	set_color_profile_slot(7, 1, 192, 0, 147);
-	set_color_profile_slot(8, 0, 186, 203, 108);
-	set_color_profile_slot(8, 1, 83, 122, 62);
-	set_color_profile_slot(9, 0, 143, 70, 56);
-	set_color_profile_slot(9, 1, 82, 27, 22);
-	set_color_profile_slot(10, 0, 220, 220, 220);
-	set_color_profile_slot(10, 1, 120, 120, 120);
-	set_color_profile_slot(11, 0, 253, 117, 89);
-	set_color_profile_slot(11, 1, 171, 44, 44);
-	set_color_profile_slot(12, 0, 229, 195, 156);
-	set_color_profile_slot(12, 1, 158, 99, 15);
+	set_color_profile_slot(6, 0, 194, 133, 220);
+	set_color_profile_slot(6, 1, 192, 0, 147);
+	set_color_profile_slot(7, 0, 143, 70, 56);
+	set_color_profile_slot(7, 1, 82, 27, 22);
+	set_color_profile_slot(8, 0, 220, 220, 220);
+	set_color_profile_slot(8, 1, 120, 120, 120);
+	set_color_profile_slot(9, 0, 253, 117, 89);
+	set_color_profile_slot(9, 1, 171, 44, 44);
+	set_color_profile_slot(10, 0, 229, 195, 156);
+	set_color_profile_slot(10, 1, 158, 99, 15);
+	set_color_profile_slot(11, 0, 222, 72, 72);
+	set_color_profile_slot(11, 1, 109, 194, 83);
+	set_color_profile_slot(12, 0, 186, 203, 108);
+	set_color_profile_slot(12, 1, 83, 122, 62);
 }
 
-//Summer Idle Hat
+//Idle Hat
 if wearing_hat == 1 {
-    if state != PS_SPAWN && state != PS_RESPAWN && state != PS_IDLE {
+    if state != PS_SPAWN && state != PS_IDLE {
         wearing_hat = -1;
-        var newfx = spawn_hit_fx(x, y, hit_fx_create(sprite_get("idle_summer_hat_toss"), 30));
+        var newfx = spawn_hit_fx(x, y, hit_fx_create(sprite_get("idle_xmas_hat_toss"), 30));
         newfx.depth = depth-1;
     }
 } else if wearing_hat == -1 {
-    if state == PS_RESPAWN or state == PS_SPAWN {
+    if state == PS_SPAWN {
     wearing_hat = 1;
     }
 }

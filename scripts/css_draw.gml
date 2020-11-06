@@ -1,6 +1,6 @@
 //MAGIC COLOUR CODE
 if !("hue" in self) hue = 0
-if get_player_color(player) = 13 {
+if get_player_color(player) = 14 {
 	hue+=1 
 	if hue>255 hue-=255;
 	//make hue shift every step + loop around
@@ -11,7 +11,7 @@ if get_player_color(player) = 13 {
 	//shift that colour by Hue, make sure it also loops
 	color_hsv=make_color_hsv(hue2,color_get_saturation(color_rgb),color_get_value(color_rgb)); 
 	//make a gamemaker color variable using the new hue
-	set_color_profile_slot(13,0,color_get_red(color_hsv),color_get_green(color_hsv),color_get_blue(color_hsv));
+	set_color_profile_slot(14,0,color_get_red(color_hsv),color_get_green(color_hsv),color_get_blue(color_hsv));
 	//set the new color using rgb values from the gamemaker color
 
 
@@ -21,7 +21,7 @@ if get_player_color(player) = 13 {
 	//kirby's feet keep the same hue as his skin
 	color_hsv=make_color_hsv(hue2,color_get_saturation(color_rgb),color_get_value(color_rgb)); 
 	//make a gamemaker color variable using the new hue
-	set_color_profile_slot(13,1,color_get_red(color_hsv),color_get_green(color_hsv),color_get_blue(color_hsv));
+	set_color_profile_slot(14,1,color_get_red(color_hsv),color_get_green(color_hsv),color_get_blue(color_hsv));
 	//set the new color using rgb values from the gamemaker color
 	}
 init_shader();
@@ -31,10 +31,10 @@ var temp_x = x + 8;
 var temp_y = y + 9;
  
 patch_ver = "3.0";
-patch_day = "03";
+patch_day = "06";
 patch_month = "NOV";
  
-var num_alts = 14;
+var num_alts = 15;
 var alt_cur = get_player_color(player);
  
  
@@ -47,15 +47,15 @@ alt_name[2]  = "Cherry";
 alt_name[3]  = "Green";
 alt_name[4]  = "Grey";
 alt_name[5]  = "Meta Knight";
-alt_name[6]  = "Summer";
-alt_name[7]  = "Purple";
-alt_name[8]  = "Early Access";
-alt_name[9]  = "Brown";
-alt_name[10]  = "White";
-alt_name[11] = "Orange";
-alt_name[12] = "Yellow";
-alt_name[13] = "Rainbow";
-alt_name[14] = "woag";
+alt_name[6]  = "Purple";
+alt_name[7]  = "Brown";
+alt_name[8]  = "White";
+alt_name[9]  = "Orange";
+alt_name[10]  = "Yellow";
+alt_name[11] = "Christmas";
+alt_name[12] = "Early Access";
+alt_name[13] = "Champion";
+alt_name[14] = "Rainbow";
 alt_name[15] = "woag";
  
  

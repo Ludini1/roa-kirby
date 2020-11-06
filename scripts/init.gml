@@ -73,9 +73,9 @@ techroll_recovery_frames = 2;
 techroll_speed = 10;
 
 //airdodge animation frames
-air_dodge_startup_frames = 1;
-air_dodge_active_frames = 2;
-air_dodge_recovery_frames = 3;
+air_dodge_startup_frames = 3;
+air_dodge_active_frames = 5;
+air_dodge_recovery_frames = 2;
 air_dodge_speed = 7.5;
 
 //roll animation frames
@@ -119,10 +119,10 @@ hookx = -1;
 hooky = -1;
 MyPuddle = noone;
 skheal = 0;
-wearing_hat = get_player_color(player) == 6;
+wearing_hat = get_player_color(player) == 11;
 
+// Focus on this stuff ludi
 
-// Tether realted things
 tethering = false;
 tether_direction = 0;
 marked_list = ds_list_create();

@@ -2,7 +2,7 @@ set_attack_value(AT_NSPECIAL_ZET, AG_CATEGORY, 2);
 set_attack_value(AT_NSPECIAL_ZET, AG_SPRITE, sprite_get("AT_NSPECIAL_ZETT_CHARGEUP_GROUND"));
 set_attack_value(AT_NSPECIAL_ZET, AG_AIR_SPRITE, sprite_get("AT_NSPECIAL_ZETT_CHARGEUP_AIR"));
 set_attack_value(AT_NSPECIAL_ZET, AG_NUM_WINDOWS, 4);
-set_attack_value(AT_NSPECIAL_ZET, AG_HURTBOX_SPRITE, sprite_get("AT_NSPECIAL_ZET_hurt"));
+set_attack_value(AT_NSPECIAL_ZET, AG_HURTBOX_SPRITE, sprite_get("AT_NSPECIAL_ZETT_hurt"));
 
 set_window_value(AT_NSPECIAL_ZET, 1, AG_WINDOW_TYPE, 1);
 set_window_value(AT_NSPECIAL_ZET, 1, AG_WINDOW_LENGTH, 35);
