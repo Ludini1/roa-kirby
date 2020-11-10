@@ -23,10 +23,10 @@ set_window_value(AT_DSTRONG, 3, AG_WINDOW_HAS_SFX, 1);
 set_window_value(AT_DSTRONG, 3, AG_WINDOW_SFX, asset_get("sfx_ice_shatter"));
 
 set_window_value(AT_DSTRONG, 4, AG_WINDOW_TYPE, 1);
-set_window_value(AT_DSTRONG, 4, AG_WINDOW_LENGTH, 10);
+set_window_value(AT_DSTRONG, 4, AG_WINDOW_LENGTH, 14);
 set_window_value(AT_DSTRONG, 4, AG_WINDOW_ANIM_FRAMES, 4);
 set_window_value(AT_DSTRONG, 4, AG_WINDOW_ANIM_FRAME_START, 10);
-set_window_value(AT_DSTRONG, 4, AG_WINDOW_HAS_WHIFFLAG, 10);
+set_window_value(AT_DSTRONG, 4, AG_WINDOW_HAS_WHIFFLAG, 1);
 
 set_num_hitboxes(AT_DSTRONG,3);
 
@@ -53,7 +53,7 @@ set_hitbox_value(AT_DSTRONG, 1, HG_HIT_SFX, asset_get("sfx_ice_nspecial_hit_grou
 set_hitbox_value(AT_DSTRONG, 2, HG_PARENT_HITBOX, 2);
 set_hitbox_value(AT_DSTRONG, 2, HG_HITBOX_TYPE, 1);
 set_hitbox_value(AT_DSTRONG, 2, HG_WINDOW, 3);
-set_hitbox_value(AT_DSTRONG, 2, HG_LIFETIME, 5);
+set_hitbox_value(AT_DSTRONG, 2, HG_LIFETIME, 2);
 set_hitbox_value(AT_DSTRONG, 2, HG_HITBOX_X, 72);
 set_hitbox_value(AT_DSTRONG, 2, HG_HITBOX_Y, -15);
 set_hitbox_value(AT_DSTRONG, 2, HG_WIDTH, 70);
@@ -75,7 +75,7 @@ set_hitbox_value(AT_DSTRONG, 2, HG_HIT_SFX, asset_get("sfx_blow_heavy1"));
 set_hitbox_value(AT_DSTRONG, 3, HG_PARENT_HITBOX, 3);
 set_hitbox_value(AT_DSTRONG, 3, HG_HITBOX_TYPE, 1);
 set_hitbox_value(AT_DSTRONG, 3, HG_WINDOW, 3);
-set_hitbox_value(AT_DSTRONG, 3, HG_LIFETIME, 5);
+set_hitbox_value(AT_DSTRONG, 3, HG_LIFETIME, 2);
 set_hitbox_value(AT_DSTRONG, 3, HG_HITBOX_X, -64);
 set_hitbox_value(AT_DSTRONG, 3, HG_HITBOX_Y, -15);
 set_hitbox_value(AT_DSTRONG, 3, HG_WIDTH, 70);
